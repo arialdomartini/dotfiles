@@ -1,4 +1,4 @@
-;; reverse the mouse wheel, emulating a Touch device 
+;; reverse the mouse wheel, emulating a Touch device
 WheelUp::
 Send {WheelDown}
 Return
