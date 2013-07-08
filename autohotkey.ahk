@@ -70,3 +70,54 @@ return
 Send,à
 return
 
+
+
+
+;; ctrl+e => Emacs
+LCtrl & e::
+if WinExist("ahk_class Emacs")
+    WinActivate
+else
+    Run "C:\Users\user\emacs-24.3\bin\runemacs.exe"
+return
+
+
+;; ctrl+c => Chrome
+LCtrl & c::
+if WinExist("ahk_class Chrome_WidgetWin_0")
+    WinActivate
+else
+	if WinExist("ahk_class Chrome_WidgetWin_1")
+	    WinActivate
+	else
+		if WinExist("ahk_class Chrome_WidgetWin_2")
+		    WinActivate
+		else
+		    Run "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+return
+
+;; ctrl+s => Skype
+LCtrl & s::
+if WinExist("ahk_class tSkMainForm")
+    WinActivate
+else
+    Run "C:\Program Files (x86)\Skype\Phone\Skype.exe"
+return
+
+;; ctrl+j => Eclipse
+LCtrl & j::
+if WinExist("ahk_class SWT_Window0")
+    WinActivate
+else
+    Run "C:\Program Files (x86)\eclipse\eclipse.exe"
+return
+
+
+;; ctrl+t => Cygwin
+LCtrl & t::
+if WinExist("ahk_class mintty")
+    WinActivate
+else
+    Run "C:\cygwin\bin\mintty.exe"
+return
+
