@@ -8,17 +8,65 @@ Send {WheelUp}
 Return
 
 
+
 ;; use CAPS-LOCK as a CTRL key
 capslock::ctrl
 ^p::send ^{up}
+return
 
 
-LCtrl::Return
+LControl::
+LControl & 1::
+LControl & 2::
+LControl & 3::
+LControl & 4::
+LControl & 5::
+LControl & 6::
+LControl & 7::
+LControl & 8::
+LControl & 9::
+LControl & 0::
+LControl & q::
+LControl & w::
+;;LControl & e::
+LControl & r::
+LControl & t::
+LControl & y::
+LControl & u::
+LControl & i::
+LControl & o::
+LControl & p::
+LControl & a::
+LControl & s::
+LControl & d::
+LControl & f::
+LControl & g::
+LControl & h::
+LControl & j::
+LControl & k::
+LControl & l::
+LControl & z::
+LControl & x::
+LControl & c::
+LControl & v::
+LControl & b::
+LControl & n::
+LControl & m::
+LControl & left::
+LControl & right::
+LControl & up::
+LControl & down::
+LControl & pgdn::
+LControl & pgup::
+LControl & end::
+LControl & home::
+LControl & del::
+return
 
 
 
 
-; allow to type Italian accented letters on an Apple us-keyboard
+; allow to type (Italian) accented letters on an Apple us-keyboard
 ; alt + Windows + Return     -> Switches between Italian and US keyboard
 ; alt + Windows + a          -> à
 ; alt + Windows + e          -> è
@@ -71,10 +119,8 @@ Send,à
 return
 
 
-
-
 ;; ctrl+e => Emacs
-LCtrl & e::
+LControl & e::
 if WinExist("ahk_class Emacs")
     WinActivate
 else
@@ -119,5 +165,13 @@ if WinExist("ahk_class mintty")
     WinActivate
 else
     Run "C:\cygwin\bin\mintty.exe"
+return
+
+;; ctrl+o => Outlook
+LCtrl & o::
+if WinExist("ahk_class rctrl_renwnd32")
+    WinActivate
+else
+    Run "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Office\Microsoft Office Outlook 2007.lnk"
 return
 
