@@ -37,10 +37,11 @@
 ; bs-show
 (global-set-key (kbd "C-x C-m") 'bs-show)
 
-; highlight line mode 
-(global-hl-line-mode
- (set-face-background hl-line-face "gray15")
-)
+; highlight line mode
+(global-hl-line-mode 1)
+(set-face-background 'highlight "#222")
+(set-face-foreground 'highlight nil)
+(set-face-underline-p 'highlight nil)
 
 
 ; mak file are seen as html
