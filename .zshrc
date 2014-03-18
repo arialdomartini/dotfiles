@@ -6,21 +6,17 @@ antigen-use oh-my-zsh
 antigen-bundle git
 antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-bundle zsh-users/zsh-history-substring-search
-#antigen theme Granze/G-zsh-theme-2 granze2
 antigen-bundle code4nothing/oh-my-git
 antigen theme arialdomartini/oh-my-git-themes arialdo-granzestyle
-#antigen-bundle code4nothing/oh-my-git
-antigen theme code4nothing/oh-my-git-themes arialdo-granzestyle
-antigen theme arialdomartini/oh-my-git-themes arialdo-pathinline
 
 antigen-apply
-
-export EDITOR=emacs
 
 # bind UP and DOWN arrow keys
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
+
+export EDITOR=emacs
 
 # pip cache
 export PIP_DOWNLOAD_CACHE="$HOME/.pipcache"
@@ -33,25 +29,26 @@ alias ..="cd ..;ll"
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+
+# apps
 alias g="git"
 alias e="emacs"
 alias p="python"
 
-alias act="source bin/activate"
-alias go="git checkout"
-w() {
-    clear
-    ls -l
-    echo
-    git branch
-    echo
-    git st
-}
 
+# python
+alias act="source bin/activate"
+
+# git
+alias go="git checkout"
+alias feat="git checkout -b"
+alias stage="git add"
+alias undo="git checkout -- ."
+alias h="git log --oneline"
+alias d='git diff'
 
 alias -g L="|less"
-# go home
-alias h="cd ~"
+
 
 alias f="fg"
 alias j="jobs"
@@ -70,6 +67,21 @@ m() {
 }
 
 alias tree="nocorrect tree"
+
+w() {
+    clear &&  ls -l && echo && git branch && echo && git status --short --branch
+}
+
+dn() {
+    git status --short --branch | grep '^.[M\?]' | head -1 | awk '{print $2}' | xargs git diff && w
+    #git diff --name-only | head -1 | xargs git diff -- && w
+}
+
+an() {
+    git status --short --branch | grep '^.[M\?]' | head -1 | awk '{print $2}' | xargs git add && w
+    #git diff --name-only | head -1 | xargs git add && w
+}
+
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
