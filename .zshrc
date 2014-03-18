@@ -6,7 +6,7 @@ antigen-use oh-my-zsh
 antigen-bundle git
 antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-bundle zsh-users/zsh-history-substring-search
-antigen-bundle code4nothing/oh-my-git
+antigen-bundle arialdomartini/oh-my-git
 antigen theme arialdomartini/oh-my-git-themes arialdo-granzestyle
 
 antigen-apply
