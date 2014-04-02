@@ -77,3 +77,12 @@
  )
 ;(add-to-list 'custom-theme-load-path "~/.emacs/themes/")
 ;(load-theme 'ample-zen t)
+
+
+
+(global-highlight-changes-mode 1)
+
+(set-face-foreground 'highlight-changes nil)
+(set-face-background 'highlight-changes "#382f2f")
+(set-face-foreground 'highlight-changes-delete nil)
+(set-face-background 'highlight-changes-delete "#916868")
