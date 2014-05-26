@@ -37,6 +37,12 @@
 ; bs-show
 (global-set-key (kbd "C-x C-m") 'bs-show)
 
+; ace-jump-mode
+(eval-when-compile
+  (require 'cl))
+(global-set-key (kbd "C-x C-j") 'ace-jump-word-mode)
+(global-set-key (kbd "C-x j") 'ace-jump-char-mode)
+
 ; highlight line mode
 (global-hl-line-mode 1)
 (set-face-background 'highlight "#222")
@@ -80,9 +86,12 @@
 
 
 
-(global-highlight-changes-mode 1)
+(global-highlight-changes-mode 0)
 
 (set-face-foreground 'highlight-changes nil)
 (set-face-background 'highlight-changes "#382f2f")
 (set-face-foreground 'highlight-changes-delete nil)
 (set-face-background 'highlight-changes-delete "#916868")
+
+
+(add-to-list 'auto-mode-alist '("\\.erl\\'" . erlang-mode))
