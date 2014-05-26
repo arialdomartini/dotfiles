@@ -1,7 +1,5 @@
 source "$HOME/.antigen/antigen.zsh"
 
-PATH="/usr/local/bin:$PATH"
-
 antigen-use oh-my-zsh
 antigen-bundle git
 antigen-bundle zsh-users/zsh-syntax-highlighting
@@ -10,6 +8,10 @@ antigen-bundle arialdomartini/oh-my-git
 antigen theme arialdomartini/oh-my-git-themes arialdo-granzestyle
 
 antigen-apply
+
+
+#PATH=~/.pyenv/shims:/usr/local/bin:/usr/local/sbin:$PATH
+PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # bind UP and DOWN arrow keys
 zmodload zsh/terminfo
@@ -85,3 +87,6 @@ an() {
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export PYENV_ROOT=/usr/local/opt/pyenv  
+eval "$(pyenv init -)"
