@@ -71,7 +71,7 @@ m() {
 alias tree="nocorrect tree"
 
 w() {
-    clear &&  ls -l && echo && git branch && echo && git status --short --branch
+    clear &&  ls -l && echo && git branch && echo && git status --short --untracked-files=all --branch
 }
 
 dn() {
