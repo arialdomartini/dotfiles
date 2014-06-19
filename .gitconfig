@@ -1,0 +1,67 @@
+[user]
+	name = Arialdo Martini
+	email = arialdomartini@gmail.com
+
+[core]
+	autocrlf = false
+
+#[format]
+#	pretty = oneline
+
+[color]
+	ui = true
+
+[alias]
+	co = commit -m
+	go = checkout
+
+	# Show an ascii tree of the current branch
+	tr = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %C(cyan)<%an>%Creset %Cgreen(%cd)' --abbrev-commit --date=relative
+
+	# Show an ascii tree of all branches
+	tra = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %C(cyan)<%an>%Creset %Cgreen(%cd)' --abbrev-commit --date=relative --all
+
+	# Non-verbose status
+	st = status --short --branch
+
+	# List the last commits of each branch, sorted by date
+	last-branches = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
+	lastb = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
+
+	# Smarter blame ignores white space (-w), moving text (-M) and  moving text into other files (-C)
+	bl = blame -wMC
+
+	# Undo
+	undo = reset --soft HEAD^
+
+	# Stand-up! Shows a list of what I worked on yesterday so I can be prepared for my stand-up meeting.
+	standup = "!git log --since yesterday  --author `git config user.email` --pretty=oneline"
+
+	# Prints a list of all files ignored
+	ignored = ls-files --others -i --exclude-standard
+
+	# List all available aliases
+	aliases = config --get-regexp ^alias
+
+	# Word diff
+	diffw = diff --word-diff=plain
+
+	# Running gitk in the background
+	k = !gitk&
+	kk = !gitk --all&
+	ka = !git kk
+
+	# Rename a branch
+	rename-current-branch = "!f() { current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout --quiet -b $1 && git branch --quiet -d $current_branch; }; f "
+	rename-branch = "!f() { git branch $2 $1 && git branch --quiet -d $1; }; f git"
+
+	# amend the last commit, using the same commit message
+	amend = commit --amend -C HEAD
+
+	# lists the files I'm about to commit
+	this = diff --cached --name-only
+	thisv = diff --cached --stat
+[mergetool]
+	keepBackup = true
+[push]
+	default = simple
