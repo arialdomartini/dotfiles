@@ -22,7 +22,7 @@
 	tra = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %C(cyan)<%an>%Creset %Cgreen(%cd)' --abbrev-commit --date=relative --all
 
 	# Non-verbose status
-	st = status --short --branch
+	st = status --short --branch --untracked-files=all
 
 	# List the last commits of each branch, sorted by date
 	last-branches = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
