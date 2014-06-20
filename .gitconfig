@@ -61,6 +61,10 @@
 	# lists the files I'm about to commit
 	this = diff --cached --name-only
 	thisv = diff --cached --stat
+
+	# show the list of the last committed files
+	last = diff-tree --no-commit-id --name-only HEAD
+
 [mergetool]
 	keepBackup = true
 [push]
