@@ -10,6 +10,10 @@
   version-control t)
 
 
+; shorter yes-no-dialogs
+(fset 'yes-or-no-p 'y-or-n-p)
+
+
 ; marmalade
 (require 'package)
 (add-to-list 'package-archives 
