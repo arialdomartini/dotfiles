@@ -88,8 +88,5 @@ an() {
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-export PYENV_ROOT=/usr/local/opt/pyenv  
-eval "$(pyenv init -)"
-
 # activate ruby rvm
 source ~/.rvm/scripts/rvm
