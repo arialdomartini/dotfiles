@@ -39,6 +39,10 @@
 (el-get 'sync)
 
 
+;; packages
+(require 'ace-jump-mode)
+
+
 ; always indent using spaces
 (setq-default indent-tabs-mode nil)
 
