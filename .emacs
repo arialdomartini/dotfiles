@@ -14,6 +14,9 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 
+; highlight parenthesis
+(show-paren-mode t)
+
 ; marmalade
 (require 'package)
 (add-to-list 'package-archives 
