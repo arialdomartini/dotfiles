@@ -56,6 +56,8 @@
  '(
    color-theme
    autopair
+   ido-hacks
+   ido-vertical-mode
 ))
 
 ;; Package manager and packages handler
@@ -99,12 +101,17 @@
 (install-wanted-packages)
 
 
-
-
 ;; packages
 (require 'ace-jump-mode)
 (require 'autopair)
 (autopair-global-mode)
+
+(require 'ido-hacks)
+(require 'ido-vertical-mode)
+(ido-mode t)
+(ido-vertical-mode)
+
+
 
 ; always indent using spaces
 (setq-default indent-tabs-mode nil)
