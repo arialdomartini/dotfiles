@@ -1,6 +1,7 @@
 ; no menu bar
 (menu-bar-mode -1)
 
+
 ; backups in .saves
 (setq backup-directory-alist `(("." . "~/.saves")))
 (setq backup-by-copying t)
@@ -41,7 +42,8 @@
 
 ;; packages
 (require 'ace-jump-mode)
-
+(require 'autopair)
+(autopair-global-mode)
 
 ; always indent using spaces
 (setq-default indent-tabs-mode nil)
