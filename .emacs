@@ -58,6 +58,7 @@
    autopair
    ido-hacks
    ido-vertical-mode
+   switch-window
 ))
 
 ;; Package manager and packages handler
@@ -111,6 +112,8 @@
 (ido-mode t)
 (ido-vertical-mode)
 
+(require 'switch-window)
+(global-set-key (kbd "C-x C-o") 'switch-window)
 
 
 ; always indent using spaces
