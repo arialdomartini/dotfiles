@@ -10,15 +10,11 @@
   kept-old-versions 2
   version-control t)
 
-
 ; shorter yes-no-dialogs
 (fset 'yes-or-no-p 'y-or-n-p)
 
-
 ; highlight parenthesis
 (show-paren-mode t)
-
-
 
 ;; Package managers
 
@@ -59,6 +55,7 @@
    ido-hacks
    ido-vertical-mode
    switch-window
+   company-mode
 ))
 
 ;; Package manager and packages handler
@@ -115,6 +112,7 @@
 (require 'switch-window)
 (global-set-key (kbd "C-x C-o") 'switch-window)
 
+(add-hook 'after-init-hook 'global-company-mode)
 
 ; always indent using spaces
 (setq-default indent-tabs-mode nil)
