@@ -56,6 +56,7 @@
    ido-vertical-mode
    switch-window
    company-mode
+   multiple-cursors
 ))
 
 ;; Package manager and packages handler
@@ -113,6 +114,17 @@
 (global-set-key (kbd "C-x C-o") 'switch-window)
 
 (add-hook 'after-init-hook 'global-company-mode)
+
+
+
+; multiple-cursors
+(require 'mouse)
+(xterm-mouse-mode t)
+(defun track-mouse (e))
+(setq mouse-sel-mode t)
+(global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
+
+
 
 ; always indent using spaces
 (setq-default indent-tabs-mode nil)
@@ -191,3 +203,4 @@
 
 
 (add-to-list 'auto-mode-alist '("\\.erl\\'" . erlang-mode))
+
