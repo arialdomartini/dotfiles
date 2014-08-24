@@ -1,3 +1,4 @@
+
 ; no menu bar
 (menu-bar-mode -1)
 
@@ -126,6 +127,11 @@
 
 
 
+; smex
+(require 'smex)
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+
 ; always indent using spaces
 (setq-default indent-tabs-mode nil)
 
@@ -203,4 +209,3 @@
 
 
 (add-to-list 'auto-mode-alist '("\\.erl\\'" . erlang-mode))
-
