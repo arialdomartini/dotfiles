@@ -1,4 +1,3 @@
-
 ; no menu bar
 (menu-bar-mode -1)
 
@@ -209,3 +208,14 @@
 
 
 (add-to-list 'auto-mode-alist '("\\.erl\\'" . erlang-mode))
+
+
+;; New empty buffer
+(defun my-new-empty-buffer ()
+  "Open a new empty buffer, offering the option to save it when exiting emacs."
+  (interactive)
+  (let ((buf (generate-new-buffer "untitled")))
+    (switch-to-buffer buf)
+    (funcall (and initial-major-mode))
+    (setq buffer-offer-save t)))
+(global-set-key (kbd "C-n") 'my-new-empty-buffer) ; Ctrl+n
