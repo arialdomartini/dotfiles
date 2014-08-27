@@ -57,6 +57,8 @@
    switch-window
    company-mode
    multiple-cursors
+   elixir
+   erlang-mode
 ))
 
 ;; Package manager and packages handler
