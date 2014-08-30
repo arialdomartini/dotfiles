@@ -221,3 +221,14 @@
     (funcall (and initial-major-mode))
     (setq buffer-offer-save t)))
 (global-set-key (kbd "C-n") 'my-new-empty-buffer) ; Ctrl+n
+
+;; duplicate line
+(defun duplicate-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (newline)
+  (yank)
+)
+(global-set-key (kbd "C-c C-d") 'duplicate-line)
