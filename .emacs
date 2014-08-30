@@ -160,7 +160,7 @@
 
 ; highlight line mode
 (global-hl-line-mode 1)
-(set-face-background 'highlight "#222")
+(set-face-background 'highlight "#333")
 (set-face-foreground 'highlight nil)
 (set-face-underline-p 'highlight nil)
 
@@ -173,40 +173,12 @@
 
 ; themes
 
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector ["#212121" "#CC5542" "#6aaf50" "#7d7c61" "#5180b3" "#DC8CC3" "#9b55c3" "#bdbdb3"])
- '(background-color "#fcf4dc")
- '(background-mode light)
- '(cursor-color "#52676f")
- '(custom-enabled-themes (quote (wheatgrass)))
- '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "e890fd7b5137356ef5b88be1350acf94af90d9d6dd5c234978cd59a6b873ea94" default)))
- '(fci-rule-color "#2e2e2e")
- '(foreground-color "#52676f")
- '(vc-annotate-background "#3b3b3b")
- '(vc-annotate-color-map (quote ((20 . "#dd5542") (40 . "#CC5542") (60 . "#fb8512") (80 . "#baba36") (100 . "#bdbc61") (120 . "#7d7c61") (140 . "#6abd50") (160 . "#6aaf50") (180 . "#6aa350") (200 . "#6a9550") (220 . "#6a8550") (240 . "#6a7550") (260 . "#9b55c3") (280 . "#6CA0A3") (300 . "#528fd1") (320 . "#5180b3") (340 . "#6380b3") (360 . "#DC8CC3"))))
- '(vc-annotate-very-old-color "#DC8CC3"))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-;(add-to-list 'custom-theme-load-path "~/.emacs/themes/")
-;(load-theme 'ample-zen t)
-
-
-
 (global-highlight-changes-mode 0)
 
-(set-face-foreground 'highlight-changes nil)
-(set-face-background 'highlight-changes "#382f2f")
-(set-face-foreground 'highlight-changes-delete nil)
-(set-face-background 'highlight-changes-delete "#916868")
+;(set-face-foreground 'highlight-changes nil)
+;(set-face-background 'highlight-changes "#382f2f")
+;(set-face-foreground 'highlight-changes-delete nil)
+;(set-face-background 'highlight-changes-delete "#916868")
 
 
 (add-to-list 'auto-mode-alist '("\\.erl\\'" . erlang-mode))
@@ -222,13 +194,30 @@
     (setq buffer-offer-save t)))
 (global-set-key (kbd "C-n") 'my-new-empty-buffer) ; Ctrl+n
 
-;; duplicate line
-(defun duplicate-line()
-  (interactive)
-  (move-beginning-of-line 1)
-  (kill-line)
-  (yank)
-  (newline)
-  (yank)
-)
-(global-set-key (kbd "C-c C-d") 'duplicate-line)
+
+
+
+;; duplicate line or region
+(defun duplicate-line-or-region (&optional n)
+  "Duplicate current line, or region if active.
+  With argument N, make N copies.
+  With negative N, comment out original line and use the absolute value."
+  (interactive "*p")
+  (let ((use-region (use-region-p)))
+    (save-excursion
+      (let ((text (if use-region        ;Get region if active, otherwise line
+                      (buffer-substring (region-beginning) (region-end))
+                    (prog1 (thing-at-point 'line)
+                      (end-of-line)
+                      (if (< 0 (forward-line 1)) ;Go to beginning of next line, or make a new one
+                          (newline))))))
+        (dotimes (i (abs (or n 1)))     ;Insert N times, or once if not specified
+          (insert text))))
+    (if use-region nil                  ;Only if we're working with a line (not a region)
+      (let ((pos (- (point) (line-beginning-position)))) ;Save column
+        (if (> 0 n)                             ;Comment out original with negative arg
+            (comment-region (line-beginning-position) (line-end-position)))
+        (forward-line 1)
+        (forward-char pos)))))
+
+(global-set-key (kbd "C-c C-d") 'duplicate-line-or-region)
