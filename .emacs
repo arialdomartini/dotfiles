@@ -60,6 +60,7 @@
    elixir
    erlang-mode
    highlight-indentation
+   expand-region
 ))
 
 ;; Package manager and packages handler
@@ -122,6 +123,11 @@
 (set-face-background 'highlight-indentation-face "#444")
 (set-face-background 'highlight-indentation-current-column-face "#955")
 (add-hook 'prog-mode-hook #'highlight-indentation-mode)
+
+(require 'expand-region)
+(global-set-key (kbd "ESC <up>") 'er/expand-region)
+(global-set-key (kbd "ESC <down>") 'er/contract-region)
+
 
 
 ; multiple-cursors
