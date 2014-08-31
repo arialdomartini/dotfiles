@@ -197,9 +197,7 @@
     (switch-to-buffer buf)
     (funcall (and initial-major-mode))
     (setq buffer-offer-save t)))
-(global-set-key (kbd "C-n") 'my-new-empty-buffer) ; Ctrl+n
-
-
+(global-set-key (kbd "C-c C-n") 'my-new-empty-buffer)
 
 
 ;; duplicate line or region
