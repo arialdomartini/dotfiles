@@ -120,7 +120,7 @@
 (add-hook 'after-init-hook 'global-company-mode)
 
 (highlight-indentation-mode)
-(set-face-background 'highlight-indentation-face "#444")
+(set-face-background 'highlight-indentation-face "#222")
 (set-face-background 'highlight-indentation-current-column-face "#955")
 (add-hook 'prog-mode-hook #'highlight-indentation-mode)
 
@@ -230,3 +230,10 @@
         (forward-char pos)))))
 
 (global-set-key (kbd "C-c C-d") 'duplicate-line-or-region)
+
+
+
+;(color-theme-dark-laptop)
+(color-theme-arjen)
+;(color-theme-charcoal-black)
+;(color-theme-jsc-dark)
