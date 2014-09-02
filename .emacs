@@ -167,6 +167,7 @@
 (eval-when-compile
   (require 'cl))
 (global-set-key (kbd "C-x C-j") 'ace-jump-word-mode)
+(global-set-key (kbd "C-M-j") 'ace-jump-word-mode)
 (global-set-key (kbd "C-x j") 'ace-jump-char-mode)
 
 ; highlight line mode
