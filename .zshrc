@@ -55,6 +55,8 @@ alias -g L="|less"
 alias f="fg"
 alias j="jobs"
 
+alias fuck='sudo $(history -p \!\!)'
+
 # cd into a directory, then list it
 
 function c() {
