@@ -4,6 +4,8 @@
 
 [core]
 	autocrlf = false
+	editor = emacs
+
 
 #[format]
 #	pretty = oneline
