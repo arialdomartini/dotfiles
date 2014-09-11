@@ -61,6 +61,9 @@
 	# amend the last commit, using the same commit message
 	amend = commit --amend -C HEAD
 
+    # commit with message
+    c = commit -m
+
 	# lists the files I'm about to commit
 	this = diff --cached --name-only
 	thisv = diff --cached --stat
