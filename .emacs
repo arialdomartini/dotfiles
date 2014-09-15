@@ -140,8 +140,7 @@
 (global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
 
 ; browser-kill-ring
-
-
+(global-set-key (kbd "C-c C-y") 'browse-kill-ring)
 
 ; smex
 (require 'smex)
