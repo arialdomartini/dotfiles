@@ -50,6 +50,7 @@
 (setq
  wanted-packages
  '(
+   smex
    color-theme
    autopair
    ido-hacks
@@ -61,6 +62,7 @@
    erlang-mode
    highlight-indentation
    expand-region
+   browse-kill-ring
 ))
 
 ;; Package manager and packages handler
@@ -136,6 +138,8 @@
 (defun track-mouse (e))
 (setq mouse-sel-mode t)
 (global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
+
+; browser-kill-ring
 
 
 
