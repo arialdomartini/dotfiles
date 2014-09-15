@@ -1,6 +1,8 @@
 ; no menu bar
 (menu-bar-mode -1)
 
+; enable narrowing
+(put 'narrow-to-region 'disabled nil)
 
 ; backups in .saves
 (setq backup-directory-alist `(("." . "~/.saves")))
