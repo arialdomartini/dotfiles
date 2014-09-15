@@ -1,5 +1,6 @@
 ; no menu bar
 (menu-bar-mode -1)
+(tool-bar-mode -1)
 
 ; enable narrowing
 (put 'narrow-to-region 'disabled nil)
