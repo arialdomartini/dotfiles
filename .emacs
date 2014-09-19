@@ -66,6 +66,7 @@
    highlight-indentation
    expand-region
    browse-kill-ring
+   powerline
 ))
 
 ;; Package manager and packages handler
@@ -149,6 +150,14 @@
 (require 'smex)
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
+
+
+; powerline
+(require 'powerline)
+(setq powerline-arrow-shape 'arrow)   ;; the default
+(setq powerline-arrow-shape 'curve)   ;; give your mode-line curves
+(setq powerline-arrow-shape 'arrow14)
+(powerline-default-theme)
 
 ; always indent using spaces
 (setq-default indent-tabs-mode nil)
