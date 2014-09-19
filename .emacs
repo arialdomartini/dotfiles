@@ -2,6 +2,9 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 
+; no scroll bars
+(scroll-bar-mode 0)
+
 ; enable narrowing
 (put 'narrow-to-region 'disabled nil)
 
@@ -19,6 +22,7 @@
 ; highlight parenthesis
 (show-paren-mode t)
 
+
 ;; Package managers
 
 ; marmalade
@@ -31,6 +35,7 @@
 
 ;; el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
@@ -199,7 +204,6 @@
 
 
 ; themes
-
 (global-highlight-changes-mode 0)
 
 ;(set-face-foreground 'highlight-changes nil)
@@ -253,3 +257,14 @@
 ;(color-theme-arjen)
 ;(color-theme-charcoal-black)
 ;(color-theme-jsc-dark)
+
+; Fullscreen
+(defun toggle-fullscreen ()
+  "Toggle full screen"
+  (interactive)
+  (set-frame-parameter
+     nil 'fullscreen
+     (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
+
+(set-frame-parameter nil 'fullscreen 'fullboth)
+
