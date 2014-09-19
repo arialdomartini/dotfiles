@@ -72,6 +72,7 @@
    expand-region
    browse-kill-ring
    powerline
+   color-theme-solarized
 ))
 
 ;; Package manager and packages handler
@@ -163,6 +164,11 @@
 (setq powerline-arrow-shape 'curve)   ;; give your mode-line curves
 (setq powerline-arrow-shape 'arrow14)
 (powerline-default-theme)
+
+
+;theme
+(load-theme 'solarized-dark t)
+
 
 ; always indent using spaces
 (setq-default indent-tabs-mode nil)
