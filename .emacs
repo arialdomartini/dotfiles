@@ -53,8 +53,8 @@
 (setq
  wanted-packages
  '(
+   ace-jump-mode
    smex
-   color-theme
    autopair
    ido-hacks
    ido-vertical-mode
@@ -241,6 +241,6 @@
 
 
 ;(color-theme-dark-laptop)
-(color-theme-arjen)
+;(color-theme-arjen)
 ;(color-theme-charcoal-black)
 ;(color-theme-jsc-dark)
