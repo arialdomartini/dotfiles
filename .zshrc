@@ -42,7 +42,7 @@ alias p="python"
 alias act="source bin/activate"
 
 # git
-alias go="git checkout"
+alias gg="git checkout"
 alias feat="git checkout -b"
 alias stage="git add"
 alias undo="git checkout -- ."
@@ -90,5 +90,5 @@ an() {
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-# activate ruby rvm
-source ~/.rvm/scripts/rvm
+export GOPATH=/Users/arialdomartini/prg/go
+export PATH=$PATH:$GOPATH/bin
