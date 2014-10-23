@@ -73,6 +73,7 @@
    browse-kill-ring
    powerline
    color-theme-solarized
+   go-mode
 ))
 
 ;; Package manager and packages handler
@@ -140,7 +141,7 @@
 (global-set-key (kbd "ESC <up>") 'er/expand-region)
 (global-set-key (kbd "ESC <down>") 'er/contract-region)
 
-
+(require 'go-mode)
 
 ; multiple-cursors
 (require 'mouse)
