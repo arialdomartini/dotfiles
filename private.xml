@@ -6,19 +6,19 @@
       <name>Control as a key chord</name>
       <appendix>Multiple keys acting as the Control key</appendix>
       <appendix>(S+D to CONTROL_L)</appendix>
-      <appendix>(J+K to CONTROL_R)</appendix>
+      <appendix>(K+L to CONTROL_R)</appendix>
       <identifier>remap.gould_control</identifier>
       <autogen>__SimultaneousKeyPresses__ KeyCode::S, KeyCode::D, KeyCode::CONTROL_L</autogen>
-      <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::K, KeyCode::CONTROL_R</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::K, KeyCode::L, KeyCode::CONTROL_R</autogen>
     </item>
     <item>
       <name>Alt as a key chord</name>
       <appendix>Multiple keys acting as the Alt key</appendix>
       <appendix>(W+E to ALT_L)</appendix>
-      <appendix>(U+I to ALT_R)</appendix>
+      <appendix>(I+O to ALT_R)</appendix>
       <identifier>remap.gould_alt</identifier>
       <autogen>__SimultaneousKeyPresses__ KeyCode::W, KeyCode::E, KeyCode::OPTION_L</autogen>
-      <autogen>__SimultaneousKeyPresses__ KeyCode::U, KeyCode::I, KeyCode::OPTION_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::I, KeyCode::O, KeyCode::OPTION_L</autogen>
     </item>
   </item>
 </root>
