@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Gould</name>
+    <item>
+      <name>Control as a key chord</name>
+      <appendix>Multiple keys acting as the Control key</appendix>
+      <appendix>(S+D to CONTROL_L)</appendix>
+      <appendix>(J+K to CONTROL_R)</appendix>
+      <identifier>remap.gould_control</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::S, KeyCode::D, KeyCode::CONTROL_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::K, KeyCode::CONTROL_R</autogen>
+    </item>
+  </item>
+</root>
