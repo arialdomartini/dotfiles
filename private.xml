@@ -27,5 +27,12 @@
       <identifier>remap.gould_return</identifier>
       <autogen>__SimultaneousKeyPresses__ KeyCode::F, KeyCode::J, KeyCode::RETURN</autogen>
     </item>
+    <item>
+      <name>Backspace as a key chord</name>
+      <appendix>Multiple keys acting as the Return key</appendix>
+      <appendix>(K+D to return)</appendix>
+      <identifier>remap.gould_backspace</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::K, KeyCode::D, KeyCode::DELETE</autogen>
+    </item>
   </item>
 </root>
