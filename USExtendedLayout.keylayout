@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE keyboard PUBLIC "" "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--Created by Ukelele version 2.2.8 on 2014-08-20 at 15:06 (GMT+2)-->
-<!--Last edited by Ukelele version 2.2.8 on 2014-12-06 at 20:10 (CET)-->
-<keyboard group="0" id="962" name="Arialdo's U.S." maxout="1">
+<!--Last edited by Ukelele version 2.2.8 on 2014-12-06 at 20:22 (CET)-->
+<keyboard group="0" id="16222" name="USExtendedLayout" maxout="1">
     <layouts>
         <layout first="0" last="17" modifiers="f4" mapSet="16c"/>
         <layout first="18" last="18" modifiers="f4" mapSet="984"/>
