@@ -86,7 +86,13 @@ an() {
     #git diff --name-only | head -1 | xargs git add && w
 }
 
-
+ramd() {
+    local size_in_mb=$1
+    local size=$(expr ${size_in_mb} \* 1024)
+    local name="RamDisk"
+    diskutil erasevolume HFS+ "$name" `hdiutil attach -nomount ram://$size`
+    echo The ${size_in_mb} Mb ram disk $name is ready
+}
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
