@@ -5,13 +5,16 @@ antigen-bundle git
 antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle arialdomartini/oh-my-git
-antigen theme arialdomartini/oh-my-git-themes arialdo-granzestyle
+#antigen theme arialdomartini/oh-my-git-themes arialdo-granzestyle
+antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
 
 antigen-apply
 
 
 #PATH=~/.pyenv/shims:/usr/local/bin:/usr/local/sbin:$PATH
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+omg_ungit_prompt="%~ • "
 
 # bind UP and DOWN arrow keys
 zmodload zsh/terminfo
