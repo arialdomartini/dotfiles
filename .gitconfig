@@ -71,6 +71,8 @@
 	# show the list of the last committed files
 	last = diff-tree --no-commit-id --name-only HEAD
 
+    fetchpl = "!f() { git fetch $1 refs/pull/$2/head; }; f"
+    getpl = "!f() { git fetch $1 +refs/pull/$2/head:refs/remotes/origin/pr/$2; }; f"
 [mergetool]
 	keepBackup = true
 [push]
