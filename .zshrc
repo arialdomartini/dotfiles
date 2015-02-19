@@ -1,19 +1,24 @@
 source "$HOME/.antigen/antigen.zsh"
 
 antigen-use oh-my-zsh
-antigen-bundle git
+#antigen-bundle git
 antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle arialdomartini/oh-my-git
-#antigen theme arialdomartini/oh-my-git-themes arialdo-granzestyle
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
 
 antigen-apply
 
-
 #PATH=~/.pyenv/shims:/usr/local/bin:/usr/local/sbin:$PATH
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
+autoload -U colors && colors
+VIRTUAL_ENV_DISABLE_PROMPT=true
+function omg_prompt_callback() {
+    if [ -n "${VIRTUAL_ENV}" ]; then
+        echo "%F{white}(`basename ${VIRTUAL_ENV}`)%f "
+    fi
+}
+#omg_second_line='%~ •'
 omg_ungit_prompt="%~ • "
 
 # bind UP and DOWN arrow keys
