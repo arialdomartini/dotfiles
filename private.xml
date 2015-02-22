@@ -37,11 +37,11 @@
     <item>
       <name>Shift as a key chord</name>
       <appendix>Multiple keys acting as the Shift key</appendix>
-      <appendix>(,+. to SHIFT_R)</appendix>
-      <appendix>(x+c to SHIFT_L)</appendix>
+      <appendix>(J+K to SHIFT_R)</appendix>
+      <appendix>(D+F to SHIFT_L)</appendix>
       <identifier>remap.gould_shift</identifier>
-      <autogen>__SimultaneousKeyPresses__ KeyCode::X, KeyCode::C, KeyCode::SHIFT_L</autogen>
-      <autogen>__SimultaneousKeyPresses__ KeyCode::COMMA, KeyCode::DOT, KeyCode::SHIFT_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::K, KeyCode::SHIFT_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::D, KeyCode::F, KeyCode::SHIFT_L</autogen>
     </item>
   </item>
 </root>
