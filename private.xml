@@ -43,5 +43,12 @@
       <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::K, KeyCode::SHIFT_L</autogen>
       <autogen>__SimultaneousKeyPresses__ KeyCode::D, KeyCode::F, KeyCode::SHIFT_L</autogen>
     </item>
+    <item>
+      <name>TAB as a key chord</name>
+      <appendix>Multiple keys acting as the TAB key</appendix>
+      <appendix>(S+K to TAB)</appendix>
+      <identifier>remap.gould_tab</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::S, KeyCode::L, KeyCode::TAB</autogen>
+    </item>
   </item>
 </root>
