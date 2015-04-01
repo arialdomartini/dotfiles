@@ -50,5 +50,14 @@
       <identifier>remap.gould_tab</identifier>
       <autogen>__SimultaneousKeyPresses__ KeyCode::S, KeyCode::L, KeyCode::TAB</autogen>
     </item>
+    <item>
+      <name>cmd as a key chord</name>
+      <appendix>Multiple keys acting as the cmd key</appendix>
+      <appendix>(,+. to CMD_R)</appendix>
+      <appendix>(X+C to CMD_L)</appendix>
+      <identifier>remap.gould_cmd</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::COMMA, KeyCode::DOT, KeyCode::COMMAND_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::X, KeyCode::C, KeyCode::COMMAND_L</autogen>
+    </item>
   </item>
 </root>
