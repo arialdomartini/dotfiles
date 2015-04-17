@@ -71,7 +71,7 @@
    multiple-cursors
    elixir
    erlang-mode
-   highlight-indentation
+;   highlight-indentation
    expand-region
    browse-kill-ring
    powerline
@@ -135,10 +135,10 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 
-(highlight-indentation-mode)
-(set-face-background 'highlight-indentation-face "#222")
-(set-face-background 'highlight-indentation-current-column-face "#955")
-(add-hook 'prog-mode-hook #'highlight-indentation-mode)
+;(highlight-indentation-mode)
+;(set-face-background 'highlight-indentation-face "#222")
+;(set-face-background 'highlight-indentation-current-column-face "#955")
+;(add-hook 'prog-mode-hook #'highlight-indentation-mode)
 
 (require 'expand-region)
 (global-set-key (kbd "ESC <up>") 'er/expand-region)
