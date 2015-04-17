@@ -211,7 +211,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.mak\\'" . html-mode))
 
-
+; You can now switch windows by pressing S-<left>, S-<right>, S-<up>, S-<down> (on OS X S is ctrl+shift)
+(windmove-default-keybindings)
 
 ; themes
 (global-highlight-changes-mode 0)
