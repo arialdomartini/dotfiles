@@ -42,7 +42,8 @@ alias .....="cd ../../../.."
 
 # apps
 alias g="git"
-alias e="emacs"
+alias e="emacsclient"
+alias ee="emacs"
 alias p="python"
 
 
