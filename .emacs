@@ -170,10 +170,6 @@
 (powerline-default-theme)
 
 
-;theme
-(load-theme 'solarized-dark t)
-
-
 ; always indent using spaces
 (setq-default indent-tabs-mode nil)
 
@@ -263,9 +259,10 @@
 (global-set-key (kbd "C-c C-d") 'duplicate-line-or-region)
 
 
-
+;theme
+;(load-theme 'solarized-dark t)
 ;(color-theme-dark-laptop)
-;(color-theme-arjen)
+(color-theme-arjen)
 ;(color-theme-charcoal-black)
 ;(color-theme-jsc-dark)
 
