@@ -176,7 +176,7 @@
 ; tabs are 4 chars
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
-(setq indent-line-function 'insert-tab)
+;(setq indent-line-function 'insert-tab)
 
 ; tabs are 4 chars in python too
 (add-hook 'python-mode-hook
@@ -209,6 +209,9 @@
 
 ; You can now switch windows by pressing S-<left>, S-<right>, S-<up>, S-<down> (on OS X S is ctrl+shift)
 (windmove-default-keybindings)
+
+; using hippie-expand rather than Dabbrev
+(global-set-key [remap dabbrev-expand] 'hippie-expand)
 
 ; themes
 (global-highlight-changes-mode 0)
