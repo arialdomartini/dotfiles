@@ -30,9 +30,9 @@
     <item>
       <name>Backspace as a key chord</name>
       <appendix>Multiple keys acting as the Return key</appendix>
-      <appendix>(K+D to return)</appendix>
+      <appendix>(U+I to return)</appendix>
       <identifier>remap.gould_backspace</identifier>
-      <autogen>__SimultaneousKeyPresses__ KeyCode::K, KeyCode::D, KeyCode::DELETE</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::U, KeyCode::I, KeyCode::DELETE</autogen>
     </item>
     <item>
       <name>Shift as a key chord</name>
