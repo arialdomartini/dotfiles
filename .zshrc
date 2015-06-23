@@ -44,7 +44,7 @@ alias .....="cd ../../../.."
 alias g="git"
 alias e="emacsclient"
 alias ee="emacs"
-alias estart="launchctl load /Library/LaunchAgents/gnu.emacs.daemon.plist"
+alias estart="sudo launchctl load /Library/LaunchAgents/gnu.emacs.daemon.plist"
 alias estart2="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
 alias estop="e -e '(kill-emacs)'"
 
