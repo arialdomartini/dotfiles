@@ -6,7 +6,7 @@ antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle arialdomartini/oh-my-git
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
-
+antigen-bundle felixr/docker-zsh-completion
 antigen-apply
 
 #PATH=~/.pyenv/shims:/usr/local/bin:/usr/local/sbin:$PATH
@@ -105,6 +105,11 @@ ramd() {
     local name="RamDisk"
     diskutil erasevolume HFS+ "$name" `hdiutil attach -nomount ram://$size`
     echo The ${size_in_mb} Mb ram disk $name is ready
+}
+
+dockerkillall() {
+    docker stop $(docker ps -a -q)
+    docker rm $(docker ps -a -q)
 }
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
