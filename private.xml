@@ -14,11 +14,11 @@
     <item>
       <name>Alt as a key chord</name>
       <appendix>Multiple keys acting as the Alt key</appendix>
-      <appendix>(W+E to ALT_L)</appendix>
-      <appendix>(I+O to ALT_R)</appendix>
+      <appendix>(F+S to ALT_L)</appendix>
+      <appendix>(J+L to ALT_R)</appendix>
       <identifier>remap.gould_alt</identifier>
-      <autogen>__SimultaneousKeyPresses__ KeyCode::W, KeyCode::E, KeyCode::OPTION_L</autogen>
-      <autogen>__SimultaneousKeyPresses__ KeyCode::I, KeyCode::O, KeyCode::OPTION_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::F, KeyCode::S, KeyCode::OPTION_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::L, KeyCode::OPTION_L</autogen>
     </item>
     <item>
       <name>Return as a key chord</name>
@@ -53,11 +53,11 @@
     <item>
       <name>cmd as a key chord</name>
       <appendix>Multiple keys acting as the cmd key</appendix>
-      <appendix>(J+L to CMD_R)</appendix>
-      <appendix>(F+S to CMD_L)</appendix>
+      <appendix>(I+O to CMD_R)</appendix>
+      <appendix>(E+R to CMD_L)</appendix>
       <identifier>remap.gould_cmd</identifier>
-      <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::L, KeyCode::COMMAND_L</autogen>
-      <autogen>__SimultaneousKeyPresses__ KeyCode::S, KeyCode::F, KeyCode::COMMAND_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::I, KeyCode::O, KeyCode::COMMAND_R</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::W, KeyCode::E, KeyCode::COMMAND_L</autogen>
     </item>
   </item>
 </root>
