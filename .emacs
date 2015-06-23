@@ -75,7 +75,7 @@
    expand-region
    browse-kill-ring
    powerline
-   color-theme-solarized
+;   color-theme-solarized
    go-mode
 ))
 
@@ -168,8 +168,10 @@
 (setq powerline-arrow-shape 'curve)   ;; give your mode-line curves
 (setq powerline-arrow-shape 'arrow14)
 (powerline-default-theme)
-
-
+(custom-set-faces
+ '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+(color-theme-charcoal-black)
 ; always indent using spaces
 (setq-default indent-tabs-mode nil)
 
@@ -265,7 +267,7 @@
 ;theme
 ;(load-theme 'solarized-dark t)
 ;(color-theme-dark-laptop)
-(color-theme-arjen)
+
 ;(color-theme-charcoal-black)
 ;(color-theme-jsc-dark)
 
