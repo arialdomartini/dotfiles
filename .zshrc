@@ -6,7 +6,7 @@ antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle arialdomartini/oh-my-git
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
-antigen-bundle felixr/docker-zsh-completion
+antigen-bundle docker
 antigen-apply
 
 #PATH=~/.pyenv/shims:/usr/local/bin:/usr/local/sbin:$PATH
