@@ -26,7 +26,7 @@ zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
-export EDITOR=emacs
+export EDITOR=e
 
 # pip cache
 export PIP_DOWNLOAD_CACHE="$HOME/.pipcache"
@@ -42,7 +42,7 @@ alias .....="cd ../../../.."
 
 # apps
 alias g="git"
-alias e="emacsclient"
+alias e="emacsclient -c -a \"\""
 alias ee="emacs"
 alias estart="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
 alias estop="e -e '(kill-emacs)'"
