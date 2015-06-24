@@ -76,7 +76,7 @@
    browse-kill-ring
    powerline
 ;   color-theme-solarized
-   go-mode
+   dockerfile-mode
 ))
 
 ;; Package manager and packages handler
