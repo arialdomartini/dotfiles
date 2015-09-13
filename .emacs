@@ -25,17 +25,6 @@
 
 ;; Package managers
 
-; marmalade
-(require 'package)
-(add-to-list 'package-archives 
-    '("marmalade" .
-      "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives 
-    '("melpa" . 
-      "http://melpa.milkbox.net/packages/") t)
-(package-initialize)
-
-
 ;; el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
@@ -71,11 +60,10 @@
    multiple-cursors
    elixir
    erlang-mode
-;   highlight-indentation
    expand-region
    browse-kill-ring
    powerline
-;   color-theme-solarized
+   solarized-emacs
    dockerfile-mode
 ))
 
@@ -135,16 +123,10 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 
-;(highlight-indentation-mode)
-;(set-face-background 'highlight-indentation-face "#222")
-;(set-face-background 'highlight-indentation-current-column-face "#955")
-;(add-hook 'prog-mode-hook #'highlight-indentation-mode)
 
 (require 'expand-region)
 (global-set-key (kbd "ESC <up>") 'er/expand-region)
 (global-set-key (kbd "ESC <down>") 'er/contract-region)
-
-(require 'go-mode)
 
 ; multiple-cursors
 (require 'mouse)
@@ -171,7 +153,6 @@
 (custom-set-faces
  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
   '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
-(color-theme-charcoal-black)
 ; always indent using spaces
 (setq-default indent-tabs-mode nil)
 
@@ -200,7 +181,7 @@
 
 ; highlight line mode
 (global-hl-line-mode 1)
-(set-face-background 'highlight "#333")
+(set-face-background 'hl-line "#303530")
 (set-face-foreground 'highlight nil)
 (set-face-underline-p 'highlight nil)
 
@@ -265,8 +246,9 @@
 
 
 ;theme
-;(load-theme 'solarized-dark t)
-;(color-theme-dark-laptop)
+(load-theme 'solarized-dark t)
+(custom-set-faces (if (not window-system) '(default ((t (:background "nil"))))))
+
 
 ;(color-theme-charcoal-black)
 ;(color-theme-jsc-dark)
@@ -281,3 +263,6 @@
 
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
+
+(setq mac-command-modifier nil)
+(setq mac-option-modifier 'meta)
