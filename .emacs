@@ -176,18 +176,14 @@
 (eval-when-compile
   (require 'cl))
 (global-set-key (kbd "C-x C-j") 'ace-jump-word-mode)
-(global-set-key (kbd "C-M-j") 'ace-jump-word-mode)
 (global-set-key (kbd "C-x j") 'ace-jump-char-mode)
 
 ; highlight line mode
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "#303530")
-(set-face-foreground 'highlight nil)
-(set-face-underline-p 'highlight nil)
 
 
 ; mak file are seen as html
-
 (add-to-list 'auto-mode-alist '("\\.mak\\'" . html-mode))
 
 ; You can now switch windows by pressing S-<left>, S-<right>, S-<up>, S-<down> (on OS X S is ctrl+shift)
@@ -249,9 +245,6 @@
 (load-theme 'solarized-dark t)
 (custom-set-faces (if (not window-system) '(default ((t (:background "nil"))))))
 
-
-;(color-theme-charcoal-black)
-;(color-theme-jsc-dark)
 
 ; Fullscreen
 (defun toggle-fullscreen ()
