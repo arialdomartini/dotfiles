@@ -66,6 +66,7 @@
    solarized-emacs
    dockerfile-mode
    magit
+   groovy-emacs-mode
 ))
 
 ;; Package manager and packages handler
