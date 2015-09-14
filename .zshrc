@@ -42,7 +42,7 @@ alias .....="cd ../../../.."
 
 # apps
 alias g="git"
-alias e="emacsclient -c -a \"\""
+alias e="emacsclient -n "
 alias ee="emacs"
 alias estart="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
 alias estop="e -e '(kill-emacs)'"

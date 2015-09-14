@@ -259,3 +259,5 @@
 
 (setq mac-command-modifier nil)
 (setq mac-option-modifier 'meta)
+
+(server-start)
