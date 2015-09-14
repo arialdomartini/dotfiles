@@ -65,6 +65,7 @@
    powerline
    solarized-emacs
    dockerfile-mode
+   magit
 ))
 
 ;; Package manager and packages handler
