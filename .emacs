@@ -67,6 +67,7 @@
    dockerfile-mode
    magit
    groovy-emacs-mode
+   markdown-mode
 ))
 
 ;; Package manager and packages handler
