@@ -59,5 +59,12 @@
       <autogen>__SimultaneousKeyPresses__ KeyCode::I, KeyCode::O, KeyCode::COMMAND_R</autogen>
       <autogen>__SimultaneousKeyPresses__ KeyCode::W, KeyCode::E, KeyCode::COMMAND_L</autogen>
     </item>
+    <item>
+      <name>ESC as a key chord</name>
+      <appendix>Multiple keys acting as the ESC key</appendix>
+      <appendix>(A+: to ESC)</appendix>
+      <identifier>remap.gould_esc</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::A, KeyCode::SEMICOLON, KeyCode::ESCAPE</autogen>
+    </item>
   </item>
 </root>
