@@ -111,6 +111,10 @@ dockerkillall() {
     docker rm $(docker ps -a -q)
 }
 
+dockerenv() {
+    eval "$(docker-machine env default)"
+}
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export GOPATH=/Users/arialdomartini/prg/go

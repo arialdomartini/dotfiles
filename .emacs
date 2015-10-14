@@ -68,7 +68,6 @@
    magit
    groovy-emacs-mode
    markdown-mode
-   which-key
 ))
 
 ;; Package manager and packages handler
@@ -146,11 +145,6 @@
 (require 'smex)
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
-
-; which-key
-(require 'which-key)
-(which-key mode)
-
 
 ; powerline
 (require 'powerline)
