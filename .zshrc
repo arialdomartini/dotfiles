@@ -111,12 +111,12 @@ dockerkillall() {
     docker rm $(docker ps -a -q)
 }
 
-denvs() {
-    eval "$(docker-machine env --swarm $1)"
+denv() {
+    eval "$(docker-machine env $1)"
 }
 
-dockerenv() {
-    eval "$(docker-machine env default)"
+denvs() {
+    eval "$(docker-machine env --swarm $1)"
 }
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
