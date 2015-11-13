@@ -111,6 +111,10 @@ dockerkillall() {
     docker rm $(docker ps -a -q)
 }
 
+denv() {
+    eval "$(docker-machine env $1)"
+}
+
 dockerenv() {
     eval "$(docker-machine env default)"
 }
