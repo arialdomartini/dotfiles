@@ -111,8 +111,8 @@ dockerkillall() {
     docker rm $(docker ps -a -q)
 }
 
-denv() {
-    eval "$(docker-machine env $1)"
+denvs() {
+    eval "$(docker-machine env --swarm $1)"
 }
 
 dockerenv() {
