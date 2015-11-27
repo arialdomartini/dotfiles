@@ -27,6 +27,7 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
 export EDITOR=e
+export GIT_EDITOR=e
 
 # pip cache
 export PIP_DOWNLOAD_CACHE="$HOME/.pipcache"
