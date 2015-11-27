@@ -68,6 +68,7 @@
    magit
    groovy-emacs-mode
    markdown-mode
+   undo-tree
 ))
 
 ;; Package manager and packages handler
@@ -170,6 +171,8 @@
     (setq python-indent 4)
     (setq tab-width 4)))
 
+
+(global-undo-tree-mode 1)
 
 ; bs-show
 (global-set-key (kbd "C-x C-m") 'bs-show)
