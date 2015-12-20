@@ -24,8 +24,10 @@
       <name>Return as a key chord</name>
       <appendix>Multiple keys acting as the Return key</appendix>
       <appendix>(F+J to return)</appendix>
+      <appendix>(E+R to return)</appendix>
       <identifier>remap.gould_return</identifier>
       <autogen>__SimultaneousKeyPresses__ KeyCode::F, KeyCode::J, KeyCode::RETURN</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::E, KeyCode::R, KeyCode::RETURN</autogen>
     </item>
     <item>
       <name>Backspace as a key chord</name>
