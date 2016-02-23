@@ -31,7 +31,7 @@
     </item>
     <item>
       <name>Backspace as a key chord</name>
-      <appendix>Multiple keys acting as the Return key</appendix>
+      <appendix>Multiple keys acting as the backspace key</appendix>
       <appendix>(E+R to backspace)</appendix>
       <identifier>remap.gould_backspace</identifier>
       <autogen>__SimultaneousKeyPresses__ KeyCode::E, KeyCode::R, KeyCode::DELETE</autogen>
