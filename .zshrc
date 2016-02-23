@@ -113,7 +113,7 @@ dockerkillall() {
 }
 
 denv() {
-    eval "$(docker-machine env $1)"
+    eval "$(docker-machine env ${1:=default})"
 }
 
 denvs() {
