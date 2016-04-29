@@ -1,13 +1,20 @@
 #!/bin/sh
 
+declare -a files=(".zshrc", ".emacs", ".gitconfig", ".gitignore-global", "gradle.properties")
+
 function install() {
-    cp .zshrc ~/.zshrc
-    cp .emacs ~/.emacs
-    cp .gitconfig ~/.gitconfig
-    cp .gitignore-global ~/.gitignore-global
+    for i in "${files[@]}"
+    do
+        ln -fs ./$i $HOME/$i
+    done
+
 }
 
-echo "Your current .zshrc, .emacs, .gitconfig and .gitignore-global will be overwritten"
+echo "Files that will be overwritten:"
+for i in "${files[@]}"
+do
+    echo "./$i => $HOME/$i"
+done
 read -p "Are you sure (y/n)? " reply
 
 if [[ $reply = "y" ]];
