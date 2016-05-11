@@ -6,6 +6,7 @@ antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle arialdomartini/oh-my-git
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
+antigen-bundle Tarrasch/zsh-bd
 antigen-bundle docker
 antigen-apply
 
@@ -40,7 +41,7 @@ alias ..="cd ..;ll"
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-
+alias upto=bd
 # apps
 alias g="git"
 alias e="emacsclient -n "
