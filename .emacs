@@ -69,6 +69,7 @@
    groovy-emacs-mode
    markdown-mode
    undo-tree
+   browse-kill-ring
 ))
 
 ;; Package manager and packages handler
@@ -159,6 +160,9 @@
 ; always indent using spaces
 (setq-default indent-tabs-mode nil)
 
+;browse-kill-ring
+(global-set-key "\C-cy" 'browse-kill-ring)
+
 ; tabs are 4 chars
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -172,7 +176,7 @@
     (setq tab-width 4)))
 
 
-(global-undo-tree-mode 1)
+(global-undo-tree-mode 0)
 
 ; bs-show
 (global-set-key (kbd "C-x C-m") 'bs-show)
