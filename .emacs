@@ -151,6 +151,10 @@
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
 
+; zap up to char
+(require 'misc)
+(global-set-key (kbd "M-z") 'zap-up-to-char)
+
 ; powerline
 (require 'powerline)
 (setq powerline-arrow-shape 'arrow)   ;; the default
