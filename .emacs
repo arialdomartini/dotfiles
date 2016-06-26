@@ -8,6 +8,9 @@
 ; enable narrowing
 (put 'narrow-to-region 'disabled nil)
 
+; desktop mode for saving sessions; use desktop-read to recover the previous session
+(desktop-save-mode 1)
+
 ; backups in .saves
 (setq backup-directory-alist `(("." . "~/.saves")))
 (setq backup-by-copying t)
