@@ -113,6 +113,10 @@ dockerkillall() {
     docker rm $(docker ps -a -q)
 }
 
+dockerremovestopped() {
+    docker rm $(docker ps -qa --filter="status=exited")
+}
+
 denv() {
     eval "$(docker-machine env ${1:=default})"
 }
