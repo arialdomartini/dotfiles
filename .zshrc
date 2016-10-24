@@ -30,6 +30,8 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 export EDITOR=emacs
 export GIT_EDITOR=emacs
 
+export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
+
 # pip cache
 export PIP_DOWNLOAD_CACHE="$HOME/.pipcache"
 mkdir -p ${PIP_DOWNLOAD_CACHE}
