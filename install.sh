@@ -1,11 +1,11 @@
 #!/bin/sh
 
-declare -a files=(".zshrc", ".emacs", ".gitconfig", ".gitignore-global", "gradle.properties")
+declare -a files=(".zshrc", ".emacs", ".gitconfig", ".gitignore-global", "gradle.properties", ".tmux.conf")
 
 function install() {
     for i in "${files[@]}"
     do
-        ln -fs ./$i $HOME/$i
+        ln -fs `pwd -P`/$i ~/$i
     done
 
 }
