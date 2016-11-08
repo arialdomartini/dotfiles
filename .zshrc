@@ -132,3 +132,5 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export GOPATH=/Users/arialdomartini/prg/go
 export PATH=$PATH:$GOPATH/bin
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
