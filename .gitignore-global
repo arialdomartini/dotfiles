@@ -1,4 +1,13 @@
-# Idea files
+# emacs temporary files
+\#*\#
+\.\#*
 
-.idea/**
+# Idea files
+.idea
 *.iml
+
+# Visual Studio and NCrunch
+*.ncrunchproject
+*.ncrunchsolution
+*.crunchsolution.cache
+*.userprefs
