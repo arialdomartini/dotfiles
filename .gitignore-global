@@ -14,9 +14,6 @@
 
 # IntelliJ Idea
 .idea/**
+**/.idea/**
 *.iml
-
-# Emacs files
-\#*\#
-\.\#*
 
