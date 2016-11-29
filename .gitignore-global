@@ -17,3 +17,8 @@
 **/.idea/**
 *.iml
 
+# NCrunch
+**.ncrunchsolution.user
+**.ncrunchproject
+**.ncrunchsolution
+**.crunchsolution.cache
