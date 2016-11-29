@@ -22,3 +22,6 @@
 **.ncrunchproject
 **.ncrunchsolution
 **.crunchsolution.cache
+
+# Visual Studio
+*.DotSettings.user
