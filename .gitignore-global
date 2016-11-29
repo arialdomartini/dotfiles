@@ -11,3 +11,12 @@
 *.ncrunchsolution
 *.crunchsolution.cache
 *.userprefs
+
+# IntelliJ Idea
+.idea/**
+*.iml
+
+# Emacs files
+\#*\#
+\.\#*
+
