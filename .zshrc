@@ -71,7 +71,7 @@ alias -g L="|less"
 alias f="fg"
 alias j="jobs"
 
-alias fuck='sudo $(history -p \!\!)'
+eval "$(thefuck --alias)"
 
 # cd into a directory, then list it
 
