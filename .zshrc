@@ -37,6 +37,10 @@ export PIP_DOWNLOAD_CACHE="$HOME/.pipcache"
 mkdir -p ${PIP_DOWNLOAD_CACHE}
 export LANG=en_US.UTF-8
 
+# java
+JAVA_HOME=$(dirname $( readlink -f $(which java) ))
+JAVA_HOME=$(realpath "$JAVA_HOME"/../)
+export JAVA_HOME
 
 ## Aliases
 alias ..="cd ..;ll"
@@ -131,6 +135,5 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export GOPATH=/Users/arialdomartini/prg/go
 export PATH=$PATH:$GOPATH/bin
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
