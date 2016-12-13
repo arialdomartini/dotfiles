@@ -25,3 +25,7 @@
 
 # Visual Studio
 *.DotSettings.user
+
+
+# Personal notes
+__notes__.*
