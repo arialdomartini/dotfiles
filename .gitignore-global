@@ -1,3 +1,6 @@
+# macOS stuff
+**/.DS_Store
+
 # emacs temporary files
 \#*\#
 \.\#*
@@ -11,6 +14,7 @@
 *.ncrunchsolution
 *.crunchsolution.cache
 *.userprefs
+*.DotSettings.user
 
 # IntelliJ Idea
 .idea/**
@@ -22,9 +26,6 @@
 **.ncrunchproject
 **.ncrunchsolution
 **.crunchsolution.cache
-
-# Visual Studio
-*.DotSettings.user
 
 
 # Personal notes
