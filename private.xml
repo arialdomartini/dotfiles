@@ -21,13 +21,22 @@
       <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::L, KeyCode::OPTION_L</autogen>
     </item>
     <item>
-      <name>CMD + alt as a key chord</name>
-      <appendix>Multiple keys acting as the CMD key</appendix>
-      <appendix>(X+V to ALT_L + CMD_L)</appendix>
-      <appendix>(M+. to ALT_R + CMD_R)</appendix>
+      <name>CMD + ALT as a key chord</name>
+      <appendix>Multiple keys acting as the CMD+ALT key</appendix>
+      <appendix>(W+R to ALT_L + CMD_L)</appendix>
+      <appendix>(O+U to ALT_R + CMD_R)</appendix>
       <identifier>remap.gould_command_alt</identifier>
-      <autogen>__SimultaneousKeyPresses__ KeyCode::X, KeyCode::V, KeyCode::COMMAND_L, ModifierFlag::OPTION_L</autogen>
-      <autogen>__SimultaneousKeyPresses__ KeyCode::M, KeyCode::DOT, KeyCode::COMMAND_R, ModifierFlag::OPTION_R</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::W, KeyCode::R, KeyCode::COMMAND_L, ModifierFlag::OPTION_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::O, KeyCode::U, KeyCode::COMMAND_R, ModifierFlag::OPTION_R</autogen>
+    </item>
+    <item>
+      <name>CMD + SHIFT as a key chord</name>
+      <appendix>Multiple keys acting as the CMD+SHIFT key</appendix>
+      <appendix>(W+F to SHIFT_L + CMD_L)</appendix>
+      <appendix>(O+J to SHIFT_R + CMD_R)</appendix>
+      <identifier>remap.gould_cmd_shift</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::W, KeyCode::F, KeyCode::COMMAND_R, ModifierFlag::SHIFT_R</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::O, KeyCode::J, KeyCode::COMMAND_R, ModifierFlag::SHIFT_R</autogen>
     </item>
     <item>
       <name>Return as a key chord</name>
