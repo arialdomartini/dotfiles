@@ -1,6 +1,6 @@
 #!/bin/sh
 
-declare -a files=(".zshrc", ".emacs", ".gitconfig", ".gitignore-global", "gradle.properties", ".tmux.conf")
+declare -a files=(".zshrc", ".emacs", ".spacemacs", ".gitconfig", ".gitignore-global", "gradle.properties", ".tmux.conf")
 
 function install() {
     for i in "${files[@]}"
