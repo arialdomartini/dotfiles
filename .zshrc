@@ -1,11 +1,7 @@
-source "$HOME/.antigen/antigen.zsh"
+source "/usr/local/antigen/antigen.zsh"
 
-antigen use oh-my-zsh
-#antigen-bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
-antigen bundle arialdomartini/oh-my-git
-antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
 antigen bundle Tarrasch/zsh-bd
 antigen bundle docker
 antigen apply
@@ -72,7 +68,7 @@ alias -g L="|less"
 alias f="fg"
 alias j="jobs"
 
-eval "$(thefuck --alias)"
+#eval "$(thefuck --alias)"
 
 # cd into a directory, then list it
 
@@ -136,3 +132,7 @@ export GOPATH=/Users/arialdomartini/prg/go
 export PATH=$PATH:$GOPATH/bin
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+export HISTFILE=/Users/arialdomartini/.zsh_history
+export SAVEHIST=9999999
+export HISTSIZE=9999999
