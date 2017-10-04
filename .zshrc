@@ -1,14 +1,14 @@
 source "$HOME/.antigen/antigen.zsh"
 
-antigen-use oh-my-zsh
+antigen use oh-my-zsh
 #antigen-bundle git
-antigen-bundle zsh-users/zsh-syntax-highlighting
-antigen-bundle zsh-users/zsh-history-substring-search
-antigen-bundle arialdomartini/oh-my-git
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle arialdomartini/oh-my-git
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
-antigen-bundle Tarrasch/zsh-bd
-antigen-bundle docker
-antigen-apply
+antigen bundle Tarrasch/zsh-bd
+antigen bundle docker
+antigen apply
 
 #PATH=~/.pyenv/shims:/usr/local/bin:/usr/local/sbin:$PATH
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
