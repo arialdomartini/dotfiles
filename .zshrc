@@ -10,8 +10,6 @@ antigen bundle Tarrasch/zsh-bd
 antigen bundle docker
 antigen apply
 
-#PATH=~/.pyenv/shims:/usr/local/bin:/usr/local/sbin:$PATH
-PATH=/usr/local/bin:/usr/local/sbin:$PATH
 autoload -U colors && colors
 VIRTUAL_ENV_DISABLE_PROMPT=true
 function omg_prompt_callback() {
