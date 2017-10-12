@@ -81,8 +81,11 @@ alias j="jobs"
 
 #eval "$(thefuck --alias)"
 
-# cd into a directory, then list it
+function l() {
+    ls -la;
+}
 
+# cd into a directory, then list it
 function c() {
     cd $1
     l
