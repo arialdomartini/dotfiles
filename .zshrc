@@ -6,6 +6,21 @@ antigen bundle Tarrasch/zsh-bd
 antigen bundle docker
 antigen apply
 
+# zsh-history-substring-search
+# Bind up, down, C-p and C-n to zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+
+
+# Enable oh-my-git with oppa-lana-style theme
+setopt prompt_subst
+source ~/prg/bash/oh-my-git-themes/spectrum.zsh
+source ~/prg/bash/oh-my-git/base.sh
+source ~/prg/bash/oh-my-git-themes/oppa-lana-style.zsh-theme
+
+
 autoload -U colors && colors
 VIRTUAL_ENV_DISABLE_PROMPT=true
 function omg_prompt_callback() {
@@ -16,10 +31,6 @@ function omg_prompt_callback() {
 #omg_second_line='%~ •'
 omg_ungit_prompt="%~ • "
 
-# bind UP and DOWN arrow keys
-zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
 
 export EDITOR=emacs
 export GIT_EDITOR=emacs
