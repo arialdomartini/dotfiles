@@ -4,7 +4,11 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle Tarrasch/zsh-bd
 antigen bundle docker
+antigen bundle psprint/history-search-multi-word
+source .antigen/bundles/psprint/history-search-multi-word/history-search-multi-word.plugin.zsh
 antigen apply
+
+
 
 # zsh-history-substring-search
 # Bind up, down, C-p and C-n to zsh-history-substring-search
@@ -152,3 +156,6 @@ export LC_ALL=en_US.UTF-8
 export HISTFILE=/Users/arialdomartini/.zsh_history
 export SAVEHIST=9999999
 export HISTSIZE=9999999
+zstyle ':completion:*' menu select=1 ''
+zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)(?)*==02=01}:${(s.:.)LS_COLORS}")'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
