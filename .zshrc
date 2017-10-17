@@ -79,6 +79,8 @@ alias -g L="|less"
 alias f="fg"
 alias j="jobs"
 
+alias do=docker
+
 #eval "$(thefuck --alias)"
 
 function l() {
