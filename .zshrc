@@ -79,7 +79,7 @@ alias -g L="|less"
 alias f="fg"
 alias j="jobs"
 
-alias do=docker
+alias k=docker
 
 #eval "$(thefuck --alias)"
 
