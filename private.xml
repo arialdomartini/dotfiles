@@ -21,6 +21,15 @@
       <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::L, KeyCode::OPTION_L</autogen>
     </item>
     <item>
+      <name>Alt + Shift as a key chord</name>
+      <appendix>Multiple keys acting as the Alt + Shift key</appendix>
+      <appendix>(S+V to ALT_L)</appendix>
+      <appendix>(L+N to ALT_R)</appendix>
+      <identifier>remap.gould_alt_shift</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::S, KeyCode::V, KeyCode::OPTION_L, ModifierFlag::SHIFT_L</autogen>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::L, KeyCode::N, KeyCode::OPTION_L, ModifierFlag::SHIFT_R</autogen>
+    </item>
+    <item>
       <name>CMD + ALT as a key chord</name>
       <appendix>Multiple keys acting as the CMD+ALT key</appendix>
       <appendix>(W+R to ALT_L + CMD_L)</appendix>
