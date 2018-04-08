@@ -316,7 +316,15 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  ;; ace jump
   (global-set-key (kbd "C-;") 'ace-jump-word-mode)
+
+  ;; indent guides
+  (setq indent-guide-delay 0.0)
+  (indent-guide-global-mode)
+  (set-face-foreground 'indent-guide-face "dimgray")
+
+  ;; misc
   (global-set-key (kbd "M-y") 'helm-show-kill-ring)
   )
 
