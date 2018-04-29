@@ -337,6 +337,11 @@ you should place your code here."
 
   ;; misc
   (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+
+
+  ;; Emacs Server
+  ;; raise the focu to emacs frame when emacsclient is invoked
+  (add-hook 'server-switch-hook (lambda () (select-frame-set-input-focus (selected-frame))))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
