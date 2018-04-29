@@ -320,9 +320,20 @@ you should place your code here."
   (global-set-key (kbd "C-;") 'ace-jump-word-mode)
 
   ;; indent guides
-  (setq indent-guide-delay 0.0)
-  (indent-guide-global-mode)
-  (set-face-foreground 'indent-guide-face "dimgray")
+  ;;(setq indent-guide-delay 0.0)
+  ;;(indent-guide-global-mode)
+  ;;(set-face-foreground 'indent-guide-face "dimgray")
+  ;;(highlight-indent-guide)
+
+
+  ;; highlight indent guide
+  ;;(spacemacs/toggle-highlight-indentation-on)
+  ;;(set-face-background 'highlight-indentation-face "#e3e3d3")
+  (add-hook 'prog-mode-hook 'spacemacs/toggle-highlight-indentation-on)
+  (set-face 'highlight-indentation-face)
+;;(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+  ;(setq highlight-indent-guides-method 'fill)
+
 
   ;; misc
   (global-set-key (kbd "M-y") 'helm-show-kill-ring)
