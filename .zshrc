@@ -4,8 +4,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle Tarrasch/zsh-bd
 antigen bundle docker
-antigen bundle psprint/history-search-multi-word
-source .antigen/bundles/psprint/history-search-multi-word/history-search-multi-word.plugin.zsh
 antigen apply
 
 
@@ -20,7 +18,6 @@ bindkey -M emacs '^N' history-substring-search-down
 
 # Enable oh-my-git with oppa-lana-style theme
 setopt prompt_subst
-source ~/prg/bash/oh-my-git-themes/spectrum.zsh
 source ~/prg/bash/oh-my-git/base.sh
 source ~/prg/bash/oh-my-git-themes/oppa-lana-style.zsh-theme
 
