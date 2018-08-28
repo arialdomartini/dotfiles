@@ -55,7 +55,7 @@ alias .....="cd ../../../.."
 alias upto=bd
 # apps
 alias g="git"
-alias e="emacsclient -n "
+alias e="emacsclient -c "
 alias ee="emacs"
 alias estart="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
 alias estop="e -e '(kill-emacs)'"
@@ -150,7 +150,7 @@ export PATH=$PATH:$GOPATH/bin
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export HISTFILE=/Users/arialdomartini/.zsh_history
+export HISTFILE=~/.zsh_history
 export SAVEHIST=9999999
 export HISTSIZE=9999999
 zstyle ':completion:*' menu select=1 ''
