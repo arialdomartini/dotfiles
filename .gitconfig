@@ -18,6 +18,9 @@
 	co = commit -m
 	go = checkout
 
+	# List all the branches
+	branches = branch -a
+
 	# Show an ascii tree of the current branch
 	tr = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %C(cyan)<%an>%Creset %Cgreen(%cd)' --abbrev-commit --date=relative
 
