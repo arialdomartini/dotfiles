@@ -55,8 +55,13 @@ alias .....="cd ../../../.."
 alias upto=bd
 # apps
 alias g="git"
-alias e="emacsclient -c "
-alias ee="emacs"
+
+# Emacs in a new frame
+alias e="emacsclient -c --no-wait"
+
+# Emacs in the terminal
+alias ee="emacsclient -ct"
+
 alias estart="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
 alias estop="e -e '(kill-emacs)'"
 
