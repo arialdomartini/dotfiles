@@ -319,7 +319,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ;; ace jump
   (global-set-key (kbd "C-;") 'ace-jump-word-mode)
-
+  (global-set-key (kbd "C-x g") 'magit-status)
   ;; indent guides
   ;;(setq indent-guide-delay 0.0)
   ;;(indent-guide-global-mode)
