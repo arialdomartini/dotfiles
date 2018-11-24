@@ -1,4 +1,4 @@
-source "/usr/local/antigen/antigen.zsh"
+source /usr/share/zsh/share/antigen.zsh
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
@@ -29,8 +29,8 @@ function omg_prompt_callback() {
         echo "%F{white}(`basename ${VIRTUAL_ENV}`)%f "
     fi
 }
-#omg_second_line='%~ •'
-omg_ungit_prompt="%~ • "
+omg_second_line='%~ '
+omg_ungit_prompt="%~ "
 
 
 export EDITOR=emacs
@@ -48,7 +48,7 @@ JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/Current/
 export JAVA_HOME
 
 ## Aliases
-alias ..="cd ..;ll"
+alias ..="cd ..;l"
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
@@ -58,6 +58,7 @@ alias g="git"
 
 # Emacs in a new frame
 alias e="emacsclient -c --no-wait"
+alias et="emacsclient -t"
 
 # Emacs in the terminal
 alias ee="emacsclient -ct"
@@ -90,8 +91,10 @@ alias k=docker
 #eval "$(thefuck --alias)"
 
 function l() {
-    ls -la;
+    ls -l --all --color -p -h;
 }
+
+alias ls="ls -p --color"
 
 # cd into a directory, then list it
 function c() {
