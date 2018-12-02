@@ -29,8 +29,8 @@ function omg_prompt_callback() {
         echo "%F{white}(`basename ${VIRTUAL_ENV}`)%f "
     fi
 }
-omg_second_line='%~ '
-omg_ungit_prompt="%~ "
+omg_second_line='%~\n$'
+omg_ungit_prompt="%~\n$"
 
 
 export EDITOR=emacs
@@ -91,7 +91,7 @@ alias k=docker
 #eval "$(thefuck --alias)"
 
 function l() {
-    ls -l --all --color -p -h;
+    ls -lAph --color;
 }
 
 alias ls="ls -p --color"
