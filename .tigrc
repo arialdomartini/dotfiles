@@ -1,0 +1,28 @@
+# settings
+set commit-order = topo
+set diff-highlight = true
+set main-view	= line-number:no,interval=5 id:yes date:custom,format="%y%m%d %H:%M" author:email-user commit-title:yes,graph=v1,refs,overflow=no
+
+set line-graphics = utf-8
+
+# colors
+color date			27	default
+color cursor		22  green
+color graph-commit	33	default
+
+color main-tag			red	default
+color main-local-tag	magenta	default
+color main-remote		cyan default
+color main-ref			black default
+color main-head			red default bold
+color main-tracked		39 default
+color diff-stat			33 default
+
+color "index "			cyan default
+color "@@"				cyan default
+color "commit "			black default
+color "Refs: "			cyan default
+color "Author: "		cyan default
+color "AuthorDate: "	cyan default
+color "Commit: "		cyan default
+color "CommitDate: " cyan default
