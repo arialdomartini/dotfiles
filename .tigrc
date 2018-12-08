@@ -7,13 +7,13 @@ set line-graphics = utf-8
 
 # colors
 color date			27	default
-color cursor		22  green
+color cursor		black  green
 color graph-commit	33	default
 
 color main-tag			red	default
 color main-local-tag	magenta	default
 color main-remote		cyan default
-color main-ref			black default
+color main-ref			yellow default
 color main-head			red default bold
 color main-tracked		39 default
 color diff-stat			33 default
