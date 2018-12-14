@@ -1,4 +1,4 @@
 dotfiles
 ========
 
-Just my [Mac OS X] dot files
+Just my macOS and Linux dot files
