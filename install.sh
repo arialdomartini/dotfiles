@@ -8,6 +8,7 @@ function install() {
         ln -fs `pwd -P`/$i ~/$i
     done
 
+    ln -fs `pwd -P`/karabiner.json ~/.config/karabiner/karabiner.json
 }
 
 echo "Files that will be overwritten:"
@@ -15,6 +16,9 @@ for i in "${files[@]}"
 do
     echo "./$i => $HOME/$i"
 done
+
+echo "./karabiner.json => ~/.config/karabiner.json"
+
 read -p "Are you sure (y/n)? " reply
 
 if [[ $reply = "y" ]];
