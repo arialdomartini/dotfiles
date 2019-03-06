@@ -4,6 +4,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle Tarrasch/zsh-bd
 antigen bundle docker
+antigen bundle zsh-users/zsh-autosuggestions
 antigen apply
 
 
