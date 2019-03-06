@@ -17,7 +17,6 @@
 	ui = true
 
 [alias]
-	co = commit -m
 	go = checkout
 
 	# List all the branches
@@ -40,7 +39,7 @@
 	bl = blame -wMC
 
 	# Undo
-	undo = reset --soft HEAD^
+	undo = !"git reset -- . && git checkout -- . && git status"
 
 	# Stand-up! Shows a list of what I worked on yesterday so I can be prepared for my stand-up meeting.
 	standup = "!git log --since yesterday  --author `git config user.email` --pretty=oneline"
@@ -66,9 +65,6 @@
 	# amend the last commit, using the same commit message
 	amend = commit --amend -C HEAD
 
-    # commit with message
-    c = commit -m
-
 	# lists the files I'm about to commit
 	this = diff --cached --name-only
 	thisv = diff --cached --stat
@@ -76,8 +72,14 @@
 	# show the list of the last committed files
 	last = diff-tree --no-commit-id --name-only HEAD
 
-    fetchpl = "!f() { git fetch $1 refs/pull/$2/head; }; f"
-    getpl = "!f() { git fetch $1 +refs/pull/$2/head:refs/remotes/origin/pr/$2; }; f"
+  fetchpl = "!f() { git fetch $1 refs/pull/$2/head; }; f"
+	getpl = "!f() { git fetch $1 +refs/pull/$2/head:refs/remotes/origin/pr/$2; }; f"
+
+	# merge a branch like a pull request
+	mergepr = merge --no-ff
+
+	# fast-forward merge
+	ff = merge --ff
 [mergetool]
 	keepBackup = true
 [push]
