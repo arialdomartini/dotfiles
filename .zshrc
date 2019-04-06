@@ -45,8 +45,7 @@ mkdir -p ${PIP_DOWNLOAD_CACHE}
 export LANG=en_US.UTF-8
 
 # java
-JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/Current/
-export JAVA_HOME
+export JAVA_HOME=/usr/lib/jvm/default
 
 ## Aliases
 alias ..="cd ..;l"
