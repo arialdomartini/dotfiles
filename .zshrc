@@ -92,7 +92,7 @@ alias k=docker
 #eval "$(thefuck --alias)"
 
 function l() {
-    ls -lAph --color;
+    lsd -l
 }
 
 alias ls="ls -p --color"
