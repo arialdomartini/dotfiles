@@ -1,6 +1,6 @@
 # settings
 set commit-order = topo
-set diff-highlight = true
+set diff-highlight = false
 set main-view	= line-number:no,interval=5 id:yes date:custom,format="%y%m%d %H:%M" author:email-user commit-title:yes,graph=v1,refs,overflow=no
 
 set line-graphics = utf-8
