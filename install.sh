@@ -1,17 +1,18 @@
 #!/bin/bash
 
-declare -a files=(".zshrc" ".gitconfig" ".gitignore-global" "gradle.properties" ".tmux.conf" ".config/i3/config" ".tigrc" ".emacs.d")
+declare -a files=(".zshrc" ".gitconfig" ".gitignore-global" "gradle.properties" ".tmux.conf" ".config/i3/config" ".tigrc")
+
+PWD=`pwd -P`
 
 function install() {
     for i in "${files[@]}"
     do
-        ln -fs `pwd -P`/$i ~/$i
+        ln -fs $PWD/$i ~/$i
     done
+
+    mkdir -p ~/.emacs.d
+    ln -fs $PWD/.emacs.d/init.el ~/.emacs.d/init.el
 }
 
-read -p "Are you sure (y/n)? " reply
+$(install)
 
-if [[ $reply = "y" ]];
-then
-    $(install)
-fi
