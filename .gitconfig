@@ -44,7 +44,7 @@
 	# Stand-up! Shows a list of what I worked on yesterday so I can be prepared for my stand-up meeting.
 	standup = "!git log --since yesterday  --author `git config user.email` --pretty=oneline"
 
-	# Prints a list of all files ignored
+	# Prints a list of all ignored files
 	ignored = ls-files --others -i --exclude-standard
 
 	# List all available aliases
@@ -65,7 +65,10 @@
 	# amend the last commit, using the same commit message
 	amend = commit --amend -C HEAD
 	amends = !git add . && git amend
-	
+
+        # reset the current branch to the previous commit
+        back = reset --hard HEAD~1
+
 	# lists the files I'm about to commit
 	this = diff --cached --name-only
 	thisv = diff --cached --stat
@@ -73,7 +76,7 @@
 	# show the list of the last committed files
 	last = diff-tree --no-commit-id --name-only HEAD
 
-  fetchpl = "!f() { git fetch $1 refs/pull/$2/head; }; f"
+        fetchpl = "!f() { git fetch $1 refs/pull/$2/head; }; f"
 	getpl = "!f() { git fetch $1 +refs/pull/$2/head:refs/remotes/origin/pr/$2; }; f"
 
 	# merge a branch like a pull request
