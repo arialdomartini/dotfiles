@@ -22,7 +22,7 @@
   ("M-x" . counsel-M-x)
   ("C-x C-f" . counsel-find-file)
   ("C-c k" . counsel-ag)
-  ("C-x b" . counsel-ibuffer))
+  ("C-x b" . counsel-switch-buffer))
 
 ;; enable swiper
 (global-set-key "\C-s" 'swiper)
