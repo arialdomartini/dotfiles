@@ -16,6 +16,16 @@
 ;; packages
 (use-package better-defaults)
 (use-package magit)
+(use-package counsel
+  :ensure t
+  :bind
+  ("M-x" . counsel-M-x)
+  ("C-x C-f" . counsel-find-file)
+  ("C-c k" . counsel-ag))
+
+;; enable swiper
+(global-set-key "\C-s" 'swiper)
+
 
 ;; No Splash screen
 (setq inhibit-spash-screen t)
