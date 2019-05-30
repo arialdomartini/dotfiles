@@ -15,6 +15,7 @@
 
 ;; packages
 (use-package better-defaults)
+(use-package magit)
 
 ;; No Splash screen
 (setq inhibit-spash-screen t)
