@@ -26,7 +26,7 @@
 
 ;; enable swiper
 (global-set-key "\C-s" 'swiper)
-
+(setq ivy-height 40)
 
 ;; No Splash screen
 (setq inhibit-spash-screen t)
