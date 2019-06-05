@@ -37,3 +37,7 @@
 
 (toggle-frame-fullscreen)
 (load-theme 'deeper-blue)
+
+
+;; set tabs to 4 spaces
+(setq c-basic-offset 4)
