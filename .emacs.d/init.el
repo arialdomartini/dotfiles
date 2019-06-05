@@ -33,3 +33,4 @@
 (setq inhibit-startup-screen t)
 
 (toggle-frame-fullscreen)
+(load-theme 'deeper-blue)
