@@ -23,6 +23,9 @@
   ("C-x C-f" . counsel-find-file)
   ("C-c k" . counsel-ag)
   ("C-x b" . counsel-switch-buffer))
+(use-package markdown-mode)
+(use-package solidity-mode)
+
 
 ;; enable swiper
 (global-set-key "\C-s" 'swiper)
