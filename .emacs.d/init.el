@@ -22,13 +22,15 @@
   ("M-x" . counsel-M-x)
   ("C-x C-f" . counsel-find-file)
   ("C-c k" . counsel-ag)
-  ("C-x b" . counsel-switch-buffer))
+  ("C-x b" . counsel-switch-buffer)
+  ("C-s" . swiper))
 (use-package markdown-mode)
 (use-package solidity-mode)
+(use-package ace-jump-mode
+  :bind
+  ("C-;" . ace-jump-word-mode))
 
-
-;; enable swiper
-(global-set-key "\C-s" 'swiper)
+;; ivy swiper
 (setq ivy-height 40)
 
 ;; No Splash screen
@@ -41,3 +43,4 @@
 
 ;; set tabs to 4 spaces
 (setq c-basic-offset 4)
+
