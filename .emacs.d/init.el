@@ -3,6 +3,11 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
+;; save Custom settings in a separate file
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+   (when (file-exists-p custom-file)
+       (load custom-file))
+
 ;; install use-package
 (unless (package-installed-p 'use-package)
   (progn
@@ -15,7 +20,9 @@
 
 ;; packages
 (use-package better-defaults)
-(use-package magit)
+(use-package magit
+  :bind
+  ("C-x g" . magit-status))
 (use-package counsel
   :ensure t
   :bind
@@ -29,7 +36,9 @@
 (use-package ace-jump-mode
   :bind
   ("C-;" . ace-jump-word-mode))
-
+(use-package switch-window
+  :bind
+  ("C-x o" . switch-window))
 ;; ivy swiper
 (setq ivy-height 40)
 
@@ -43,4 +52,3 @@
 
 ;; set tabs to 4 spaces
 (setq c-basic-offset 4)
-
