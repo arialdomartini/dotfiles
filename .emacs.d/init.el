@@ -43,7 +43,7 @@
   :bind
   ("C-x o" . switch-window))
 ;; ivy swiper
-(setq ivy-height 40)
+(setq ivy-height 25)
 
 ;; No Splash screen
 (setq inhibit-spash-screen t)
