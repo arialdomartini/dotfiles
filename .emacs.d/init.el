@@ -49,6 +49,11 @@
 (toggle-frame-fullscreen)
 (load-theme 'deeper-blue)
 
+;; increase the minibuffer font
+(add-hook 'minibuffer-setup-hook 'set-minibuffer-font)
+(defun set-minibuffer-font ()
+       (set (make-local-variable 'face-remapping-alist)
+          '((default :height 1.5))))
 
 ;; set tabs to 4 spaces
 (setq c-basic-offset 4)
