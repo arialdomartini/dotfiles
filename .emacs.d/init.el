@@ -31,6 +31,9 @@
   ("C-c k" . counsel-ag)
   ("C-x b" . counsel-switch-buffer)
   ("C-s" . swiper))
+(use-package ivy-prescient
+  :config
+  (ivy-prescient-mode 1))
 (use-package markdown-mode)
 (use-package solidity-mode)
 (use-package ace-jump-mode
