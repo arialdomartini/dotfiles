@@ -19,7 +19,6 @@
 (setq use-package-always-ensure t)
 
 ;; packages
-(use-package better-defaults)
 (use-package magit
   :bind
   ("C-x g" . magit-status))
@@ -45,12 +44,27 @@
 ;; ivy swiper
 (setq ivy-height 25)
 
+
+;; zap-up-to-char
+(autoload 'zap-up-to-char
+  "misc"  "Kill up to, but not including ARGth occurrence of CHAR." t)
+(global-set-key (kbd "M-z") 'zap-up-to-char)
+
+
+;; set tabs to 4 spaces
+(setq c-basic-offset 4)
+(setq-default indent-tabs-mode nil)
+
+(show-paren-mode 1)
+
+;; always prefer y-n over yes-no
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+
+;; Layout
 ;; No Splash screen
 (setq inhibit-spash-screen t)
 (setq inhibit-startup-screen t)
-
-(toggle-frame-fullscreen)
-(load-theme 'deeper-blue)
 
 ;; increase the minibuffer font
 (add-hook 'minibuffer-setup-hook 'set-minibuffer-font)
@@ -58,5 +72,10 @@
        (set (make-local-variable 'face-remapping-alist)
           '((default :height 1.5))))
 
-;; set tabs to 4 spaces
-(setq c-basic-offset 4)
+(toggle-frame-fullscreen)
+(load-theme 'deeper-blue)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(horizontal-scroll-bar-mode -1)
+
