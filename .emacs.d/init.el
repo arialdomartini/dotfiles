@@ -72,10 +72,18 @@
        (set (make-local-variable 'face-remapping-alist)
           '((default :height 1.5))))
 
+
 (toggle-frame-fullscreen)
 (load-theme 'deeper-blue)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (horizontal-scroll-bar-mode -1)
+
+
+;; Kill buffer
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
+
+;; set tabs to 4 spaces
+(setq c-basic-offset 4)
 
