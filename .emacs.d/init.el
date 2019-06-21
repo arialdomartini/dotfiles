@@ -28,7 +28,7 @@
   ("M-x" . counsel-M-x)
   ("C-x C-f" . counsel-find-file)
   ("C-c k" . counsel-ag)
-  ("C-x b" . counsel-switch-buffer)
+  ("C-x b" . counsel-ibuffer)
   ("C-s" . swiper))
 (use-package ivy-prescient
   :config
