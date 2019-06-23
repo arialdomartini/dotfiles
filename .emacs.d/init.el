@@ -34,6 +34,7 @@
   :config
   (ivy-prescient-mode 1))
 (use-package markdown-mode)
+(use-package haskell-mode)
 (use-package solidity-mode)
 (use-package ace-jump-mode
   :bind
