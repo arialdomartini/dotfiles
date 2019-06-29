@@ -39,6 +39,13 @@
 (use-package ace-jump-mode
   :bind
   ("C-;" . ace-jump-word-mode))
+
+(use-package ace-jump-zap
+  :config
+  (setq ajz/zap-function 'kill-region)
+  :bind
+  ("M-;" . ace-jump-zap-to-char))
+
 (use-package switch-window
   :bind
   ("C-x o" . switch-window))
