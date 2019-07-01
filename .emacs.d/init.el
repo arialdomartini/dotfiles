@@ -50,6 +50,18 @@
   ("M-;" . ace-jump-zap-to-char))
 
 
+(use-package multiple-cursors
+  :bind
+  ("C->" . mc/mark-next-like-this)
+  ("C-S->" . mc/mark-all-words-like-this)
+
+  )
+
+(use-package expand-region
+  :bind
+  ("C-=" . er/expand-region)
+  ("C-+" . er/contract-region))
+
 (use-package switch-window
   :bind
   ("C-x o" . switch-window))
