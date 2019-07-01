@@ -36,15 +36,19 @@
 (use-package markdown-mode)
 (use-package haskell-mode)
 (use-package solidity-mode)
+
 (use-package ace-jump-mode
   :bind
-  ("C-;" . ace-jump-word-mode))
-
+  ("C-;" . ace-jump-word-mode)
+  :config
+  (setq ace-jump-mode-move-keys
+        '(?j ?f ?k ?d ?l ?s ?a ?h ?g ?u ?r ?i ?e ?o ?w ?p ?q ?y ?t ?m ?v ?, ?c ?. ?x ?/ ?z ?n ?b ?7 ?4 ?8 ?3 ?9 ?2 ?0 ?1 ?6 ?5)))
 (use-package ace-jump-zap
   :config
   (setq ajz/zap-function 'kill-region)
   :bind
   ("M-;" . ace-jump-zap-to-char))
+
 
 (use-package switch-window
   :bind
