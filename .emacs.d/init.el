@@ -3,6 +3,15 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
+;; backup files
+(setq
+   backup-by-copying t
+   backup-directory-alist '(("." . "~/.saves/"))
+   delete-old-versions t
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t)
+
 ;; save Custom settings in a separate file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
    (when (file-exists-p custom-file)
