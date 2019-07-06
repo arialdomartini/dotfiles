@@ -53,9 +53,7 @@
 (use-package multiple-cursors
   :bind
   ("C->" . mc/mark-next-like-this)
-  ("C-S->" . mc/mark-all-words-like-this)
-
-  )
+  ("C-S->" . mc/mark-all-words-like-this))
 
 (use-package expand-region
   :bind
