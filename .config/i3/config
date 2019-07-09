@@ -4,9 +4,17 @@
 
 set $mod Mod4
 
+# Don’t treat Plasma pop-ups as full-sized windows
+for_window [class="plasmashell"] floating enable
+
+# Don’t spawn an empty window for the Plasma Desktop
+for_window [title="Desktop — Plasma"] kill, floating enable, border none
+
+
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 12
+font pango:monospace 14
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -146,7 +154,7 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+#bar {
+#        status_command i3status
+#}
 
