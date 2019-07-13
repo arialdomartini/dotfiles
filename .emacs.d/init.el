@@ -28,6 +28,9 @@
 (setq use-package-always-ensure t)
 
 ;; packages
+;; guide-key
+(use-package which-key)
+
 (use-package magit
   :bind
   ("C-x g" . magit-status))
@@ -117,4 +120,3 @@
 
 ;; set tabs to 4 spaces
 (setq c-basic-offset 4)
-
