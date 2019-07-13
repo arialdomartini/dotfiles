@@ -76,7 +76,7 @@
   :bind
   ("C-x o" . switch-window))
 ;; ivy swiper
-(setq ivy-height 25)
+(setq ivy-height 15)
 
 
 ;; zap-up-to-char
@@ -104,7 +104,7 @@
 (add-hook 'minibuffer-setup-hook 'set-minibuffer-font)
 (defun set-minibuffer-font ()
        (set (make-local-variable 'face-remapping-alist)
-          '((default :height 1.5))))
+          '((default :height 2.5))))
 
 
 (toggle-frame-fullscreen)
