@@ -49,18 +49,16 @@
 (use-package haskell-mode)
 (use-package solidity-mode)
 
-(use-package ace-jump-mode
+(use-package avy
   :bind
-  ("C-;" . ace-jump-word-mode)
-  :config
-  (setq ace-jump-mode-move-keys
-        '(?j ?f ?k ?d ?l ?s ?a ?h ?g ?u ?r ?i ?e ?o ?w ?p ?q ?y ?t ?m ?v ?, ?c ?. ?x ?/ ?z ?n ?b ?7 ?4 ?8 ?3 ?9 ?2 ?0 ?1 ?6 ?5)))
-(use-package ace-jump-zap
-  :config
-  (setq ajz/zap-function 'kill-region)
-  :bind
-  ("M-;" . ace-jump-zap-to-char))
+  ("C-;" . avy-goto-word-or-subword-1)
+  ("C-c j l" . avy-goto-line)
+  ("C-c j c" . avy-goto-char)
+  )
 
+(use-package avy-zap
+  :bind
+  ("M-;" . avy-zap-to-char))
 
 (use-package multiple-cursors
   :bind
