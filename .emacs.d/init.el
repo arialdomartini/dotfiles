@@ -32,7 +32,18 @@
 ;; guide-key
 (use-package which-key
   :config
-  (which-key-mode))
+  (which-key-mode)
+  (which-key-setup-side-window-bottom)
+  (set-face-attribute 'which-key-key-face nil :height 1.6)
+  (set-face-attribute 'which-key-separator-face nil :height 1.6)
+  (set-face-attribute 'which-key-note-face nil :height 1.6)
+  (set-face-attribute 'which-key-command-description-face nil :height 1.6)
+  (set-face-attribute 'which-key-group-description-face nil :height 1.6))
+
+
+;;(setq which-key-max-description-length nil)
+;;(setq which-key-max-display-columns 4)
+(setq which-key-side-window-max-width 0.90)
 
 (use-package magit
   :bind
