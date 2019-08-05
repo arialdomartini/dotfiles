@@ -30,7 +30,9 @@
 
 ;; packages
 ;; guide-key
-(use-package which-key)
+(use-package which-key
+  :config
+  (which-key-mode))
 
 (use-package magit
   :bind
