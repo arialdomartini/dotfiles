@@ -27,6 +27,7 @@
     (require 'use-package)))
 (setq use-package-always-ensure t)
 
+
 ;; packages
 ;; guide-key
 (use-package which-key)
@@ -34,6 +35,7 @@
 (use-package magit
   :bind
   ("C-x g" . magit-status))
+
 (use-package counsel
   :ensure t
   :bind
@@ -42,6 +44,7 @@
   ("C-c k" . counsel-ag)
   ("C-x b" . counsel-ibuffer)
   ("C-s" . swiper))
+
 (use-package ivy-prescient
   :config
   (ivy-prescient-mode 1))
@@ -75,6 +78,13 @@
   ("C-x o" . switch-window))
 ;; ivy swiper
 (setq ivy-height 15)
+
+;; save-place
+(use-package saveplace
+  :config
+  (setq save-place-file "~/.emacs.d/saveplace")
+  (setq-default save-place t))
+
 
 
 ;; zap-up-to-char
