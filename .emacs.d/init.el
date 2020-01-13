@@ -64,6 +64,7 @@
 (use-package markdown-mode)
 (use-package haskell-mode)
 (use-package solidity-mode)
+(use-package go-mode)
 
 (use-package avy
   :bind
