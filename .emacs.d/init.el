@@ -142,3 +142,6 @@
 
 ;; set tabs to 4 spaces
 (setq c-basic-offset 4)
+
+;; enable the possibility to navigate in dired using "a"
+(put 'dired-find-alternate-file 'disabled nil)
