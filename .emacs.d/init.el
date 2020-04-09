@@ -55,7 +55,7 @@
   ("M-x" . counsel-M-x)
   ("C-x C-f" . counsel-find-file)
   ("C-c k" . counsel-ag)
-  ("C-x b" . counsel-ibuffer)
+  ("C-x b" . counsel-switch-buffer)
   ("C-s" . swiper))
 
 (use-package ivy-prescient
@@ -64,7 +64,6 @@
 (use-package markdown-mode)
 (use-package haskell-mode)
 (use-package solidity-mode)
-(use-package go-mode)
 
 (use-package avy
   :bind

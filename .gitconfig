@@ -23,7 +23,7 @@
 	branches = branch -a
 
 	# Show an ascii tree of the current branch
-	tr = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %C(cyan)<%an>%Creset %Cgreen(%cd)' --abbrev-commit --date=relative
+	tr = log --graph --pretty=format:'%C(yellow)%d%Creset %s %C(cyan)<%an>%Creset %Cgreen(%cd) %Cred%h%Creset' --abbrev-commit --date=relative
 
 	# Show an ascii tree of all branches
 	tra = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %C(cyan)<%an>%Creset %Cgreen(%cd)' --abbrev-commit --date=relative --all
@@ -55,8 +55,8 @@
 
 	# Running gitk in the background
 	k = !gitk&
-	kk = !gitk --all&
-	ka = !git kk
+	kk = !gitk --all --simplify-by-decoration&
+	ka = !gitk --all&
 
 	# Rename a branch
 	rename-current-branch = "!f() { current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout --quiet -b $1 && git branch --quiet -d $current_branch; }; f "
