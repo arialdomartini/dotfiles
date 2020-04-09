@@ -49,14 +49,17 @@
   :bind
   ("C-x g" . magit-status))
 
-(use-package counsel
+(use-package ivy
   :ensure t
   :bind
   ("M-x" . counsel-M-x)
   ("C-x C-f" . counsel-find-file)
   ("C-c k" . counsel-ag)
   ("C-x b" . counsel-switch-buffer)
-  ("C-s" . swiper))
+  ("C-s" . swiper)
+  :config
+  (setq ivy-use-virtualbuffers t
+        ivy-count-format "%d/%d "))
 
 (use-package ivy-prescient
   :config
