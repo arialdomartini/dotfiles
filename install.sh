@@ -12,6 +12,9 @@ function install() {
 
     mkdir -p ~/.emacs.d
     ln -fs $PWD/.emacs.d/init.el ~/.emacs.d/init.el
+
+    mkdir -p ~/.screenlayout/
+    ln -fs $PWD/.screenlayout/dual-screen.sh ~/.screenlayout
 }
 
 $(install)
