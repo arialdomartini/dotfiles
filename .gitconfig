@@ -6,7 +6,6 @@
 	autocrlf = false
 	editor = emacs
 	excludesfile = ~/.gitignore-global
-
 [diff]
 	MnemonicPrefix = true
 
@@ -88,3 +87,5 @@
 	keepBackup = true
 [push]
 	default = simple
+[rebase]
+	autosquash = true
