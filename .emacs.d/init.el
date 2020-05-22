@@ -131,7 +131,7 @@
           '((default :height 2.5))))
 
 
-(toggle-frame-fullscreen)
+;; (toggle-frame-fullscreen)
 (load-theme 'deeper-blue)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
