@@ -219,3 +219,5 @@ exec_always --no-startup-id ~/.screenlayout/dual-screen.sh
 bindsym $mod+z exec xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Accel Speed" 0.8
 bindsym $mod+x exec xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Accel Speed" 0.3
 bindsym $mod+c exec xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Accel Speed" 0.01
+
+bindsym $mod+Shift+s exec gnome-screenshot --interactive
