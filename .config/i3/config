@@ -52,10 +52,10 @@ floating_modifier $mod
 bindsym $mod+Return exec konsole
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+k kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec "rofi -combi-modi drun, run -show combi -modi combi -show-icons -font Fira\ Code\ 20"
+bindsym $mod+j exec "rofi -combi-modi drun, run -show combi -modi combi -show-icons -font Fira\ Code\ 20"
 bindsym $mod+Shift+d exec "rofi -show window -font Fira\ Code\ 20"
 
 
