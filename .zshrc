@@ -1,59 +1,71 @@
-source /usr/share/zsh/share/antigen.zsh
+#+BEGIN_SRC PowerLevel10k
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-history-substring-search
-antigen bundle Tarrasch/zsh-bd
-antigen bundle docker
-antigen bundle zsh-users/zsh-autosuggestions
-antigen apply
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#+END_SRC
+
+#+BEGIN_SRC Activate zinit
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+fi
+
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+zpcompinit; zpcdreplay
 
 
+if [ `tput colors` = "256" ]; then
+	zinit light romkatv/powerlevel10k
+fi
+#+END_SRC
 
-# zsh-history-substring-search
-# Bind up, down, C-p and C-n to zsh-history-substring-search
+#+BEGIN_SRC Plugins
+zinit light zsh-users/zsh-completions
+zinit snippet OMZ::lib/history.zsh
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit light Aloxaf/fzf-tab
+zinit light Tarrasch/zsh-bd
+
+zinit snippet $HOME/.fzf.zsh
+
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=true
+zinit light zsh-users/zsh-history-substring-search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
 
-
-# Enable oh-my-git with oppa-lana-style theme
-setopt prompt_subst
-source ~/prg/bash/oh-my-git/base.sh
-source ~/prg/bash/oh-my-git-themes/oppa-lana-style.zsh-theme
+zstyle ':fzf-tab:complete:_zlua:*' query-string input
 
 
-autoload -U colors && colors
-VIRTUAL_ENV_DISABLE_PROMPT=true
-function omg_prompt_callback() {
-    if [ -n "${VIRTUAL_ENV}" ]; then
-        echo "%F{white}(`basename ${VIRTUAL_ENV}`)%f "
-    fi
-}
-omg_second_line='%~\n$'
-omg_ungit_prompt="%~\n$"
+zinit light zsh-users/zsh-autosuggestions
 
+# those should stay last
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma/fast-syntax-highlighting
+#+END_SRC
 
-export EDITOR=emacs
-export GIT_EDITOR=emacs
+#+BEGIN_SRC Aliases
+alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
-export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
+alias tree='broot'
+alias grep='rg'
+alias find='fd'
 
-# pip cache
-export PIP_DOWNLOAD_CACHE="$HOME/.pipcache"
-mkdir -p ${PIP_DOWNLOAD_CACHE}
-export LANG=en_US.UTF-8
-
-# java
-export JAVA_HOME=/usr/lib/jvm/default
-
-## Aliases
 alias ..="cd ..;l"
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias upto=bd
-# apps
+
 alias g="git"
 
 # Emacs in a new frame
@@ -68,25 +80,15 @@ alias estop="e -e '(kill-emacs)'"
 
 alias p="python"
 
-
 # python
 alias act="source bin/activate"
 
 # git
-alias gg="git checkout"
-alias feat="git checkout -b"
-alias stage="git add"
-alias undo="git checkout -- ."
 alias h="git log --oneline"
-alias d='git diff'
-
 alias -g L="|less"
-
 
 alias f="fg"
 alias j="jobs"
-
-alias k=docker
 
 #eval "$(thefuck --alias)"
 
@@ -149,18 +151,39 @@ denvs() {
     eval "$(docker-machine env --swarm $1)"
 }
 
+#+END_SRC
+
+#+BEGIN_SRC  Environment variables
+
+export HISTFILE=~/.zsh_history
+export SAVEHIST=9999999
+export HISTSIZE=9999999
+
+export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+export EDITOR=emacs
+export VISUAL=emacs
+
+
+export LANG=en_US.UTF-8
+
+export EDITOR=emacs
+export GIT_EDITOR=emacs
+
+export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
+
+
+export JAVA_HOME=/usr/lib/jvm/default
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-export GOPATH=/Users/arialdomartini/prg/go
-export PATH=$PATH:$GOPATH/bin
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export HISTFILE=~/.zsh_history
 export SAVEHIST=9999999
 export HISTSIZE=9999999
-zstyle ':completion:*' menu select=1 ''
-zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)(?)*==02=01}:${(s.:.)LS_COLORS}")'
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+export LS_COLORS="$(vivid generate solarized-dark)"
+
+#+END_SRC
