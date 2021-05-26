@@ -51,12 +51,15 @@ zinit light zsh-users/zsh-autosuggestions
 # those should stay last
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
+zinit load wfxr/forgit
+
 #+END_SRC
 
 #+BEGIN_SRC Aliases
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
 alias tree='broot'
+
 alias grep='rg'
 alias find='fd'
 
