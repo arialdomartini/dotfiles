@@ -44,7 +44,7 @@ bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
 
 zstyle ':fzf-tab:complete:_zlua:*' query-string input
-
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 zinit light zsh-users/zsh-autosuggestions
 
@@ -188,5 +188,6 @@ export SAVEHIST=9999999
 export HISTSIZE=9999999
 
 export LS_COLORS="$(vivid generate solarized-dark)"
+export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 #+END_SRC
