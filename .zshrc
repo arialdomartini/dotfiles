@@ -33,6 +33,7 @@ zinit snippet OMZ::lib/history.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit light Aloxaf/fzf-tab
 zinit light Tarrasch/zsh-bd
+zinit light https://github.com/felixr/docker-zsh-completion
 
 zinit snippet $HOME/.fzf.zsh
 
