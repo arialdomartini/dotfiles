@@ -38,6 +38,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
+#
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -221,3 +222,6 @@ bindsym $mod+x exec xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Ac
 bindsym $mod+c exec xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Accel Speed" 0.01
 
 bindsym $mod+Shift+s exec gnome-screenshot --interactive
+
+
+exec_always --no-startup-id xinput --set-prop "DLL075B:01 06CB:76AF Touchpad" "libinput Accel Speed" .5
