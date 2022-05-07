@@ -11,7 +11,7 @@ fi
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
     command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.zinit/bin" && \
         print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
         print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
@@ -31,11 +31,11 @@ fi
 zinit light zsh-users/zsh-completions
 zinit snippet OMZ::lib/history.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit snippet OMZP::fzf
 zinit light Aloxaf/fzf-tab
 zinit light Tarrasch/zsh-bd
 zinit light https://github.com/felixr/docker-zsh-completion
 
-zinit snippet $HOME/.fzf.zsh
 
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=true
 zinit light zsh-users/zsh-history-substring-search
