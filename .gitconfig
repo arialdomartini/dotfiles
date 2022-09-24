@@ -6,6 +6,13 @@
 	autocrlf = false
 	editor = emacs
 	excludesfile = ~/.gitignore-global
+	pager = delta
+
+[delta]
+    navigate = true # use n and N to move between diff sections
+    light = false
+	side-by-side = true
+
 [diff]
 	MnemonicPrefix = true
 
@@ -17,6 +24,8 @@
 
 [alias]
 	go = checkout
+
+	c = "!f() { git commit -m \"$1\"; }; f"
 
 	# List all the branches
 	branches = branch -a
@@ -38,10 +47,10 @@
 	bl = blame -wMC
 
 	# Undo
-	undo = !"git reset -- . && git checkout -- . && git status"
+	undo = !git reset -- . && git checkout -- . && git status
 
 	# Stand-up! Shows a list of what I worked on yesterday so I can be prepared for my stand-up meeting.
-	standup = "!git log --since yesterday  --author `git config user.email` --pretty=oneline"
+	standup = !git log --since yesterday  --author `git config user.email` --pretty=oneline
 
 	# Prints a list of all ignored files
 	ignored = ls-files --others -i --exclude-standard
@@ -85,7 +94,7 @@
 	ff = merge --ff
 
         # fixup
-	fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && GIT_SEQUENCE_EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
+	fixup = "!f() { TARGET=$(git rev-parse $1); git commit --fixup=$TARGET ${@:2} && GIT_SEQUENCE_EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
 
 [mergetool]
 	keepBackup = true
@@ -93,3 +102,5 @@
 	default = simple
 [rebase]
 	autosquash = true
+[pull]
+	rebase = true
