@@ -94,6 +94,8 @@ alias -g L="|less"
 alias f="fg"
 alias j="jobs"
 
+alias s="kitty +kitten ssh"
+
 #eval "$(thefuck --alias)"
 
 function l() {
