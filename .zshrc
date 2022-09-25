@@ -183,6 +183,7 @@ export JAVA_HOME=/usr/lib/jvm/default
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin
 export PATH=$PATH:/usr/bin/vendor_perl
+export PATH=$PATH:/home/arialdo/.ghcup/bin/:/home/arialdo/.cabal/bin
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
