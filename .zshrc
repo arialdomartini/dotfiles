@@ -118,6 +118,8 @@ m() {
 
 alias tree="nocorrect tree"
 
+alias hoogle="hoogle --info"
+
 w() {
     clear &&  git branch && echo && git status --short --untracked-files=all --branch
 }
@@ -194,5 +196,3 @@ export HISTSIZE=9999999
 
 export LS_COLORS="$(vivid generate solarized-dark)"
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
-
-#+END_SRC
