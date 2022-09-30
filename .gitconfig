@@ -8,6 +8,9 @@
 	excludesfile = ~/.gitignore-global
 	pager = delta
 
+[status]
+	showUntrackedFiles = all
+
 [delta]
     navigate = true # use n and N to move between diff sections
     light = false
