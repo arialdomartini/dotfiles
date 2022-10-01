@@ -18,6 +18,8 @@
 
 [diff]
 	MnemonicPrefix = true
+	#external = difft
+	guitool = kdiff3
 
 #[format]
 #	pretty = oneline
@@ -28,7 +30,7 @@
 [alias]
 	go = checkout
 
-	c = "!f() { git commit -m \"$1\"; }; f"
+	c = "!f() { git commit -am \"$1\"; }; f"
 
 	# List all the branches
 	branches = branch -a
@@ -107,3 +109,9 @@
 	autosquash = true
 [pull]
 	rebase = true
+
+[merge]
+	tool = kdiff3
+
+[difftool]
+	prompt = false
