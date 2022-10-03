@@ -114,16 +114,16 @@ set $lg DP1
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1  terminal"
-set $ws2 "2 𝓔 emacs"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6 "
-set $ws7 "7  browser"
-set $ws8 "8 λ coding"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "1 🐙"
+set $ws2 "2 ✌"
+set $ws3 "3 🐀"
+set $ws4 "4 🍎"
+set $ws5 "5 😾"
+set $ws6 "6 🍷"
+set $ws7 "7 🦊"
+set $ws8 "8 𝓔"
+set $ws9 "9 👻"
+set $ws10 "10 🔥"
 
 workspace $ws1 output $laptop $lg
 workspace $ws2 output $laptop $lg
