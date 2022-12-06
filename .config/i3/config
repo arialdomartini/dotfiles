@@ -22,7 +22,7 @@ workspace_auto_back_and_forth no
 # class                 border  backgr. text    indicator child_border
 client.focused          #4c7899 #557744 #ffffff #2e9ef4   #285577
 client.unfocused        #333333 #112211 #445544 #292d2e   #222222
-client.focused_inactive #333333 #223311 #66776 6#484e50   #5f676a
+client.focused_inactive #333333 #223311 #667766 #484e50   #5f676a
 
 bindsym $mod+semicolon exec i3-easyfocus --all --font "-bitstream-bitstream vera sans mono-medium-r-normal--100-0-0-0-m-0-ascii-0"
 
