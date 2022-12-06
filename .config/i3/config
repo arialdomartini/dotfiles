@@ -20,7 +20,7 @@ hide_edge_borders smart
 workspace_auto_back_and_forth no
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #557744 #ffffff #2e9ef4   #285577
+client.focused          #4c7899 #557744 #ffffff #2e9ef4   #555555
 client.unfocused        #333333 #112211 #445544 #292d2e   #222222
 client.focused_inactive #333333 #223311 #667766 #484e50   #5f676a
 
@@ -232,3 +232,4 @@ bindsym $mod+Shift+s exec gnome-screenshot --interactive
 exec_always --no-startup-id xinput --set-prop "DLL075B:01 06CB:76AF Touchpad" "libinput Accel Speed" .5
 
 for_window [all] title_window_icon yes
+for_window [all] border pixel 2
