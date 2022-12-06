@@ -230,3 +230,5 @@ bindsym $mod+Shift+s exec gnome-screenshot --interactive
 
 
 exec_always --no-startup-id xinput --set-prop "DLL075B:01 06CB:76AF Touchpad" "libinput Accel Speed" .5
+
+for_window [all] title_window_icon yes
