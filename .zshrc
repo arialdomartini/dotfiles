@@ -54,6 +54,9 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 zinit load wfxr/forgit
 
+
+eval "$(direnv hook zsh)"
+
 #+END_SRC
 
 #+BEGIN_SRC Aliases
