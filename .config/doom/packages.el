@@ -11,7 +11,7 @@
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
-;; https://github.com/raxod502/straight.el#the-recipe-format
+;; https://github.com/radian-software/straight.el#the-recipe-format
 ;(package! another-package
 ;  :recipe (:host github :repo "username/repo"))
 
@@ -34,13 +34,12 @@
 
 ;; Specify a `:branch' to install a package from a particular branch or tag.
 ;; This is required for some packages whose default branch isn't 'master' (which
-;; our package manager can't deal with; see raxod502/straight.el#279)
+;; our package manager can't deal with; see radian-software/straight.el#279)
 ;(package! builtin-package :recipe (:branch "develop"))
 
 ;; Use `:pin' to specify a particular commit to install.
 ;(package! builtin-package :pin "1a2b3c4d5e")
-;;(package! haskell-mode)
-;;(package! lsp-haskell)
+
 
 ;; Doom's packages are pinned to a specific commit and updated from release to
 ;; release. The `unpin!' macro allows you to unpin single packages...
@@ -50,13 +49,10 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! gitconfig-mode
-	  	  :recipe (:host github :repo "magit/git-modes"
-				 			 :files ("gitconfig-mode.el")))
-(package! gitignore-mode
-	  	  :recipe (:host github :repo "magit/git-modes"
-				 			 :files ("gitignore-mode.el")))
 
-;;(package! switch-window)
-;;(global-set-key (kbd "C-x o") 'switch-window)
-;;(setq switch-window-shortcut-style 'qwerty)
+(package! gitconfig-mode
+  :recipe (:host github :repo "magit/git-modes"
+           :files ("gitconfig-mode.el")))
+(package! gitignore-mode
+  :recipe (:host github :repo "magit/git-modes"
+           :files ("gitignore-mode.el")))
