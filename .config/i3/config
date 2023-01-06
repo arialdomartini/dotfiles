@@ -10,8 +10,11 @@ bindsym $mod+Shift+u exec setxkbmap us
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Terminus 18
-#font pango:DejaVu Sans Mono 18
+# font pango:Inconsolata 20
+#font pango:3270Medium Nerd Font 28
+#font pango:Source Code Pro 29
+font pango:Terminus 16
+#font pango:Lilex Nerd Font, FontAwesome 30
 
 workspace_layout tabbed
 title_align left
@@ -56,7 +59,7 @@ bindsym $mod+Return exec konsole
 bindsym $mod+Shift+k kill
 
 # start dmenu (a program launcher)
-bindsym $mod+j exec "rofi -combi-modi drun, run -show combi -modi combi -show-icons -font Fira\ Code\ 20"
+bindsym $mod+j exec "rofi -combi-modi drun, run -show combi -modi combi -show-icons -font Lilex\ Nerd\ Font\ 24"
 bindsym $mod+k exec "rofi -show window -font Fira\ Code\ 20"
 
 
@@ -119,8 +122,9 @@ set $lg DP1
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1 🐙"
-set $ws2 "2 ✌"
+# This requires the package noto-color-emoji-fontconfig
+set $ws1 "1 🐛 "
+set $ws2 "2 🍄"
 set $ws3 "3 🐀"
 set $ws4 "4 🍎"
 set $ws5 "5 😾"
@@ -212,7 +216,9 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+   # font pango:Source Sans Pro, FontAwesome 50
+   font pango:Noto Sans, 16
+   status_command i3status
 }
 
 # Keyboard delay and repeat rate
