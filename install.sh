@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -a files=(".zshrc" ".gitconfig" ".gitignore-global" "gradle.properties" ".tmux.conf" ".config/i3/config" ".config/alacritty/alacritty.yml" ".tigrc")
+declare -a files=(".zshrc" ".gitconfig" ".gitignore-global" "gradle.properties" ".tmux.conf" ".config/i3/config" ".config/alacritty/alacritty.yml" ".config/i3status/config"  ".tigrc")
 
 PWD=`pwd -P`
 
