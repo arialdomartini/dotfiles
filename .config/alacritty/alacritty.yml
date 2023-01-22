@@ -1,3 +1,7 @@
+# cloned from https://github.com/alacritty/alacritty-theme
+import:
+  - ~/.config/alacritty/alacritty-colorscheme/themes/solarized_dark.yaml
+
 #env:
   #TERM: alacritty
 
@@ -21,7 +25,8 @@ font:
   normal:
     # Default:
     #   - (Linux/BSD) monospace
-    family: "Inconsolata"
+    # family: "Inconsolata"
+    family: "MesloLGS NF"
 
   size: 15.0
 
