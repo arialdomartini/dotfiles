@@ -1,6 +1,11 @@
 # cloned from https://github.com/alacritty/alacritty-theme
 import:
+# - ~/.config/alacritty/alacritty-colorscheme/themes/tango_dark.yaml
   - ~/.config/alacritty/alacritty-colorscheme/themes/solarized_dark.yaml
+#  - ~/.config/alacritty/alacritty-colorscheme/themes/city_lights.yaml
+#  - ~/.config/alacritty/alacritty-colorscheme/themes/doom_one.yaml
+#  - ~/.config/alacritty/alacritty-colorscheme/themes/gruvbox_material.yaml
+#  - ~/.config/alacritty/alacritty-colorscheme/themes/horizon_dark.yaml
 
 #env:
   #TERM: alacritty
@@ -9,7 +14,7 @@ window:
   title: Alacritty
 
   # Allow terminal applications to change Alacritty's window title.
-  dynamic_title: true
+  dynamic_title: false
 
   #class:
     #instance: Alacritty
@@ -27,8 +32,9 @@ font:
     #   - (Linux/BSD) monospace
     # family: "Inconsolata"
     family: "MesloLGS NF"
+    #family: "SourceCodePro+Powerline+Awesome Regular"
 
-  size: 15.0
+  size: 20.0
 
   #offset:
   #  x: 0
@@ -39,6 +45,8 @@ font:
 draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
+
+
 colors:
   # Default colors
   #primary:
@@ -62,7 +70,7 @@ colors:
   # affected cell, or hexadecimal colors like #ff00ff.
   cursor:
     text: CellBackground
-    cursor: '#bbffbb'
+#    cursor: '#444444'
 
   # Search colors
   #
@@ -92,26 +100,30 @@ colors:
   #  background: None
 
   # Normal colors
-  #normal:
-  #  black:   '#1d1f21'
-  #  red:     '#cc6666'
-  #  green:   '#b5bd68'
-  #  yellow:  '#f0c674'
-  #  blue:    '#81a2be'
-  #  magenta: '#b294bb'
-  #  cyan:    '#8abeb7'
-  #  white:   '#c5c8c6'
 
-  # Bright colors
-  #bright:
-  #  black:   '#666666'
-  #  red:     '#d54e53'
-  #  green:   '#b9ca4a'
-  #  yellow:  '#e7c547'
-  #  blue:    '#7aa6da'
-  #  magenta: '#c397d8'
-  #  cyan:    '#70c0b1'
-  #  white:   '#eaeaea'
+#    background: '0x2e3436'
+#    foreground: '0xd3d7cf'
+
+  normal:
+#    black: '0x2e3436'
+#    red: '0xcc0000'
+#    green: '0x4e9a06'
+#    yellow: '0xc4a000'
+#    blue: '0x3465a4'
+#    magenta: '0x75507b'
+#    cyan: '0x06989a'
+#    white: '0xd3d7cf'
+
+  bright:
+    black: '0x444743'
+#    red: '0xef2929'
+#    green: '0x8ae234'
+#    yellow: '0xfce94f'
+#    blue: '0x729fcf'
+#    magenta: '0xad7fa8'
+#    cyan: '0x34e2e2'
+#    white: '0xeeeeec'
+
 
 # Bell
 #
@@ -151,7 +163,7 @@ colors:
   #   command:
   #     program: notify-send
   #     args: ["Hello, World!"]
-  #
+
   #command: None
 
 #selection:
@@ -171,7 +183,7 @@ cursor:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    shape: Beam
+    shape: Block
 
     # Cursor blinking state
     #
@@ -180,7 +192,7 @@ cursor:
     #   - Off: Disable blinking by default
     #   - On: Enable blinking by default
     #   - Always: Force the cursor to always blink
-    blinking: Always 
+    blinking: Never
 
   # Cursor blinking interval in milliseconds.
   blink_interval: 250
@@ -199,6 +211,7 @@ live_config_reload: true
 # Shell
 shell:
     program: /usr/bin/zsh
+    #program: /usr/bin/bash
 #  args:
 #    - --login
 
