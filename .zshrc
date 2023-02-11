@@ -186,7 +186,6 @@ export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --
 export JAVA_HOME=/usr/lib/jvm/default
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=$PATH:$HOME/.rvm/bin
 export PATH=$PATH:/usr/bin/vendor_perl
 export PATH=$PATH:/home/arialdo/.ghcup/bin/:/home/arialdo/.cabal/bin
 
@@ -199,3 +198,7 @@ export HISTSIZE=9999999
 
 export LS_COLORS="$(vivid generate solarized-dark)"
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
