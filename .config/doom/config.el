@@ -78,6 +78,7 @@
 
 (global-set-key (kbd "C-s") 'consult-line)
 (global-set-key (kbd "C-;") 'avy-goto-word-or-subword-1)
+(global-set-key (kbd "M-;") 'avy-goto-word-or-subword-1)
 ;; (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 
 
@@ -96,3 +97,5 @@
 
 
 (setq fancy-splash-image (concat doom-private-dir "doomEmacsDracula.svg"))
+(global-visual-line-mode 1)
+(visual-line-mode 1)
