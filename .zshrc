@@ -87,9 +87,6 @@ alias estop="e -e '(kill-emacs)'"
 
 alias p="python"
 
-# python
-alias act="source bin/activate"
-
 # git
 alias h="git log --oneline"
 alias -g L="|less"
