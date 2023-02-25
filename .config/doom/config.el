@@ -99,3 +99,6 @@
 (setq fancy-splash-image (concat doom-private-dir "doomEmacsDracula.svg"))
 (global-visual-line-mode 1)
 (visual-line-mode 1)
+
+; allows C-u C-SPC-SPC-SPC...
+(setq set-mark-command-repeat-pop 1)
