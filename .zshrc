@@ -118,8 +118,6 @@ m() {
 
 alias tree="nocorrect tree"
 
-alias hoogle="hoogle --info"
-
 w() {
     clear &&  git branch && echo && git status --short --untracked-files=all --branch
 }
