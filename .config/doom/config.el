@@ -102,3 +102,6 @@
 
 ; allows C-u C-SPC-SPC-SPC...
 (setq set-mark-command-repeat-pop 1)
+
+
+(setq magit-repository-directories '(("/home/arialdo/prg" . 3)))
