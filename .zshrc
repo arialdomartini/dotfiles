@@ -197,3 +197,5 @@ export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
+
+export HASKELL_LSP_SERVER_ARGS="+RTS -M512m -RTS"
