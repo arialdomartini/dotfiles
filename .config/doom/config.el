@@ -105,3 +105,9 @@
 
 
 (setq magit-repository-directories '(("/home/arialdo/prg" . 3)))
+
+; C-x g to select a Git repository in ido mode
+(add-hook 'ido-setup-hook
+          (lambda ()
+            (define-key ido-completion-map
+              (kbd \"C-x g\") 'ido-enter-magit-status)))
