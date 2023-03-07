@@ -111,3 +111,5 @@
           (lambda ()
             (define-key ido-completion-map
               (kbd \"C-x g\") 'ido-enter-magit-status)))
+
+(global-set-key (kbd "M-z") 'zap-up-to-char)
