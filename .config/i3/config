@@ -223,6 +223,7 @@ bar {
 
 # Keyboard delay and repeat rate
 exec --no-startup-id xset r rate 185 35
+bindsym $mod+o exec xset r rate 185 35
 
 exec --no-startup-id setxkbmap -option ctrl:nocap
 # exec_always --no-startup-id  xrandr --output DVI-D-0 --off --output HDMI-0 --mode 2560x1440 --pos 1600x0 --rotate normal --output DVI-I-1 --mode 1600x900 --pos 0x392 --rotate normal --output DVI-Ir-0 --off --output DP-1 --off --output DP-0 --off
