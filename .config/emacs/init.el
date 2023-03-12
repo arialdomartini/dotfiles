@@ -19,4 +19,6 @@
  kept-old-versions 2
  version-control t)
 
+(set-frame-font "Monoid 20")
+
 
