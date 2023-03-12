@@ -10,11 +10,8 @@ function install() {
         ln -fs $PWD/$i ~/$i
     done
 
-    mkdir -p ~/.doom.d
-    ln -fs $PWD/.doom.d/config.el ~/.doom.d/config.el
-    ln -fs $PWD/.doom.d/custom.el ~/.doom.d/custom.el
-    ln -fs $PWD/.doom.d/init.el ~/.doom.d/init.el
-    ln -fs $PWD/.doom.d/packages.el ~/.doom.d/packages.el
+    mkdir -p ~/.config/emacs
+    ln -fs $PWD/.config/emacs/init.el ~/.config/emacs/init.el
 
     mkdir -p ~/.screenlayout/
     ln -fs $PWD/.screenlayout/dual-screen.sh ~/.screenlayout
