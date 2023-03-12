@@ -11,6 +11,7 @@ function install() {
     done
 
     mkdir -p ~/.config/emacs
+    mkdir ~/.saves
     ln -fs $PWD/.config/emacs/init.el ~/.config/emacs/init.el
 
     mkdir -p ~/.screenlayout/
