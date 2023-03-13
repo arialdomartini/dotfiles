@@ -10,10 +10,20 @@ function install() {
         ln -fs $PWD/$i ~/$i
     done
 
+    # Emacs
+    mkdir -p ~/.saves
     mkdir -p ~/.config/emacs
-    mkdir ~/.saves
+    customPackages=.config/emacs/my-packages
+    mkdir -p ~/${customPackages}
+
+    for i in $(ls ${PWD}/${customPackages})
+    do
+        ln -fs $PWD/${customPackages}/$i ~/${customPackages}/$i
+    done
+    
     ln -fs $PWD/.config/emacs/init.el ~/.config/emacs/init.el
 
+    # i3
     mkdir -p ~/.screenlayout/
     ln -fs $PWD/.screenlayout/dual-screen.sh ~/.screenlayout
 }
