@@ -15,4 +15,6 @@
       straight-check-for-modifications nil)
 
 (straight-use-package 'use-package)
+(setq straight-check-for-modifications '(find-when-checking))
+
 (provide 'aa/load-straight)
