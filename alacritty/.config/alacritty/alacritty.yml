@@ -1,11 +1,11 @@
 # cloned from https://github.com/alacritty/alacritty-theme
 import:
-# - ~/.alacritty-theme/themes/tango_dark.yaml
-  - ~/.alacritty-theme/themes/solarized_dark.yaml
-#  - ~/.alacritty-theme/themes/city_lights.yaml
-#  - ~/.alacritty-theme/themes/doom_one.yaml
-#  - ~/.alacritty-theme/themes/gruvbox_material.yaml
-#  - ~/.alacritty-theme/themes/horizon_dark.yaml
+# - ~/.config/alacritty/alacritty-theme/themes/tango_dark.yaml
+  - ~/.config/alacritty/alacritty-theme/themes/solarized_dark.yaml
+#  - ~/.config/alacritty/alacritty-theme/themes/city_lights.yaml
+#  - ~/.config/alacritty/alacritty-theme/themes/doom_one.yaml
+#  - ~/.config/alacritty/alacritty-theme/themes/gruvbox_material.yaml
+#  - ~/.config/alacritty/alacritty-theme/themes/horizon_dark.yaml
 
 #env:
   #TERM: alacritty

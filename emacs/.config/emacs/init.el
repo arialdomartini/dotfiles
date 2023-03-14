@@ -3,12 +3,20 @@
 (setq package-enable-at-startup nil)
 
 
-(add-to-list 'load-path "~/.config/emacs/my-packages")
-(load "appearance.el")
-(load "backup.el")
-(load "nativecomp.el")
-(load "straight.el")
+;; TODO Not clear where use-package is found
+;; TODO Not clear what :noerror is
+(require 'use-package nil :noerror)
+;; TODO how to make this relative to the directory
 
+(defun aa/install-packages (ps path) 
+  (add-to-list 'load-path path)
+  (dolist (p ps)
+    (require p)))
 
-
-(put 'dired-find-alternate-file 'disabled nil)
+(aa/install-packages
+ '(aa/load-straight
+   aa/appearance
+   aa/backup
+   aa/nativecomp
+   aa/packages)
+ "~/.config/emacs/local-packages")

@@ -13,3 +13,6 @@
   (load bootstrap-file nil 'nomessage))
 (setq straight-use-package-by-default t
       straight-check-for-modifications nil)
+
+(straight-use-package 'use-package)
+(provide 'aa/load-straight)

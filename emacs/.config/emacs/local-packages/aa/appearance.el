@@ -7,3 +7,5 @@
 (blink-cursor-mode -1)
 
 (set-frame-font "Monoid 20")
+
+(provide 'aa/appearance)
