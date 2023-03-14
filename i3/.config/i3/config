@@ -233,8 +233,8 @@ exec --no-startup-id setxkbmap -option ctrl:nocap
 #exec_always --no-startup-id ~/.screenlayout/dual-screen.sh
 
 mode "Screen layout: [p]rojector, [l]aptop, [Esc] cancel" {
-  bindsym l exec ~/.screenlayout/laptop.sh ; mode "default"
-  bindsym p exec ~/.screenlayout/projector.sh ; mode "default"
+  bindsym l exec ~/.config/screenlayout/laptop.sh ; mode "default"
+  bindsym p exec ~/.config/screenlayout/projector.sh ; mode "default"
   bindsym Escape mode "default"
 }
 bindsym $mod+p mode "Screen layout: [p]rojector, [l]aptop, [Esc] cancel"
