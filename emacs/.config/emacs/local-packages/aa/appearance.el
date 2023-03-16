@@ -7,5 +7,7 @@
 (blink-cursor-mode -1)
 
 (set-frame-font "Monoid 20")
+(load-theme 'adwaita)
+
 
 (provide 'aa/appearance)
