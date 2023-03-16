@@ -1,3 +1,4 @@
+(use-package smooth-scrolling)
 (use-package magit)
 (use-package marginalia)
 (use-package consult)
