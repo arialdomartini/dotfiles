@@ -9,9 +9,8 @@
 (set-frame-font "Monoid 20")
 (load-theme 'adwaita)
 
-(unless (package-installed-p 'nyan-mode)
-  (package-vc-install "https://github.com/TeMPOraL/nyan-mode.git"))
 (use-package nyan-mode
+  :ensure t
   :config
   (nyan-mode 0)
   (nyan-start-animation)
