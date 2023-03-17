@@ -7,4 +7,6 @@
 
 (put 'dired-find-alternate-file 'disabled nil)
 
+(electric-pair-mode t)
+
 (provide 'aa/defaults)
