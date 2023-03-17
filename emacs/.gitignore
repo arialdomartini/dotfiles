@@ -1,0 +1,4 @@
+.config/emacs/elpa
+.config/emacs/eln-cache
+.config/emacs/auto-save-list
+.config/emacs/transient

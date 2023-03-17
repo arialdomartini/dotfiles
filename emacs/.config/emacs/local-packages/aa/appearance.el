@@ -9,10 +9,13 @@
 (set-frame-font "Monoid 20")
 (load-theme 'adwaita)
 
-(use-package nyan-mode
-  :config
-  (nyan-mode 0)
-  (nyan-start-animation)
-  (nyan-toggle-wavy-trail))
+;; (use-package nyan-mode
+;;   :config
+;;   (nyan-mode 0)
+;;   (nyan-start-animation)
+;;   (nyan-toggle-wavy-trail))
+
+
+(pixel-scroll-precision-mode)
 
 (provide 'aa/appearance)
