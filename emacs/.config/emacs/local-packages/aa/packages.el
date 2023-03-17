@@ -1,5 +1,8 @@
 ;;(use-package consult)
-(use-package expand-region :ensure t)
+(use-package expand-region
+  :ensure t
+  :bind ("C-=" . er/expand-region))
+
 (use-package magit :ensure t)
 ;;(use-package marginalia :ensure t)xo
 ;;(use-package marginalia :ensure t)
