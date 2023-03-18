@@ -27,7 +27,7 @@ client.focused          #4c7899 #557744 #ffffff #2e9ef4   #555555
 client.unfocused        #333333 #112211 #445544 #292d2e   #222222
 client.focused_inactive #333333 #223311 #667766 #484e50   #5f676a
 
-bindsym $mod+l exec i3-easyfocus --all --font "-bitstream-bitstream vera sans mono-medium-r-normal--100-0-0-0-m-0-ascii-0"
+bindsym $mod+semicolon exec wmfocus
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -253,4 +253,3 @@ for_window [all] border pixel 2
 
 
 bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
-bindsym $mod+semicolon exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
