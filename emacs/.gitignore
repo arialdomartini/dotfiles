@@ -2,3 +2,5 @@
 .config/emacs/eln-cache
 .config/emacs/auto-save-list
 .config/emacs/transient
+.config/emacs/projects
+.config/emacs/recentf
