@@ -31,7 +31,9 @@
 (use-package vertico
   :ensure t
   :init
-  (vertico-mode))
+  (vertico-mode)
+  (setq vertico-count 10)
+  (setq vertico-resize t))
 
 (use-package marginalia
   :ensure t
