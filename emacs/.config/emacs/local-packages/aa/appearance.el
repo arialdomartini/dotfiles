@@ -6,7 +6,7 @@
 (setq blink-cursor -1)
 (blink-cursor-mode -1)
 
-(set-frame-font "Monoid 20")
+(set-frame-font "Monoid 14")
 (load-theme 'adwaita)
 
 (use-package nyan-mode
