@@ -14,7 +14,6 @@
 ;; (use-package git-time-machine :ensure t)
 ;; (use-package ripgrep :ensure t)
 ;; (use-package all-the-icons :ensure t)
-;; ;;(use-package vterm :ensure t)
 ;; ;;(use-package drag-stuff :ensure t)
 
 
@@ -44,6 +43,10 @@
   :init
   (marginalia-mode))
 
+(use-package vterm
+  :custom
+  (vterm-shell "zsh"))
+
 ;; (use-package embark :ensure t)
 ;; (use-package embark-consult :ensure t)
 ;; (use-package orderless :ensure t)
@@ -58,7 +61,6 @@
 ;; (use-package git-time-machine :ensure t)
 ;; (use-package ripgrep :ensure t)
 ;; (use-package all-the-icons :ensure t)
-;; ;;(use-package vterm :ensure t)
 ;; ;;(use-package drag-stuff :ensure t)
 
 
