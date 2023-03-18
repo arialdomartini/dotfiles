@@ -7,7 +7,12 @@
 (blink-cursor-mode -1)
 
 (set-frame-font "Monoid 14")
-(load-theme 'adwaita)
+
+
+(use-package solarized-theme
+  :config
+  (load-theme 'solarized-selenized-dark t))
+
 
 (use-package nyan-mode
   :ensure t
