@@ -35,6 +35,10 @@
   (setq vertico-count 10)
   (setq vertico-resize t))
 
+(use-package savehist
+  :init
+  (savehist-mode))
+
 (use-package marginalia
   :ensure t
   :init
