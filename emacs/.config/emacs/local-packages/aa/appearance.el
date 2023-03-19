@@ -28,7 +28,7 @@
 
 ;; Magit reuses the whole buffer
 (add-to-list 'display-buffer-alist
-	     '((derived-mode . magit-mode)
+	     '((derived-mode . magit-status-mode)
 	       (display-buffer-reuse-window display-buffer-same-window)))
 
 
