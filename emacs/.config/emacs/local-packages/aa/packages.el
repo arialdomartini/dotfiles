@@ -16,7 +16,6 @@
 ;; (use-package all-the-icons :ensure t)
 ;; ;;(use-package drag-stuff :ensure t)
 
-
 (use-package consult
   :ensure t
   :bind (("M-g M-g" . consult-goto-line)
@@ -48,24 +47,29 @@
   :custom
   (completion-styles .'(orderless, basic)))
 
-;; TODO use corfu with dabbrev
+;; TODO use corfu with dabbtrev
 ;; TODO the popup window has the wrong size
 (use-package corfu
   :ensure t
+  :custom
+  (corfu-auto t)
+  (corfu-cycle t)
+  (corfu-separator ?\s)
+  (corfu-preview-current "insert")
+  (corfu-scroll-margin 25)
   :init
   (global-corfu-mode)
-  (defun corfu-move-to-minibuffer ()
+    (defun corfu-move-to-minibuffer ()
     (interactive)
     (let ((completion-extra-properties corfu--extra)
           completion-cycle-threshold completion-cycling)
       (apply #'consult-completion-in-region completion-in-region--data)))
-  (keymap-set corfu-map "M-m" 'corfu-move-to-minibuffer))
-
-(use-package emacs
-  :init
-  ;; `completion-at-point' is often bound to M-TAB.
-  (setq tab-always-indent 'complete))
-
+  (keymap-set corfu-map "M-m" 'corfu-move-to-minibuffer)
+  ;; enable corfu on TAB
+  (use-package emacs
+    :init
+    ;; `completion-at-point' is often bound to M-TAB.
+    (setq tab-always-indent 'complete)))
 
 (use-package vterm
   :custom
