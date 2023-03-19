@@ -43,6 +43,23 @@
   :init
   (marginalia-mode))
 
+(use-package orderless
+  :ensure t
+  :custom
+  (completion-styles .'(orderless, basic)))
+
+;; TODO use corfu with dabbrev
+;; TODO the popup window has the wrong size
+(use-package corfu
+  :ensure t
+  :init
+  (global-corfu-mode))
+(use-package emacs
+  :init
+  ;; `completion-at-point' is often bound to M-TAB.
+  (setq tab-always-indent 'complete))
+
+
 (use-package vterm
   :custom
   (vterm-shell "zsh"))

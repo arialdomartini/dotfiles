@@ -6,7 +6,9 @@
 (setq blink-cursor -1)
 (blink-cursor-mode -1)
 
-(set-frame-font "Monoid 14")
+
+(set-frame-font "Monoid 14" nil t)
+
 
 
 (use-package solarized-theme
