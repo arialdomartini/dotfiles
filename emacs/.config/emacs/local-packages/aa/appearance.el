@@ -26,4 +26,10 @@
 
 (pixel-scroll-precision-mode)
 
+;; Magit reuses the whole buffer
+(add-to-list 'display-buffer-alist
+	     '((derived-mode . magit-mode)
+	       (display-buffer-reuse-window display-buffer-same-window)))
+
+
 (provide 'aa/appearance)
