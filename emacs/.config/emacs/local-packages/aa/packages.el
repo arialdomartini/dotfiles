@@ -72,18 +72,17 @@
     ;; `completion-at-point' is often bound to M-TAB.
     (setq tab-always-indent 'complete)))
 
+
 (use-package vterm
   :custom
   (vterm-shell "zsh"))
 
 ;; (use-package embark :ensure t)
 ;; (use-package embark-consult :ensure t)
-;; (use-package orderless :ensure t)
 
 ;; (use-package which-key :ensure t)
 ;; (use-package embark :ensure t)
 ;; (use-package embark-consult :ensure t)
-;; (use-package orderless :ensure t)
 
 ;; (use-package which-key :ensure t)
 ;; (use-package git-gutter :ensure t)
