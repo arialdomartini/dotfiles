@@ -53,7 +53,14 @@
 (use-package corfu
   :ensure t
   :init
-  (global-corfu-mode))
+  (global-corfu-mode)
+  (defun corfu-move-to-minibuffer ()
+    (interactive)
+    (let ((completion-extra-properties corfu--extra)
+          completion-cycle-threshold completion-cycling)
+      (apply #'consult-completion-in-region completion-in-region--data)))
+  (keymap-set corfu-map "M-m" 'corfu-move-to-minibuffer))
+
 (use-package emacs
   :init
   ;; `completion-at-point' is often bound to M-TAB.
