@@ -45,10 +45,11 @@
 (use-package orderless
   :ensure t
   :custom
-  (completion-styles .'(orderless, basic)))
+  (completion-styles . '(orderless basic))
+  (completion-category-defaults . nil)
+  (completion-category-overrides . '((file (styles . (substring partial-completion fuzzy))))))
 
-;; TODO use corfu with dabbtrev
-;; TODO the popup window has the wrong size
+;; TODO use corfu with dabbrev
 (use-package corfu
   :ensure t
   :custom
