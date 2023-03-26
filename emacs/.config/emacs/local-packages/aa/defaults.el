@@ -8,5 +8,6 @@
 (put 'dired-find-alternate-file 'disabled nil)
 
 (electric-pair-mode t)
+(delete-selection-mode t)
 
 (provide 'aa/defaults)
