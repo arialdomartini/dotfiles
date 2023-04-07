@@ -1,17 +1,22 @@
 ;; _*_ lexical-binding: t _*_
 
-;; TODO how to make this relative to the directory
-(defun aa/require-local-packages (ps path) 
-  (add-to-list 'load-path path)
-  (dolist (p ps)
-    (require p)))
+(defun aa/get-packages (path)
+  (let ((files (directory-files-recursively path "")))
+    (mapcar (lambda (f)
+	      (intern
+	       (file-name-sans-extension
+		(file-relative-name f path))))
+	    files)))
 
-;; TODO how to read from directory content
-(aa/require-local-packages
- '(aa/prelude
-   aa/defaults
-   aa/nativecomp
-   aa/appearance
-   aa/backup
-   aa/packages)
- "~/.config/emacs/local-packages")
+(defun aa/require-packages-in (path)
+  (let ((packages (aa/get-packages path)))
+    (add-to-list 'load-path path)
+    (dolist(p packages)
+      (require p))))
+
+(aa/require-packages-in "local-packages")
+
+
+
+
+
