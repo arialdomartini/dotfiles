@@ -14,7 +14,10 @@
     (dolist(p packages)
       (require p))))
 
-(aa/require-packages-in "local-packages")
+(aa/require-packages-in
+ (expand-file-name "local-packages" user-emacs-directory))
+
+
 
 
 
