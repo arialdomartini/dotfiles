@@ -39,6 +39,8 @@
 (global-set-key (kbd "M-s-<left>") 'windmove-left)
 (global-set-key (kbd "M-s-<right>") 'windmove-right)
 
+(winner-mode t)
+
 (use-package buffer-expose
   :ensure t)
 
@@ -57,7 +59,5 @@
 	     '((derived-mode . magit-status-mode)
 	       (display-buffer-reuse-window display-buffer-same-window)))
 
-
-(
 
 (provide 'aa/appearance)
