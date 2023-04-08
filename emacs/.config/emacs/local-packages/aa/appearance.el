@@ -33,7 +33,11 @@
   (setq switch-window-default-window-size 0.65) ;auto resize to 65% of frame size
   (switch-window-mouse-mode)) ;auto resize with mouse too
 
-(use-package)
+;; windmove
+(global-set-key (kbd "M-s-<up>") 'windmove-up)
+(global-set-key (kbd "M-s-<down>") 'windmove-down)
+(global-set-key (kbd "M-s-<left>") 'windmove-left)
+(global-set-key (kbd "M-s-<right>") 'windmove-right)
 
 (use-package buffer-expose
   :ensure t)
