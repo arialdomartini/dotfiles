@@ -98,9 +98,7 @@ alias s="kitty +kitten ssh"
 
 #eval "$(thefuck --alias)"
 
-function l() {
-    lsd -l
-}
+alias l="lsd -l"
 
 alias ls="ls -p --color"
 
