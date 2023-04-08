@@ -33,6 +33,11 @@
   (setq switch-window-default-window-size 0.65) ;auto resize to 65% of frame size
   (switch-window-mouse-mode)) ;auto resize with mouse too
 
+(use-package)
+
+(use-package buffer-expose
+  :ensure t)
+
 (use-package nyan-mode
   :ensure t
   :config
