@@ -6,7 +6,7 @@
 (setq blink-cursor -1)
 (blink-cursor-mode -1)
 
-(hl-line-mode)
+(global-hl-line-mode)
 
 (pixel-scroll-precision-mode)
 
