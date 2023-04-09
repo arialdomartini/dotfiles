@@ -45,9 +45,10 @@
 (use-package orderless
   :ensure t
   :custom
-  (completion-styles . '(orderless basic))
+  (completion-styles '(orderless basic))
   (completion-category-defaults . nil)
-  (completion-category-overrides . '((file (styles . (substring partial-completion fuzzy))))))
+  (completion-category-overrides '((file (styles substring basic partial-completion)))))
+  
 
 ;; TODO use corfu with dabbrev
 (use-package corfu
