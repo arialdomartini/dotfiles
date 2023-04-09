@@ -7,7 +7,11 @@
 (blink-cursor-mode -1)
 
 
-(require 'all-the-icons)
+(use-package all-the-icons
+  :ensure t
+  :config
+  (require 'all-the-icons))
+
 (use-package doom-modeline
   :ensure t
   :init (doom-modeline-mode 1)
