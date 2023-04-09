@@ -84,4 +84,9 @@
   (volatile-highlights-mode t)
   (set-face-attribute 'vhl/default-face nil :background "#113322"))
 
+(use-package beacon
+  :ensure t
+  :config
+  (beacon-mode t))
+
 (provide 'aa/appearance)
