@@ -6,6 +6,7 @@
 (setq blink-cursor -1)
 (blink-cursor-mode -1)
 
+(hl-line-mode)
 
 (use-package all-the-icons
   :ensure t
