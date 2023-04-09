@@ -77,4 +77,10 @@
 	       (display-buffer-reuse-window display-buffer-same-window)))
 
 
+(use-package volatile-highlights
+  :ensure t
+  :config
+  (volatile-highlights-mode t)
+  (set-face-attribute 'vhl/default-face nil :background "#113322"))
+
 (provide 'aa/appearance)
