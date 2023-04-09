@@ -7,7 +7,14 @@
 (blink-cursor-mode -1)
 
 
-
+(require 'all-the-icons)
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1)
+  :config 
+  (setq doom-modeline-buffer-state-icon nil)
+  (setq doom-modeline-indent-info t)
+  (setq doom-modeline-lsp t))
 
 ;(set-frame-font "PragmataPro Liga 18" nil t)
 (set-frame-font "Monoid 18" nil t)
