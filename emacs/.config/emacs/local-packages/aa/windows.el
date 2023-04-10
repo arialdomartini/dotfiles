@@ -18,4 +18,8 @@
 (use-package buffer-expose
   :ensure t)
 
+(global-set-key (kbd "C-;") 'avy-goto-char)
+(global-set-key (kbd "C-'") 'avy-goto-word-0)
+
+
 (provide 'aa/windows)
