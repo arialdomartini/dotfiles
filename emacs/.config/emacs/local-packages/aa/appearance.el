@@ -6,7 +6,15 @@
 (setq blink-cursor -1)
 (blink-cursor-mode -1)
 
-(global-hl-line-mode)
+(use-package hl-line
+  :config
+  (global-hl-line-mode)
+
+  (defun aa/disable-hl-line-mode ()
+    "Unconditionally disable `hl-line-mode'."
+    (setq-local hl-line-mode nil
+		global-hl-line-mode nil)
+    (global-hl-line-unhighlight)))
 
 (pixel-scroll-precision-mode)
 

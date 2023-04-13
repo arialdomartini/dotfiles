@@ -75,8 +75,10 @@
 
 
 (use-package vterm
+  :after hl-line
   :custom
-  (vterm-shell "zsh"))
+  (vterm-shell "zsh")
+  :hook (vterm-mode . aa/disable-hl-line-mode))
 
 ;; (use-package embark :ensure t)
 ;; (use-package embark-consult :ensure t)
