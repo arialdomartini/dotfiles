@@ -31,7 +31,10 @@
   :init
   (vertico-mode)
   (setq vertico-count 10)
-  (setq vertico-resize t))
+  (setq vertico-resize nil)
+  :bind (:map vertico-map
+              ("C-j" . vertico-insert)
+              ("C-l" . backward-kill-word)))
 
 (use-package savehist
   :init
