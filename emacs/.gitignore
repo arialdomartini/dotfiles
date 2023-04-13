@@ -7,3 +7,5 @@
 .config/emacs/history
 .config/emacs/bookmarks
 .config/emacs/dist-newstyle
+.config/emacs/projectile-bookmarks.eld
+.config/emacs/.lsp-session-v1
