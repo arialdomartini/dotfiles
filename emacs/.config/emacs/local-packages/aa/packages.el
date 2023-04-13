@@ -36,6 +36,9 @@
               ("C-j" . vertico-insert)
               ("C-l" . backward-kill-word)))
 
+(setq enable-recursive-minibuffers t)
+
+
 (use-package savehist
   :init
   (savehist-mode))
