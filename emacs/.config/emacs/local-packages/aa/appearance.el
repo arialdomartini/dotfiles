@@ -5,6 +5,7 @@
 (horizontal-scroll-bar-mode -1)
 (setq blink-cursor -1)
 (blink-cursor-mode -1)
+(setq help-window-select t)
 
 (use-package hl-line
   :config
