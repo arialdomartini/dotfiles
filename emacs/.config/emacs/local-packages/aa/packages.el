@@ -4,7 +4,12 @@
   :bind ("C-=" . er/expand-region))
 
 (use-package magit :ensure t)
-;; (use-package projectile :ensure t)
+
+(use-package git-timemachine
+  :bind (("C-c g t" . git-timemachine)))
+
+
+
 (use-package embark
   :ensure t
   :bind (("C-." . embark-act)
