@@ -8,29 +8,21 @@
 (use-package git-timemachine
   :bind (("C-c g t" . git-timemachine)))
 
-
-
 (use-package embark
   :ensure t
   :bind (("C-." . embark-act)
 	 ("C-," . embark-dwim)))
 
-;; (use-package embark-consult :ensure t)
-;; (use-package orderless :ensure t)
 
 (use-package which-key :ensure t)
 
-;; (use-package git-gutter :ensure t)
-;; (use-package git-time-machine :ensure t)
-;; (use-package ripgrep :ensure t)
-;; (use-package all-the-icons :ensure t)
 ;;(use-package drag-stuff :ensure t)
 
 (use-package consult
   :ensure t
   :bind (("M-g M-g" . consult-goto-line)
 	 ("C-x b" . consult-buffer)
-	 ("C-s"   . consult-line-multi)
+	 ("C-s"   . consult-line)
 	 ("C-S-s" . isearch-forward)
 	 ("C-x r b" . consult-bookmark)))
 (setq register-preview-delay 0.5
