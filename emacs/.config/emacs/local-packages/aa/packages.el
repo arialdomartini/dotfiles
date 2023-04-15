@@ -1,4 +1,3 @@
-;;(use-package consult)
 (use-package expand-region
   :ensure t
   :bind ("C-=" . er/expand-region))
@@ -14,9 +13,14 @@
 	 ("C-," . embark-dwim)))
 
 
-(use-package which-key :ensure t)
+(use-package which-key
+  :ensure t)
 
-;;(use-package drag-stuff :ensure t)
+(use-package drag-stuff
+  :ensure t
+  :config
+  (drag-stuff-define-keys)) ;; M-<up/down/left/right>
+
 
 (use-package consult
   :ensure t
