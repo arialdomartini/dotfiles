@@ -36,10 +36,12 @@
 
 (use-package vertico
   :ensure t
-  :init
+  :config
   (vertico-mode)
-  (setq vertico-count 10)
-  (setq vertico-resize nil)
+  (setq vertico-count 10
+	vertico-resize nil)
+  (file-name-shadow-mode 1)
+  (add-hook 'rfn-eshadow-update-overlay-hook #'vertico-directory-tidy) 
   :bind (:map vertico-map
               ("C-j" . vertico-insert)
               ("C-l" . backward-kill-word)))
