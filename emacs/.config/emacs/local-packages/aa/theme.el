@@ -1,5 +1,6 @@
-(use-package solarized-theme
+(use-package modus-themes
+  :ensure t
   :config
-  (load-theme 'solarized-selenized-dark t))
+  (load-theme 'modus-vivendi-tinted :no-confirm))
 
 (provide 'aa/theme)
