@@ -6,4 +6,4 @@
   (setq doom-modeline-indent-info t)
   (setq doom-modeline-lsp t))
 
-(provide 'aa/mode-line)
+(provide 'aa-mode-line)

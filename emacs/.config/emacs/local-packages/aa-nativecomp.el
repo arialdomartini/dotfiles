@@ -14,4 +14,4 @@
 (setq native-comp-async-report-warnings-errors nil
       comp-async-report-warning-errors nil)
 
-(provide 'aa/nativecomp)
+(provide 'aa-nativecomp)

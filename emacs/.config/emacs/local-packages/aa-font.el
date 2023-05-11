@@ -10,4 +10,4 @@
 (ligature-pragmatapro-setup)
 (global-ligature-mode)
 
-(provide 'aa/font)
+(provide 'aa-font)

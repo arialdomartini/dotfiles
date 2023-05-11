@@ -3,4 +3,4 @@
   :config
   (load-theme 'modus-vivendi-tinted :no-confirm))
 
-(provide 'aa/theme)
+(provide 'aa-theme)

@@ -24,4 +24,4 @@
 ;;   '(dashboard-heading-face ((t (:inherit font-lock-header-face :weight bold :height .5))))
 ;;   '(dashboard-items-face ((t (:inherit font-lock-keyword-face :height .2)))))
 
-(provide 'aa/dashboard)
+(provide 'aa-dashboard)

@@ -9,4 +9,4 @@
  version-control t
  create-lockfiles nil)
 
-(provide 'aa/backup)
+(provide 'aa-backup)

@@ -2,7 +2,7 @@
   :ensure t
   :config
   (projectile-mode +1)
-  (setq projectile-project-search-path '("~/prg/"))
+  (setq projectile-project-search-path '("~/prg/" . 1))
   :bind (:map projectile-mode-map
               ("C-c p" . projectile-command-map)))
 
@@ -12,4 +12,4 @@
 (use-package ripgrep
   :ensure t)
 
-(provide 'aa/projectile)
+(provide 'aa-projectile)

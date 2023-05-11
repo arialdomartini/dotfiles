@@ -36,6 +36,7 @@
 
 (use-package vertico
   :ensure t
+  :demand t
   :config
   (vertico-mode)
   (setq vertico-count 10
@@ -96,4 +97,4 @@
   (vterm-shell "zsh")
   :hook (vterm-mode . aa/disable-hl-line-mode))
 
-(provide 'aa/packages)
+(provide 'aa-packages)

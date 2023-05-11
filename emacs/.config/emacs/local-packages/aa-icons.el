@@ -9,4 +9,4 @@
     (setq all-the-icons-dired-monochrome nil) ;; does not work...
   :hook ((dired-mode) . all-the-icons-dired-mode))
 
-(provide 'aa/icons)
+(provide 'aa-icons)

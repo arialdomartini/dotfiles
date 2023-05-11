@@ -22,4 +22,4 @@
 (global-set-key (kbd "C-'") 'avy-goto-word-0)
 
 
-(provide 'aa/windows)
+(provide 'aa-windows)

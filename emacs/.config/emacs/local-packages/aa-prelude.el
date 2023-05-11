@@ -7,4 +7,4 @@
 ;; (unless package-archive-contents
 ;;  (package-refresh-contents))
 
-(provide 'aa/prelude)
+(provide 'aa-prelude)
