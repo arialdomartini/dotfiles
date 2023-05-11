@@ -7,6 +7,8 @@
 (use-package git-timemachine
   :bind (("C-c g t" . git-timemachine)))
 
+(use-package embark-consult
+  :ensure t)
 (use-package embark
   :ensure t
   :bind (("C-." . embark-act)
