@@ -12,4 +12,13 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+
+(defun kill-current-buffer (&optional arg)
+	"Kill the current buffer without prompting. With a prefix ARG, invoke `kill-buffer' instead."
+	(interactive)
+	(if arg
+	    (call-interactively #'kill-buffer)
+	  (kill-buffer (current-buffer))))
+(global-set-key (kbd "C-x k") 'kill-current-buffer)
+
 (provide 'aa-defaults)
