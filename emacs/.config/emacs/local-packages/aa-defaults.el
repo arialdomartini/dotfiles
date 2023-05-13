@@ -21,4 +21,8 @@
 	  (kill-buffer (current-buffer))))
 (global-set-key (kbd "C-x k") 'kill-current-buffer)
 
+
+;; Dired
+(setq delete-by-moving-to-trash t)
+
 (provide 'aa-defaults)
