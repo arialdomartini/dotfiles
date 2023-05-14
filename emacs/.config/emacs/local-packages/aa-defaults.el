@@ -23,6 +23,8 @@
 
 
 ;; Dired
-(setq delete-by-moving-to-trash t)
+(setq
+ delete-by-moving-to-trash t
+ dired-kill-when-opening-new-dired-buffer t)
 
 (provide 'aa-defaults)
