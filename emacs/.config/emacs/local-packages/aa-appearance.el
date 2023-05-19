@@ -34,11 +34,11 @@
 
 
 
-;; (use-package volatile-highlights
-;;   :ensure t
-;;   :config
-;;   (volatile-highlights-mode t)
-;;   (set-face-attribute 'vhl/default-face nil :background "#113322"))
+(use-package volatile-highlights
+  :ensure t
+  :config
+  (volatile-highlights-mode t)
+  (set-face-attribute 'vhl/default-face nil :background "#113322"))
 
 
 (use-package pulsar
