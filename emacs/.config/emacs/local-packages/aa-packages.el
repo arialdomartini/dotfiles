@@ -26,15 +26,23 @@
   (drag-stuff-define-keys)) ;; M-<up/down/left/right>
 
 
+
+
 (use-package consult
   :ensure t
+  :demand t
   :bind (("M-g M-g" . consult-goto-line)
 	 ("C-x b" . consult-buffer)
 	 ("C-s"   . consult-line)
 	 ("C-S-s" . isearch-forward)
-	 ("C-x r b" . consult-bookmark)))
-(setq register-preview-delay 0.5
-      register-preview-function #'consult-register-format)
+	 ("C-x r b" . consult-bookmark))
+  :config
+  (setq register-preview-delay 0.5
+	register-preview-function #'consult-register-format
+;;	completion-in-region-function #'consult-completion-in-region
+;;	tab-always-indent 'complete)
+	))
+
 
 (use-package vertico
   :ensure t
@@ -67,7 +75,7 @@
   (completion-styles '(orderless basic))
   (completion-category-defaults . nil)
   (completion-category-overrides '((file (styles substring basic partial-completion)))))
-  
+
 
 ;; TODO use corfu with dabbrev
 (use-package corfu
@@ -85,7 +93,7 @@
     (let ((completion-extra-properties corfu--extra)
           completion-cycle-threshold completion-cycling)
       (apply #'consult-completion-in-region completion-in-region--data)))
-  (keymap-set corfu-map "M-m" 'corfu-move-to-minibuffer)
+  (keymap-set corfu-map "<tab>" 'corfu-move-to-minibuffer)
   ;; enable corfu on TAB
   (use-package emacs
     :init
