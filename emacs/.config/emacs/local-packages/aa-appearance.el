@@ -40,10 +40,17 @@
 ;;   (volatile-highlights-mode t)
 ;;   (set-face-attribute 'vhl/default-face nil :background "#113322"))
 
-(use-package beacon
+
+(use-package pulsar
   :ensure t
   :config
-  (beacon-mode t))
+  (setq pulsar-pulse t
+	pulsar-delay 0.055
+	pulsar-iterations 10
+	pulsar-face 'pulsar-green
+	pulsar-highlight-face 'pulsar-yellow
+	pulsar-global-mode 1))
+
 
 (use-package rainbow-mode
   :ensure t
