@@ -94,11 +94,9 @@
           completion-cycle-threshold completion-cycling)
       (apply #'consult-completion-in-region completion-in-region--data)))
   (keymap-set corfu-map "<tab>" 'corfu-move-to-minibuffer)
-  ;; enable corfu on TAB
-  (use-package emacs
-    :init
-    ;; `completion-at-point' is often bound to M-TAB.
-    (setq tab-always-indent 'complete)))
+  :config
+    ;; enable corfu on TAB
+    (setq tab-always-indent 'complete))
 
 
 (use-package vterm
