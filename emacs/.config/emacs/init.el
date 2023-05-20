@@ -18,5 +18,3 @@
 
 
 (aa-require-packages-in (locate-user-emacs-file "local-packages"))
-
-(put 'dired-find-alternate-file 'disabled nil)
