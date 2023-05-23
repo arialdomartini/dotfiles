@@ -28,7 +28,7 @@
 (use-package nyan-mode
   :ensure t
   :config
-  (nyan-mode 0)
+  (nyan-mode 1)
   (nyan-start-animation)
   (nyan-toggle-wavy-trail))
 
