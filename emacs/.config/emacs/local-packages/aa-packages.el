@@ -27,7 +27,6 @@
 
 
 
-
 (use-package consult
   :ensure t
   :demand t
@@ -104,5 +103,8 @@
   :custom
   (vterm-shell "zsh")
   :hook (vterm-mode . aa/disable-hl-line-mode))
+
+(use-package markdown-mode
+  :ensure t)
 
 (provide 'aa-packages)
