@@ -33,6 +33,8 @@
   (nyan-toggle-wavy-trail))
 
 
+(use-package olivetti
+  :ensure t)
 
 (use-package volatile-highlights
   :ensure t
