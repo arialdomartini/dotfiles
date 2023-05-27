@@ -107,4 +107,7 @@
 (use-package markdown-mode
   :ensure t)
 
+(use-package restclient
+  :ensure t)
+
 (provide 'aa-packages)
