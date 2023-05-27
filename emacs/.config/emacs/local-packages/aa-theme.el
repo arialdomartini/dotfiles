@@ -10,6 +10,7 @@
     (set-face-attribute 'mode-line-inactive nil :underline  line)
     (set-face-attribute 'mode-line          nil :box        nil)
     (set-face-attribute 'mode-line-inactive nil :box        nil)
-    (set-face-attribute 'mode-line-inactive nil :background "#f9f2d9")))
+    (set-face-attribute 'mode-line-inactive nil :background "#141414")
+    (set-face-attribute 'mode-line          nil :background "#304060")))
 
 (provide 'aa-theme)
