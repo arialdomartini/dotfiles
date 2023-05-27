@@ -1,9 +1,10 @@
-(use-package doom-modeline
+(use-package moody
   :ensure t
-  :init (doom-modeline-mode 1)
-  :config 
-  (setq doom-modeline-buffer-state-icon nil)
-  (setq doom-modeline-indent-info t)
-  (setq doom-modeline-lsp t))
+  :config
+  (setq x-underline-at-descent-line t)
+  (moody-replace-mode-line-buffer-identification)
+  (moody-replace-vc-mode)
+  (moody-replace-eldoc-minibuffer-message-function))
+
 
 (provide 'aa-mode-line)
