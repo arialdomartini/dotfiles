@@ -110,4 +110,7 @@
 (use-package restclient
   :ensure t)
 
+(use-package lorem-ipsum
+  :ensure t)
+
 (provide 'aa-packages)
