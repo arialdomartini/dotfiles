@@ -2,7 +2,10 @@
   :ensure t
   :bind ("C-=" . er/expand-region))
 
-(use-package magit :ensure t)
+(use-package magit
+  :ensure t
+  :config
+  (setq magit-gitk-executable "/usr/bin/gitg"))
 
 (use-package git-timemachine
   :bind (("C-c g t" . git-timemachine)))
