@@ -5,7 +5,8 @@
 (use-package magit
   :ensure t
   :config
-  (setq magit-gitk-executable "/usr/bin/gitg"))
+  (setq magit-gitk-executable "/usr/bin/gitg"
+	magit-repository-directories '(("~/prg/" . 2))))
 
 (use-package git-timemachine
   :bind (("C-c g t" . git-timemachine)))
