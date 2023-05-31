@@ -6,7 +6,8 @@
   :ensure t
   :config
   (setq magit-gitk-executable "/usr/bin/gitg"
-	magit-repository-directories '(("~/prg/" . 2))))
+	magit-repository-directories '(("~/prg/" . 2))
+	magit-revision-show-gravatars 'author))
 
 (use-package git-timemachine
   :bind (("C-c g t" . git-timemachine)))
