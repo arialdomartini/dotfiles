@@ -19,7 +19,7 @@
   :ensure t)
 
 (use-package avy :ensure t)
-(global-set-key (kbd "C-;") 'avy-goto-char)
+(global-set-key (kbd "C-;") 'avy-goto-word-1)
 (global-set-key (kbd "C-'") 'avy-goto-word-0)
 
 
