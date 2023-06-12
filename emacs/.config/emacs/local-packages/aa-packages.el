@@ -107,7 +107,9 @@
   :after hl-line
   :custom
   (vterm-shell "zsh")
-  :hook (vterm-mode . aa/disable-hl-line-mode))
+  :hook (vterm-mode . aa/disable-hl-line-mode)
+  :config
+  (global-set-key (kbd "C-c t") 'vterm))
 
 (use-package markdown-mode
   :ensure t)
