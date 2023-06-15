@@ -25,13 +25,6 @@
 	       (display-buffer-reuse-window display-buffer-same-window)))
 
 
-(use-package nyan-mode
-  :ensure t
-  :config
-  (nyan-mode 1)
-  (nyan-start-animation)
-  (nyan-toggle-wavy-trail))
-
 (use-package olivetti
   :ensure t)
 
