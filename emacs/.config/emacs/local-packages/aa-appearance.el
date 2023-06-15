@@ -32,15 +32,17 @@
   (nyan-start-animation)
   (nyan-toggle-wavy-trail))
 
-
 (use-package olivetti
   :ensure t)
 
+;; goggles
 (use-package volatile-highlights
   :ensure t
   :config
-  (volatile-highlights-mode t)
-  (set-face-attribute 'vhl/default-face nil :background "#113322"))
+  (defun aa-volatile-highlights-set-background (_theme)
+    (set-face-attribute 'vhl/default-face nil :background (face-attribute 'mode-line :background)))
+    (add-hook 'enable-theme-functions 'aa-volatile-highlights-set-background)
+  (volatile-highlights-mode t))
 
 
 (use-package pulsar
