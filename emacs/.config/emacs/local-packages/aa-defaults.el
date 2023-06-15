@@ -6,6 +6,7 @@
 (setq warning-minimum-level :error)
 
 (put 'dired-find-alternate-file 'disabled nil)
+(add-hook 'dired-mode-hook 'dired-hide-details-mode)
 
 (electric-pair-mode t)
 (delete-selection-mode t)
