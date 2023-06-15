@@ -7,7 +7,7 @@
   :ensure t
   :init
   (setq
-   dashboard-startup-banner (concat user-emacs-directory "logo.svg")
+   dashboard-startup-banner (concat user-emacs-directory "logo.png")
    dashboard-image-banner-max-width 250
    dashboard-banner-logo-title nil
    dashboard-center-content t)
