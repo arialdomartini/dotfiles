@@ -1,6 +1,8 @@
 (use-package expand-region
   :ensure t
-  :bind ("C-=" . er/expand-region))
+  :bind
+  ("C-=" . er/expand-region)
+  ("C-+" . er/contract-region))
 
 (use-package magit
   :ensure t
