@@ -59,6 +59,7 @@ bindsym $mod+Return exec konsole
 
 # kill focused window
 bindsym $mod+Shift+k kill
+bindsym $mod+Mod1+k kill
 
 # start dmenu (a program launcher)
 bindsym $mod+j exec "rofi -combi-modi drun, run -show combi -modi combi -show-icons -font Lilex\ Nerd\ Font\ 24"
