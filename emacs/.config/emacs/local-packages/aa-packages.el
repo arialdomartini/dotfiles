@@ -11,11 +11,19 @@
 	magit-repository-directories '(("~/prg/" . 2))
 	magit-revision-show-gravatars 'author))
 
+(use-package forge
+  :ensure t
+  :config
+  (setq auth-sources '("~/.authinfo")
+	github.user "arialdomartini@gmail.com"))
+
+
 (use-package git-timemachine
   :bind (("C-c g t" . git-timemachine)))
 
 (use-package embark-consult
   :ensure t)
+
 (use-package embark
   :ensure t
   :bind (("C-." . embark-act)
