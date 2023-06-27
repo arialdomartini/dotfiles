@@ -28,4 +28,10 @@
  delete-by-moving-to-trash t
  dired-kill-when-opening-new-dired-buffer t)
 
+
+(use-package dirvish
+  :ensure t
+  :config
+  (dirvish-override-dired-mode))
+
 (provide 'aa-defaults)
