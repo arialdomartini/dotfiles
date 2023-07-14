@@ -15,7 +15,7 @@
 		(:eval
 		 (when (mode-line-window-selected-p) mode-line-position))
 
-		(vc-mode moody-vc-mode)
+		(vc-mode vc-mode)
 		"  " mode-line-modes mode-line-misc-info mode-line-end-spaces))
 
 
