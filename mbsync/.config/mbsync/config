@@ -3,6 +3,7 @@ Host imap.gmail.com
 UserCmd "awk -F ' ' '/gmail/ { print $(NF-2); exit; }' ~/.authinfo"
 PassCmd "awk -F ' ' '/gmail/ { print $NF; exit; }' ~/.authinfo"
 SSLType IMAPS
+SSLVersions TLSv1.2
 
 IMAPStore gmail-remote
 Account gmail
