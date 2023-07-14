@@ -1,0 +1,25 @@
+IMAPAccount gmail
+Host imap.gmail.com
+UserCmd "awk -F ' ' '/gmail/ { print $(NF-2); exit; }' ~/.authinfo"
+PassCmd "awk -F ' ' '/gmail/ { print $NF; exit; }' ~/.authinfo"
+SSLType IMAPS
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore gmail-local
+Subfolders Verbatim
+# The trailing "/" is important
+Path ~/.mail/gmail/
+Inbox ~/.mail/gmail/Inbox
+
+Channel gmail
+Far :gmail-remote:
+Near :gmail-local:
+# Include everything
+Patterns *
+Sync All
+Create Both
+Remove Both
+Expunge Both
+SyncState *
