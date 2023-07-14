@@ -115,3 +115,5 @@
 
 [difftool]
 	prompt = false
+[github]
+	user = arialdomartini
