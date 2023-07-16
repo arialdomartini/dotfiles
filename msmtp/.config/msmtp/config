@@ -1,0 +1,18 @@
+# Default values for all accounts.
+defaults
+auth           on
+tls            on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+logfile        ~/.msmtp.log
+
+# Gmail
+account        gmail
+host           smtp.gmail.com
+port           465
+tls_starttls   off
+from           arialdo.martini@gmail.com
+user           arialdo.martini
+passwordeval   "awk -F ' ' '/gmail/ { print $NF; exit; }' ~/.authinfo"
+
+# Default account
+account default : gmail
