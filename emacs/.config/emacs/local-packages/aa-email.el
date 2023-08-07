@@ -3,6 +3,11 @@
   :ensure nil ; because it comes with the `notmuch' from Arch
   :config
   (define-key global-map (kbd "C-c m") #'notmuch)
+
+  (setq send-mail-function #'sendmail-send-it
+	sendmail-program (executable-find "msmtp")
+	message-sendmail-envelope-from 'header)
+
   (setq notmuch-show-logo nil
 	notmuch-search-oldest-first nil
 	notmuch-hello-auto-refresh t
@@ -46,7 +51,6 @@
             :query "*"
             :sort-order newest-first
             :key ,(kbd "a")))))
-
 
 
 (provide 'aa-email)
