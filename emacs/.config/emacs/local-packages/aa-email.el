@@ -34,13 +34,19 @@
           ("flag" . italic))
         notmuch-show-empty-saved-searches t
         notmuch-saved-searches
-        `(( :name "📥 inbox"
+        `(( :name "💬 unread (inbox)"
+            :query "tag:unread and tag:inbox"
+            :sort-order newest-first
+            :key ,(kbd "u"))
+          ( :name "📥 inbox"
             :query "tag:inbox"
             :sort-order newest-first
             :key ,(kbd "i"))
-          ( :name "💬 unread (inbox)"
-            :query "tag:unread and tag:inbox"
+	  ( :name "😸 all"
+            :query "*"
             :sort-order newest-first
-            :key ,(kbd "u")))))
+            :key ,(kbd "a")))))
+
+
 
 (provide 'aa-email)
