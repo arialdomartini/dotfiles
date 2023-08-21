@@ -20,4 +20,7 @@
     (setq eglot-fsharp-server-install-dir "~/.dotnet/tools/")
     (add-hook 'fsharp-mode-hook #'eglot-ensure)))
 
+(use-package markdown-toc
+  :ensure t)
+
 (provide 'aa-languages)
