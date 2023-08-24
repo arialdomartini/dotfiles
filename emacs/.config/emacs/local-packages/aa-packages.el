@@ -119,7 +119,7 @@
   (vterm-shell "zsh")
   :config
   (global-set-key (kbd "C-c t") 'vterm)
-  (add-hook 'vterm-mode  'aa/disable-hl-line-mode))
+  (add-hook 'vterm-mode-hook  #'aa/disable-hl-line-mode))
 
 (use-package markdown-mode
   :ensure t)
