@@ -45,8 +45,8 @@
 	pulsar-delay 0.055
 	pulsar-iterations 10
 	pulsar-face 'pulsar-green
-	pulsar-highlight-face 'pulsar-yellow
-	pulsar-global-mode 1))
+	pulsar-highlight-face 'pulsar-yellow)
+  (pulsar-global-mode 1))
 
 
 (use-package rainbow-mode
