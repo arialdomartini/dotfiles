@@ -17,7 +17,6 @@
   (setq auth-sources '("~/.authinfo")
 	github.user "arialdomartini@gmail.com"))
 
-
 (use-package git-timemachine
   :bind (("C-c g t" . git-timemachine)))
 
@@ -38,6 +37,7 @@
 (use-package drag-stuff
   :ensure t
   :config
+  (drag-stuff-mode)
   (drag-stuff-define-keys)) ;; M-<up/down/left/right>
 
 
