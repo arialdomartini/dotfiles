@@ -27,10 +27,10 @@
  dired-kill-when-opening-new-dired-buffer t)
 
 
-(use-package dirvish
-  :ensure t
-  :config
-  (dirvish-override-dired-mode))
+;; (use-package dirvish
+;;   :ensure t
+;;   :config
+;;   (dirvish-override-dired-mode))
 
 (progn
   ;; copied from Prot's `prot-simple-keyboard-quit-dwim'
