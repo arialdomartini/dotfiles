@@ -58,7 +58,6 @@ floating_modifier $mod
 bindsym $mod+Return exec konsole
 
 # kill focused window
-bindsym $mod+Shift+k kill
 bindsym $mod+Mod1+k kill
 
 # start dmenu (a program launcher)
