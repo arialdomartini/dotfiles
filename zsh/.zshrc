@@ -201,3 +201,6 @@ export HASKELL_LSP_SERVER_ARGS="+RTS -M512m -RTS"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 source /usr/share/doc/pkgfile/command-not-found.zsh
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
