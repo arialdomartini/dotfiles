@@ -124,7 +124,10 @@
   (add-hook 'vterm-mode-hook  #'aa/disable-hl-line-mode))
 
 (use-package markdown-mode
-  :ensure t)
+  :ensure t
+  :after olivetti
+  :config
+  (add-hook 'markdown-mode-hook #'olivetti-mode))
 
 (use-package restclient
   :ensure t)
