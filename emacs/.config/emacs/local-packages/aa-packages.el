@@ -49,12 +49,14 @@
 	 ("C-x b" . consult-buffer)
 	 ("C-s"   . consult-line)
 	 ("C-S-s" . isearch-forward)
-	 ("C-x r b" . consult-bookmark))
+	 ("C-x r b" . consult-bookmark)
+	 ("C-c r r" . consult-ripgrep)
+	 ("C-c g g" . consult-git-grep))
   :config
   (setq register-preview-delay 0.5
 	register-preview-function #'consult-register-format
-;;	completion-in-region-function #'consult-completion-in-region
-;;	tab-always-indent 'complete)
+	;;	completion-in-region-function #'consult-completion-in-region
+	;;	tab-always-indent 'complete)
 	))
 
 
