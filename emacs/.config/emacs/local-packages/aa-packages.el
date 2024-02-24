@@ -129,6 +129,10 @@
   :config
   (add-hook 'markdown-mode-hook #'olivetti-mode))
 
+(use-package markdown-toc
+  :ensure t)
+
+
 (use-package restclient
   :ensure t)
 

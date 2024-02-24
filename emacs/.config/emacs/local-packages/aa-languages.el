@@ -23,12 +23,7 @@
 (use-package aggressive-indent
   :ensure t
   :config
-  (defun aa-turn-aggressive-indent-mode-on ()
-    (aggressive-indent-mode t)
-    (message "Let's be aggressive! ARRR"))
-  (add-hook 'emacs-lisp-mode-hook #'aa-turn-aggressive-indent-mode-on))
+  (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode))
 
-(use-package markdown-toc
-  :ensure t)
 
 (provide 'aa-languages)
