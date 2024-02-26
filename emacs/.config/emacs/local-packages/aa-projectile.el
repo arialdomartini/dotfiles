@@ -2,7 +2,7 @@
   :ensure t
   :config
   (projectile-mode +1)
-  (setq projectile-project-search-path '("~/prg/" . 1))
+  (setq projectile-project-search-path '(("~/prg/" . 2)))
   :bind (:map projectile-mode-map
               ("C-c p" . projectile-command-map)))
 
