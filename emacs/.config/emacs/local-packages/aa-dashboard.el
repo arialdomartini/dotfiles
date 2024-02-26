@@ -15,9 +15,8 @@
   :config
   (dashboard-setup-startup-hook)
   (text-scale-set 1)
-  (setq dashboard-items '((recents . 7)
-                          (bookmarks . 3)
-                          (projects . 5))
+  (setq dashboard-items '((projects . 7)
+			  (recents . 20))
 	text-scale .2))
 
 ;; (custom-set-faces
