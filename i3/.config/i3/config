@@ -233,12 +233,13 @@ exec --no-startup-id setxkbmap -option ctrl:nocap
 # exec_always --no-startup-id  xrandr --output DVI-D-0 --off --output HDMI-0 --mode 2560x1440 --pos 1600x0 --rotate normal --output DVI-I-1 --mode 1600x900 --pos 0x392 --rotate normal --output DVI-Ir-0 --off --output DP-1 --off --output DP-0 --off
 #exec_always --no-startup-id ~/.screenlayout/dual-screen.sh
 
-mode "Screen layout: [p]rojector, [l]aptop, [Esc] cancel" {
-  bindsym l exec ~/.config/screenlayout/laptop.sh ; mode "default"
-  bindsym p exec ~/.config/screenlayout/projector.sh ; mode "default"
+mode "Screen layout: [p]rojector, [l]aptop, [s] studio, [Esc] cancel" {
+  bindsym l exec ~/.config/screenlayouts/laptop.sh ; mode "default"
+  bindsym p exec ~/.config/screenlayouts/projector.sh ; mode "default"
+  bindsym s exec ~/.config/screenlayouts/studio.sh ; mode "default"
   bindsym Escape mode "default"
 }
-bindsym $mod+Mod1+p mode "Screen layout: [p]rojector, [l]aptop, [Esc] cancel"
+bindsym $mod+Mod1+p mode "Screen layout: [p]rojector, [l]aptop, [s] studio, [Esc] cancel"
 
 bindsym $mod+z exec xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Accel Speed" 0.8
 bindsym $mod+x exec xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Accel Speed" 0.3
