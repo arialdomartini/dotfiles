@@ -127,7 +127,8 @@
   :ensure t
   :after olivetti
   :config
-  (add-hook 'markdown-mode-hook #'olivetti-mode))
+  (add-hook 'markdown-mode-hook #'olivetti-mode)
+  (add-hook 'markdown-mode-hook #'auto-fill-mode))
 
 (use-package markdown-toc
   :ensure t)
