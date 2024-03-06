@@ -7,6 +7,6 @@
   (add-hook 'enable-theme-functions 'aa-borderless-line)
   (setq modus-themes-org-blocks 'gray-background)
 
-  (modus-themes-load-theme 'modus-operandi-tinted))
+  (modus-themes-load-theme 'modus-vivendi-deuteranopia))
 
 (provide 'aa-theme)
