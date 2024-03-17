@@ -5,6 +5,7 @@
 
 (put 'dired-find-alternate-file 'disabled nil)
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
+(setq-default indent-tabs-mode nil)
 
 (electric-pair-mode t)
 (delete-selection-mode t)
