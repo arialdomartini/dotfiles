@@ -5,8 +5,14 @@
     (set-face-attribute 'mode-line nil          :box nil :underline nil  :overline nil)
     (set-face-attribute 'mode-line-inactive nil :box nil :underline nil  :overline nil))
   (add-hook 'enable-theme-functions 'aa-borderless-line)
-  (setq modus-themes-org-blocks 'gray-background)
+  (setq modus-themes-org-blocks 'gray-background))
 
-  (modus-themes-load-theme 'modus-vivendi-deuteranopia))
+;;  (modus-themes-load-theme 'modus-vivendi-deuteranopia))
+
+(use-package base16-theme
+  :ensure t
+  :config
+  (load-theme 'base16-default-dark t))
+
 
 (provide 'aa-theme)
