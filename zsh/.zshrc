@@ -1,3 +1,6 @@
+autoload -U compinit && compinit -u  # BEFORE zoxide init
+eval "$(/usr/bin/zoxide init zsh)"
+
 #+BEGIN_SRC PowerLevel10k
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -19,7 +22,7 @@ fi
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
-zpcompinit; zpcdreplay
+# zpcompinit; zpcdreplay
 
 
 if [ `tput colors` = "256" ]; then
@@ -204,3 +207,4 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
