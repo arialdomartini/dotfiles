@@ -7,6 +7,9 @@
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
 (setq-default indent-tabs-mode nil)
 
+(setq global-mark-ring-max 100)
+(setq mark-ring-max 25)
+
 (electric-pair-mode t)
 (delete-selection-mode t)
 
