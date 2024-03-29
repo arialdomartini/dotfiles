@@ -34,8 +34,15 @@
   :config
   (defun aa-volatile-highlights-set-background (_theme)
     (set-face-attribute 'vhl/default-face nil :background (face-attribute 'mode-line :background)))
-    (add-hook 'enable-theme-functions 'aa-volatile-highlights-set-background)
+  (add-hook 'enable-theme-functions 'aa-volatile-highlights-set-background)
   (volatile-highlights-mode t))
+
+
+(defun turn-on-toggle-truncate-line ()
+  "Turns truncating on, without printing messages"
+  (let ((inhibit-message t))
+    (toggle-truncate-lines 1)))
+(add-hook 'text-mode-hook #'turn-on-toggle-truncate-line)
 
 
 (use-package pulsar
