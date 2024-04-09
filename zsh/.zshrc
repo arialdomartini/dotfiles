@@ -207,4 +207,6 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey "\e[H" beginning-of-line
+bindkey "\e[F" end-of-line
 
