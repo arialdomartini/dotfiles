@@ -96,23 +96,35 @@
 ;; TODO use corfu with dabbrev
 (use-package corfu
   :ensure t
-  :custom
-  (corfu-auto t)
-  (corfu-cycle t)
-  (corfu-separator ?\s)
-  (corfu-preview-current "insert")
-  (corfu-scroll-margin 25)
   :init
   (global-corfu-mode)
-    (defun corfu-move-to-minibuffer ()
+  (defun corfu-move-to-minibuffer ()
     (interactive)
     (let ((completion-extra-properties corfu--extra)
           completion-cycle-threshold completion-cycling)
       (apply #'consult-completion-in-region completion-in-region--data)))
   (keymap-set corfu-map "<tab>" 'corfu-move-to-minibuffer)
   :config
-    ;; enable corfu on TAB
-    (setq tab-always-indent 'complete))
+  (setq corfu-min-width 250
+        corfu-min-height 750
+        corfu-count 20
+        corfu-auto t
+        corfu-cycle t
+        corfu-separator ?\s
+        corfu-preview-current "insert"
+        corfu-scroll-margin 25
+        ;; enable corfu on TAB
+        tab-always-indent 'complete
+        ;; shows documentation after `corfu-popupinfo-delay'
+        corfu-popupinfo-delay '(1.25 . 0.5))
+  (corfu-popupinfo-mode 1)
+
+  ;; Sort by input history (no need to modify `corfu-sort-function').
+  (with-eval-after-load 'savehist
+    (corfu-history-mode 1)
+    (add-to-list 'savehist-additional-variables 'corfu-history)) )
+
+
 
 
 (use-package vterm
