@@ -78,7 +78,9 @@
 
 (use-package savehist
   :init
-  (savehist-mode))
+  (savehist-mode)
+  :config
+  (push 'register-alist savehist-additional-variables))
 
 (use-package marginalia
   :ensure t
