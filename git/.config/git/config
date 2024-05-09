@@ -117,3 +117,5 @@
 	prompt = false
 [github]
 	user = arialdomartini
+[init]
+	defaultBranch = main
