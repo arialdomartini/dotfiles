@@ -5,7 +5,7 @@
 [core]
 	autocrlf = false
 	editor = emacs
-	excludesfile = ~/.gitignore-global
+	excludesfile = ~/.config/git/.gitignore-global
 	pager = delta
 
 [status]
