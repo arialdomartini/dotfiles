@@ -51,6 +51,7 @@
 	 ("C-S-s" . isearch-forward)
 	 ("C-x r b" . consult-bookmark)
 	 ("C-c r r" . consult-ripgrep)
+         ("M-y" . consult-yank-pop)
 	 ("C-c g g" . consult-git-grep))
   :config
   (setq register-preview-delay 0.5
