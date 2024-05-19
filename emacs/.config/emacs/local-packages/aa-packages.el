@@ -135,6 +135,7 @@
   (vterm-shell "zsh")
   :config
   (global-set-key (kbd "C-c t") 'vterm)
+  (setq vterm-ignore-blink-cursor nil)
   (add-hook 'vterm-mode-hook  #'aa/disable-hl-line-mode))
 
 (use-package markdown-mode
