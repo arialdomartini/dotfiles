@@ -35,6 +35,8 @@
 	# List all the branches
 	branches = branch -a
 
+        l = log --oneline
+
 	# Show an ascii tree of the current branch
 	tr = log --graph --pretty=format:'%C(yellow)%d%Creset %s %C(cyan)<%an>%Creset %Cgreen(%cd) %Cred%h%Creset' --abbrev-commit --date=relative
 
