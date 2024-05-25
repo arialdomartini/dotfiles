@@ -8,10 +8,10 @@
   (switch-window-mouse-mode)) ;auto resize with mouse too
 
 ;; windmove
-(global-set-key (kbd "M-s-<up>") 'windmove-up)
-(global-set-key (kbd "M-s-<down>") 'windmove-down)
-(global-set-key (kbd "M-s-<left>") 'windmove-left)
-(global-set-key (kbd "M-s-<right>") 'windmove-right)
+(global-set-key (kbd "C-M-S-<up>") 'windmove-up)
+(global-set-key (kbd "C-M-S-<down>") 'windmove-down)
+(global-set-key (kbd "C-M-S-<left>") 'windmove-left)
+(global-set-key (kbd "C-M-S-<right>") 'windmove-right)
 
 (winner-mode t)
 
