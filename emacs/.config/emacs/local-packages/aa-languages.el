@@ -12,7 +12,8 @@
   :ensure t
   :config
   (add-hook 'haskell-mode-hook #'eglot-ensure)
-  (add-hook 'haskell-mode-hook #'haskell-decl-scan-mode))
+  (add-hook 'haskell-mode-hook #'haskell-decl-scan-mode)
+  (define-key haskell-mode-map (kbd "M-RET")#'eglot-code-actions))
 
 (use-package fsharp-mode
   :ensure t)
