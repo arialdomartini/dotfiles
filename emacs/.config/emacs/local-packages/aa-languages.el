@@ -1,5 +1,7 @@
 (use-package eglot
-  :ensure t)
+  :ensure t
+  :config
+  (setq eglot-autoshutdown t))
 
 (use-package rainbow-delimiters
   :ensure t
