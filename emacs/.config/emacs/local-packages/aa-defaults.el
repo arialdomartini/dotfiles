@@ -15,6 +15,8 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+(global-set-key (kbd "M-z") 'zap-up-to-char)
+
 (progn
   (defun kill-current-buffer (&optional arg)
     (interactive (list current-prefix-arg))
