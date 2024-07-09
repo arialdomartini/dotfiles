@@ -66,6 +66,7 @@ The DWIM behaviour of this command is as follows:
 
   (define-key global-map [remap keyboard-quit] 'aa-simple-keyboard-quit-dwim) )
 
-
+;; Tab = 4 spaces
+(setq sgml-basic-offset 4)
 
 (provide 'aa-defaults)
