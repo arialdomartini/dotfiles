@@ -18,9 +18,10 @@
 (use-package buffer-expose
   :ensure t)
 
-(use-package avy :ensure t)
-(global-set-key (kbd "C-;") 'avy-goto-word-1)
-(global-set-key (kbd "C-'") 'avy-goto-word-0)
+(use-package avy :ensure t
+  :config 
+  (global-set-key (kbd "C-;") 'avy-goto-word-1)
+  (global-set-key (kbd "C-:") 'avy-goto-line))
 
 
 (provide 'aa-windows)
