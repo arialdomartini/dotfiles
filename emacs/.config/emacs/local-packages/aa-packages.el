@@ -9,7 +9,8 @@
   :config
   (setq magit-gitk-executable "/usr/bin/gitg"
 	magit-repository-directories '(("~/prg/" . 2))
-	magit-revision-show-gravatars 'author))
+	magit-revision-show-gravatars 'author)
+  (put 'magit-edit-line-commit 'disabled nil))
 
 (use-package forge
   :ensure t
