@@ -38,12 +38,7 @@
   (volatile-highlights-mode t))
 
 
-(defun turn-on-toggle-truncate-line ()
-  "Turns truncating on, without printing messages"
-  (let ((inhibit-message t))
-    (toggle-truncate-lines 1)))
-(add-hook 'text-mode-hook #'turn-on-toggle-truncate-line)
-
+(setq-default truncate-lines t)
 
 (use-package pulsar
   :ensure t
