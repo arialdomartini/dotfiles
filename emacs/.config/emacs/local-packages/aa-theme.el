@@ -7,12 +7,12 @@
   (add-hook 'enable-theme-functions 'aa-borderless-line)
   (setq modus-themes-org-blocks 'gray-background))
 
-;;  (modus-themes-load-theme 'modus-vivendi-deuteranopia))
+(modus-themes-load-theme 'modus-vivendi-tinted)
 
-(use-package base16-theme
-  :ensure t
-  :config
-  (load-theme 'base16-default-dark t))
+;; (use-package base16-theme
+;;   :ensure t
+;;   :config
+;;   (load-theme 'base16-default-dark t))
 
 
 (provide 'aa-theme)
