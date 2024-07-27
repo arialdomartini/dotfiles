@@ -2,12 +2,20 @@
 
 (load (locate-user-emacs-file "aa-prelude.el"))
 
+
 (defun aa-get-packages (path)
-  (let ((files (directory-files-recursively path "")))
+  (let* ((reg
+          (concat
+           "\\`"   ; beginning of line
+           "[^#]"  ; not #
+           ".*"    ; any char
+           "\\.el" ; .el extension
+           "\\'"))  ; end of string
+         (files (directory-files-recursively path reg)))
     (mapcar (lambda (f)
 	      (intern
 	       (file-name-sans-extension
-		(file-relative-name f path))))
+	        (file-relative-name f path))))
 	    files)))
 
 (defun aa-require-packages-in (path)
