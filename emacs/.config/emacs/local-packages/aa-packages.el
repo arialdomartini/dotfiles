@@ -13,8 +13,7 @@
 	         (display-buffer-reuse-window display-buffer-same-window)))
 
   (setq magit-gitk-executable "/usr/bin/gitg"
-	magit-repository-directories '(("~/prg/" . 2))
-	magit-revision-show-gravatars 'author)
+	magit-repository-directories '(("~/prg/" . 2)))
   (put 'magit-edit-line-commit 'disabled nil))
 
 (use-package forge
