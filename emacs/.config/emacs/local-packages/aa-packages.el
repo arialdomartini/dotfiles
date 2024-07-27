@@ -5,8 +5,13 @@
   ("C-+" . er/contract-region))
 
 (use-package magit
-  :ensure t
+  :defer t
   :config
+  ;; Magit reuses the whole buffer
+  (add-to-list 'display-buffer-alist
+	       '((derived-mode . magit-status-mode)
+	         (display-buffer-reuse-window display-buffer-same-window)))
+
   (setq magit-gitk-executable "/usr/bin/gitg"
 	magit-repository-directories '(("~/prg/" . 2))
 	magit-revision-show-gravatars 'author)

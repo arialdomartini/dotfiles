@@ -16,10 +16,7 @@
 		global-hl-line-mode nil)
     (global-hl-line-unhighlight)))
 
-;; Magit reuses the whole buffer
-(add-to-list 'display-buffer-alist
-	     '((derived-mode . magit-status-mode)
-	       (display-buffer-reuse-window display-buffer-same-window)))
+
 
 
 (use-package olivetti
