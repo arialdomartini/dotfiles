@@ -8,9 +8,8 @@
 (setq help-window-select t)
 
 (use-package hl-line
+  :hook (after-init . global-hl-line-mode)
   :config
-  (global-hl-line-mode)
-
   (defun aa/disable-hl-line-mode ()
     "Unconditionally disable `hl-line-mode'."
     (setq-local hl-line-mode nil
