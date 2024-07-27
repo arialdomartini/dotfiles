@@ -16,8 +16,6 @@
 		global-hl-line-mode nil)
     (global-hl-line-unhighlight)))
 
-(pixel-scroll-precision-mode)
-
 ;; Magit reuses the whole buffer
 (add-to-list 'display-buffer-alist
 	     '((derived-mode . magit-status-mode)
