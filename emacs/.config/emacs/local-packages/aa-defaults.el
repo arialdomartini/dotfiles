@@ -32,6 +32,10 @@
  delete-by-moving-to-trash t
  dired-kill-when-opening-new-dired-buffer t)
 
+(use-package dired-subtree
+  :bind
+  (("TAB" . dired-subtree-toggle)))
+
 
 ;; (use-package dirvish
 ;;   :ensure t
