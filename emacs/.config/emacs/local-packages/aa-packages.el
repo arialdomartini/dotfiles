@@ -136,12 +136,12 @@
 
 
 (use-package vterm
-  :custom
-  (vterm-shell "zsh")
+  :bind ("C-c t" . vterm)
   :config
-  (global-set-key (kbd "C-c t") 'vterm)
   (setq vterm-ignore-blink-cursor nil)
-  :hook (vterm-mode . aa/disable-hl-line-mode))
+  :hook (vterm-mode . aa/disable-hl-line-mode)
+  :custom
+  (vterm-shell "zsh"))
 
 
 (use-package markdown-mode
