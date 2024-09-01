@@ -21,7 +21,7 @@ hide_edge_borders smart
 workspace_auto_back_and_forth yes
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #557744 #ffffff #2e9ef4   #555555
+client.focused          #4c7899 #557744 #ffffff #ff0000   #555555
 client.unfocused        #333333 #112211 #bbbbbb #292d2e   #222222
 client.focused_inactive #333333 #223311 #667766 #484e50   #5f676a
 
@@ -210,6 +210,11 @@ bar {
 exec --no-startup-id xset r rate 185 35
 bindsym $mod+Mod1+o exec xset r rate 185 35
 
+exec --no-startup-id xinput --set-prop "DLL075B:01 06CB:76AF Touchpad" "libinput Accel Speed" 0 .5
+bindsym $mod+Mod1+i exec xinput --set-prop "DLL075B:01 06CB:76AF Touchpad" "libinput Accel Speed" 0.5
+
+
+
 exec --no-startup-id setxkbmap -option ctrl:nocap
 # exec_always --no-startup-id  xrandr --output DVI-D-0 --off --output HDMI-0 --mode 2560x1440 --pos 1600x0 --rotate normal --output DVI-I-1 --mode 1600x900 --pos 0x392 --rotate normal --output DVI-Ir-0 --off --output DP-1 --off --output DP-0 --off
 #exec_always --no-startup-id ~/.screenlayout/dual-screen.sh
@@ -226,7 +231,6 @@ bindsym $mod+z exec xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Ac
 bindsym $mod+x exec xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Accel Speed" 0.3
 bindsym $mod+c exec xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Accel Speed" 0.01
 
-exec_always --no-startup-id xinput --set-prop "DLL075B:01 06CB:76AF Touchpad" "libinput Accel Speed" .5
 
 # for_window [all] title_window_icon yes
 for_window [all] border pixel 2
