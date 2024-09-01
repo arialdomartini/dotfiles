@@ -17,21 +17,25 @@
   (put 'magit-edit-line-commit 'disabled nil))
 
 (use-package forge
-  :ensure t
+  :defer t
+  :after magit
   :config
   (setq auth-sources '("~/.authinfo")
-	github.user "arialdomartini@gmail.com"))
+	github.user "arialdo.martini@gmail.com"))
+
+;; we stopped here
 
 (use-package git-timemachine
   :bind (("C-c g t" . git-timemachine)))
-
-(use-package embark-consult
-  :ensure t)
 
 (use-package embark
   :ensure t
   :bind (("C-." . embark-act)
 	 ("C-," . embark-dwim)))
+
+(use-package embark-consult
+  :ensure t
+  :after (embark consult))
 
 
 (use-package which-key
@@ -131,7 +135,6 @@
   (with-eval-after-load 'savehist
     (corfu-history-mode 1)
     (add-to-list 'savehist-additional-variables 'corfu-history)) )
-
 
 
 
