@@ -171,7 +171,7 @@ export EDITOR=emacs
 export VISUAL=emacs
 
 
-export LANG=en_US.UTF-8
+
 
 export EDITOR=emacs
 export GIT_EDITOR=emacs
@@ -183,6 +183,7 @@ export JAVA_HOME=/usr/lib/jvm/default
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
 
 export HISTFILE=~/.zsh_history
 export SAVEHIST=9999999
