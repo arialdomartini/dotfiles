@@ -32,7 +32,7 @@
   (volatile-highlights-mode t))
 
 
-(setq-default truncate-lines t)
+(setq-default truncate-lines nil)
 
 (use-package pulsar
   :ensure t
