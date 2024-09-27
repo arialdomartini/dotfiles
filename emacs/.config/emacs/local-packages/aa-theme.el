@@ -7,15 +7,10 @@
   (add-hook 'enable-theme-functions 'aa-borderless-line)
   (setq modus-themes-org-blocks 'gray-background))
 
-;;(modus-themes-load-theme 'modus-operandi-tinted)
+;; (modus-themes-load-theme 'modus-vivendi)
 
-(use-package theme-buffet
-  :config
-  (theme-buffet-timer-mins 30)
-  (setq theme-buffet-menu 'modus-ef)
-  (theme-buffet-anything-goes))
-
-
+(use-package ef-themes)
+(ef-themes-select-dark 'ef-maris-dark)
 
 ;; (use-package base16-theme
 ;;   :ensure t
