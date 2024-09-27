@@ -65,15 +65,7 @@
               ("C-l" . backward-kill-word)))
 
 
-(setq completion-lazy-hilit t)
-(use-package orderless
-  :ensure t
-  :custom
-  (completion-styles '(orderless basic))
-  (completion-category-overrides '((file (styles basic partial-completion)))))
-
-
-
+;; (setq completion-lazy-hilit t)
 (use-package consult
   :ensure t
   :demand t
@@ -91,6 +83,14 @@
 	;;	completion-in-region-function #'consult-completion-in-region
 	;;	tab-always-indent 'complete)
 	))
+
+(use-package orderless
+  :ensure t
+  :config
+  (setq completion-styles '(orderless basic))
+  (setq completion-category-overrides '((file (styles basic partial-completion)))))
+
+
 
 
 (use-package vertico
