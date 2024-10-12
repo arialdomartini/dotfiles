@@ -1,6 +1,14 @@
 autoload -U compinit && compinit -u  # BEFORE zoxide init
 eval "$(/usr/bin/zoxide init zsh)"
 
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
 #+BEGIN_SRC PowerLevel10k
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -9,21 +17,6 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #+END_SRC
-
-#+BEGIN_SRC Activate zinit
-if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
-    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.zinit/bin" && \
-        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
-        print -P "%F{160}▓▒░ The clone has failed.%f%b"
-fi
-
-source "$HOME/.zinit/bin/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-# zpcompinit; zpcdreplay
-
 
 if [ `tput colors` = "256" ]; then
 	zinit light romkatv/powerlevel10k
@@ -36,8 +29,8 @@ zinit snippet OMZ::lib/history.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZP::fzf
 zinit light Aloxaf/fzf-tab
-zinit light Tarrasch/zsh-bd
-zinit light https://github.com/felixr/docker-zsh-completion
+#zinit light Tarrasch/zsh-bd
+#zinit light https://github.com/felixr/docker-zsh-completion
 
 
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=true
@@ -74,7 +67,7 @@ alias ..="cd ..;l"
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias upto=bd
+#alias upto=bd
 
 alias g="git"
 
@@ -207,4 +200,4 @@ bindkey "^[[1;5D" backward-word
 bindkey "\e[H" beginning-of-line
 bindkey "\e[F" end-of-line
 
-source /usr/share/zsh/plugins/zsh-nix-shell/nix-shell.plugin.zsh
+# source /usr/share/zsh/plugins/zsh-nix-shell/nix-shell.plugin.zsh
