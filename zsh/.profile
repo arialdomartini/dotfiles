@@ -5,3 +5,6 @@ PATH=$PATH:/home/arialdo/.dotnet/tools
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
+
+echo "Profile executed!"
