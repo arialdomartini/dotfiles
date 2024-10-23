@@ -43,5 +43,6 @@
   :config
   (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode))
 
+(use-package nix-mode)
 
 (provide 'aa-languages)
