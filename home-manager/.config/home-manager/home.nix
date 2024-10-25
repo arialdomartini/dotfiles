@@ -1,10 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  home.username = "arialdo";
-  home.homeDirectory = "/home/arialdo";
-
-  home.stateVersion = "24.05";
+  home = {
+    stateVersion = "24.05";
+    username = "arialdo";
+    homeDirectory = "/home/arialdo";
+  };
 
   # imports = [
   #   ./firefox.nix
@@ -20,9 +21,9 @@
 
   ];
 
-    # TODO find a a way to move these files in program.git
-    xdg.configFile."git/config".source = ../../git/config;
-    xdg.configFile."git/.gitignore-global".source = ../../git/.gitignore-global;
+  # TODO find a a way to move these files in program.git
+  xdg.configFile."git/config".source = ../../git/config;
+  xdg.configFile."git/.gitignore-global".source = ../../git/.gitignore-global;
 
   home.file = {
   };
