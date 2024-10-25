@@ -15,19 +15,22 @@
     };
   };
 
+  nixpkgs.config.allowUnfree = true;
+  
   # imports = [
   #   ./firefox.nix
   # ];
   
   programs = {
     home-manager.enable = true;
+    
     git = {
       enable = true;
     };
   };
 
   home.packages = with pkgs; [
-
+    jetbrains.rider
   ];
 
   # TODO find a a way to move these files in program.git
