@@ -17,10 +17,6 @@
 
   nixpkgs.config.allowUnfree = true;
   
-  # imports = [
-  #   ./firefox.nix
-  # ];
-  
   programs = {
     home-manager.enable = true;
     
