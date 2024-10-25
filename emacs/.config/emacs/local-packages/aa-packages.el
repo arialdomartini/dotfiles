@@ -162,10 +162,14 @@
 
 
 (use-package vterm
-  :bind ("C-c t" . vterm)
   :config
   (setq vterm-ignore-blink-cursor nil)
   :hook (vterm-mode . aa/disable-hl-line-mode)
+  :bind (("C-c t" . vterm)
+         :map vterm-mode-map
+         ("<f1>" . vterm-copy-mode)
+         :map vterm-copy-mode-map
+         ("<f1>" . vterm-copy-mode))
   :custom
   (vterm-shell "zsh"))
 
