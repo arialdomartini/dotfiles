@@ -27,6 +27,7 @@
 
   home.packages = with pkgs; [
     jetbrains.rider
+    ripgrep
   ];
 
   # TODO find a a way to move these files in program.git
