@@ -19,15 +19,13 @@
   
   programs = {
     home-manager.enable = true;
-    
-    git = {
-      enable = true;
-    };
+    git.enable = true;
   };
 
   home.packages = with pkgs; [
     jetbrains.rider
     ripgrep
+    onlyoffice-bin
   ];
 
   # TODO find a a way to move these files in program.git
