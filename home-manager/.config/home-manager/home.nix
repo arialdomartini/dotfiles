@@ -3,6 +3,7 @@
 {
   imports = [
     ./git.nix
+    ./zsh.nix
   ];
 
   home = {
@@ -23,15 +24,13 @@
   
   programs = {
     home-manager.enable = true;
-    git.enable = true;
-  };
+    };
 
   home.packages = with pkgs; [
     jetbrains.rider
     ripgrep
     onlyoffice-bin
   ];
-
 
   home.sessionVariables = {
     EDITOR = "emacs";
