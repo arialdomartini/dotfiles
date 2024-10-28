@@ -29,8 +29,13 @@
   home.packages = with pkgs; [
     jetbrains.rider
     ripgrep
+    ripgrep-all
     onlyoffice-bin
   ];
+
+  home.file = {
+    ".profile".source = ../../../zsh/.profile;
+  };
 
   home.sessionVariables = {
     EDITOR = "emacs";
