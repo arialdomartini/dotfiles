@@ -74,9 +74,10 @@
 	 ("C-s"   . consult-line)
 	 ("C-S-s" . isearch-forward)
 	 ("C-x r b" . consult-bookmark)
-	 ("C-c r r" . consult-ripgrep)
          ("M-y" . consult-yank-pop)
-	 ("C-c g g" . consult-git-grep))
+	 ("C-c r r" . consult-ripgrep)
+	 ("C-c g g" . consult-git-grep)
+         ("C-c f l" . consult-focus-lines))
   :config
   (setq register-preview-delay 0.5
 	register-preview-function #'consult-register-format
