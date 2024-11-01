@@ -38,11 +38,6 @@
   :after (embark consult))
 
 
-(use-package which-key
-  :ensure t
-  :config
-  (which-key-mode t))
-
 (use-package drag-stuff
   :ensure t
   :config
