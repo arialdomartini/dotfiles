@@ -28,9 +28,14 @@
 
   home.packages = with pkgs; [
     jetbrains.rider
+    smartgithg
+    gimp
     ripgrep
     ripgrep-all
     onlyoffice-bin
+    unzip
+    fd
+    jq
   ];
 
   home.file = {
