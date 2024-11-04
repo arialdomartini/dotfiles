@@ -129,12 +129,12 @@
   :ensure t
   :init
   (global-corfu-mode)
-  (defun corfu-move-to-minibuffer ()
-    (interactive)
-    (let ((completion-extra-properties corfu--extra)
-          completion-cycle-threshold completion-cycling)
-      (apply #'consult-completion-in-region completion-in-region--data)))
-  (keymap-set corfu-map "<tab>" 'corfu-move-to-minibuffer)
+  ;; (defun corfu-move-to-minibuffer ()
+  ;;   (interactive)
+  ;;   (let ((completion-extra-properties corfu--extra)
+  ;;         completion-cycle-threshold completion-cycling)
+  ;;     (apply #'consult-completion-in-region completion-in-region--data)))
+  ;; (keymap-set corfu-map "<tab>" 'corfu-move-to-minibuffer)
   :config
   (setq corfu-min-width 250
         corfu-min-height 750
@@ -153,7 +153,8 @@
   ;; Sort by input history (no need to modify `corfu-sort-function').
   (with-eval-after-load 'savehist
     (corfu-history-mode 1)
-    (add-to-list 'savehist-additional-variables 'corfu-history)) )
+    (add-to-list 'savehist-additional-variables 'corfu-history)))
+
 
 
 
