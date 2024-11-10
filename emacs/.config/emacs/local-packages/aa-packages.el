@@ -188,4 +188,8 @@
 (use-package lorem-ipsum
   :ensure t)
 
+(use-package vundo
+  :config
+  (setq vundo-glyph-alist vundo-unicode-symbols))
+
 (provide 'aa-packages)
