@@ -3,31 +3,37 @@
   :config
   (setq eglot-autoshutdown t))
 
+
+(use-package c-ts-mode
+  :ensure nil
+  :config
+  (add-hook 'c-mode-hook 'eglot-ensure)
+  (add-hook 'c++-mode-hook 'eglot-ensure)
+  (add-hook 'c++-ts-mode-hook 'eglot-ensure))
+
 (use-package rainbow-delimiters
   :ensure t
   :config
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 
+
+(use-package aggressive-indent
+  :ensure t
+  :config
+  (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode))
+
+(use-package nix-mode)
+
+
 ;; (use-package haskell-mode
 ;;   :ensure t
-;;   :defer t
-;;   :init
-;;   (add-hook 'haskell-mode-hook #'eglot-ensure)
-;;   (add-hook 'haskell-mode-hook #'haskell-decl-scan-mode)
-;;   :config
-;;   (define-key haskell-mode-map (kbd "M-RET")#'eglot-code-actions))
-
-(use-package haskell-mode
-  :ensure t
-  :mode "\\.hs\\'"
-  :hook
-  (haskell-mode . eglot-ensure)
-  (haskell-mode . haskell-decl-scan-mode)
-  :bind
-  ( :map haskell-mode-map
-    ("M-RET". eglot-code-actions)))
-
-
+;;   :mode "\\.hs\\'"
+;;   :hook
+;;   (haskell-mode . eglot-ensure)
+;;   (haskell-mode . haskell-decl-scan-mode)
+;;   :bind
+;;   ( :map haskell-mode-map
+;;     ("M-RET". eglot-code-actions)))
 
 (use-package fsharp-mode
   :ensure t)
@@ -38,11 +44,16 @@
   (setq eglot-fsharp-server-install-dir nil)
   (add-hook 'fsharp-mode-hook #'eglot-ensure))
 
-(use-package aggressive-indent
-  :ensure t
-  :config
-  (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode))
 
-(use-package nix-mode)
+(use-package haskell-ts-mode
+  :vc (:url https://codeberg.org/pranshu/haskell-ts-mode))
+
+;; does not work properly
+;; (use-package fsharp-ts-mode
+;;   :vc (:url "https://github.com/KaranAhlawat/fsharp-ts-mode"))
+
+(global-set-key (kbd "<XF86Tools>") 'consult-imenu)
+(global-set-key (kbd "<XF86Launch5>") 'consult-outline)
+
 
 (provide 'aa-languages)
