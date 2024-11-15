@@ -4,6 +4,7 @@
   imports = [
     ./git.nix
     ./zsh.nix
+    ./direnv.nix
   ];
 
   home = {
