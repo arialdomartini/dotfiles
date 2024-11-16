@@ -46,7 +46,15 @@
 
 
 (use-package haskell-ts-mode
-  :vc (:url https://codeberg.org/pranshu/haskell-ts-mode))
+  :vc (:url https://codeberg.org/pranshu/haskell-ts-mode)
+  :mode "\\.hs\\'"
+  :hook (haskell-ts-mode . eglot-ensure)
+  :bind
+  ( :map haskell-ts-mode-map
+    ("M-RET". eglot-code-actions))
+  :config
+  (add-to-list 'eglot-server-programs '(haskell-ts-mode . ("haskell-language-server-wrapper" "--lsp"))))
+
 
 ;; does not work properly
 ;; (use-package fsharp-ts-mode
