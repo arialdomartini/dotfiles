@@ -9,11 +9,11 @@
   :config
   ;; Magit reuses the whole buffer
   (add-to-list 'display-buffer-alist
-	       '((derived-mode . magit-status-mode)
-	         (display-buffer-reuse-window display-buffer-same-window)))
+           '((derived-mode . magit-status-mode)
+             (display-buffer-reuse-window display-buffer-same-window)))
 
   (setq magit-gitk-executable "/usr/bin/gitg"
-	magit-repository-directories '(("~/prg/" . 2)))
+    magit-repository-directories '(("~/prg/" . 2)))
   (put 'magit-edit-line-commit 'disabled nil))
 
 (use-package forge
@@ -21,7 +21,7 @@
   :after magit
   :config
   (setq auth-sources '("~/.authinfo")
-	github.user "arialdo.martini@gmail.com"))
+    github.user "arialdo.martini@gmail.com"))
 
 ;; we stopped here
 
@@ -31,7 +31,7 @@
 (use-package embark
   :ensure t
   :bind (("C-." . embark-act)
-	 ("C-," . embark-dwim)))
+     ("C-," . embark-dwim)))
 
 (use-package embark-consult
   :ensure t
@@ -52,7 +52,7 @@
   :config
   (vertico-mode)
   (setq vertico-count 10
-	vertico-resize nil)
+    vertico-resize nil)
   (file-name-shadow-mode 1)
   ;;  (add-hook 'rfn-eshadow-update-overlay-hook #'vertico-directory-tidy) 
   :bind (:map vertico-map
@@ -65,20 +65,20 @@
   :ensure t
   :demand t
   :bind (("M-g M-g" . consult-goto-line)
-	 ("C-x b" . consult-buffer)
-	 ("C-s"   . consult-line)
-	 ("C-S-s" . isearch-forward)
-	 ("C-x r b" . consult-bookmark)
+         ("C-x b" . consult-buffer)
+         ("C-s"   . consult-line)
+         ("C-S-s" . isearch-forward)
+         ("C-x r b" . consult-bookmark)
          ("M-y" . consult-yank-pop)
-	 ("C-c r r" . consult-ripgrep)
-	 ("C-c g g" . consult-git-grep)
+         ("C-c r r" . consult-ripgrep)
+         ("C-c g g" . consult-git-grep)
          ("C-c f l" . consult-focus-lines))
   :config
   (setq register-preview-delay 0.5
-	register-preview-function #'consult-register-format
-	;;	completion-in-region-function #'consult-completion-in-region
-	;;	tab-always-indent 'complete)
-	))
+        register-preview-function #'consult-register-format
+        ;;    completion-in-region-function #'consult-completion-in-region
+        ;;    tab-always-indent 'complete)
+        ))
 
 (use-package orderless
   :ensure t
@@ -95,7 +95,7 @@
   :config
   (vertico-mode)
   (setq vertico-count 10
-	vertico-resize nil)
+        vertico-resize nil)
   (file-name-shadow-mode 1)
   (add-hook 'rfn-eshadow-update-overlay-hook #'vertico-directory-tidy) 
   :bind (:map vertico-map
