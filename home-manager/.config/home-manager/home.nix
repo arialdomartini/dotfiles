@@ -28,7 +28,6 @@
     };
 
   home.packages = with pkgs; [
-    jetbrains.rider
     smartgithg
     gimp
     ripgrep
