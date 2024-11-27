@@ -70,4 +70,10 @@
 
 
 
+(use-package highlight-sexp
+  :vc (:url "https://github.com/daimrod/highlight-sexp")
+  :hook ((emacs-lisp-mode . highlight-sexp-mode)))
+
+
+
 (provide 'aa-languages)
