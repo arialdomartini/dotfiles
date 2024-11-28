@@ -1,7 +1,52 @@
 (use-package eglot
   :ensure t
   :config
-  (setq eglot-autoshutdown t))
+  (setq eglot-autoshutdown t)
+  :bind
+  (:map prog-mode-map
+        ("M-RET". eglot-code-actions))
+  :custom
+  (eglot-events-buffer-size 0) ; disable events logging, it should be enabled only when debuggigng LSP servers
+  (eglot-sync-connect-nil 0) ; disable UI freeze when opening big files
+  (eglot-connect-timeout nil)) ; never timeout
+
+
+(use-package flymake
+  :config
+  ;; (set-face-attribute 'flymake-error  nil :inverse-video t)
+  ;; (set-face-attribute 'flymake-warning  nil :inverse-video t)
+  ;; (set-face-attribute 'flymake-note  nil :inverse-video t)
+  :custom
+  (flymake-mode-line-lighter "Fly")
+  :hook prog-mode)
+
+
+(use-package consult-eglot-embark)
+
+(use-package consult-eglot
+  :after (consult eglot embark)
+  :config
+  (require 'consult-eglot-embark)
+  (consult-eglot-embark-mode))
+
+(use-package consult-eglot
+  :after (consult eglot embark)
+  :config
+  (require 'consult-eglot-embark)
+  (consult-eglot-embark-mode))
+
+
+(use-package indent-bars
+  :config
+  (require 'indent-bars-ts)
+  :custom
+  (indent-bars-treesit-support t)
+  (indent-bars-spacing-override nil)
+  ;; (indent-bars-treesit-wrap '())
+  (indent-bars-color-by-depth '(:regexp "outline-\\([0-9]+\\)" :blend 0.4))
+  (indent-bars-no-stipple-char (string-to-char "|"))
+  (indent-bars-prefer-character 't)) ;; so it works also in terminal
+
 
 
 (use-package c-ts-mode
