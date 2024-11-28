@@ -51,9 +51,10 @@
   :demand t
   :config
   (vertico-mode)
-  (setq vertico-count 10
-    vertico-resize nil)
+  (setq vertico-count 15
+        vertico-resize nil)
   (file-name-shadow-mode 1)
+  
   ;;  (add-hook 'rfn-eshadow-update-overlay-hook #'vertico-directory-tidy) 
   :bind (:map vertico-map
               ("C-j" . vertico-insert)
@@ -69,7 +70,8 @@
          ("C-s"   . consult-line)
          ("C-S-s" . isearch-forward)
          ("C-x r b" . consult-bookmark)
-         ("M-y" . consult-yank-pop)
+         ("C-M-y" . consult-yank-pop)
+         ("M-y" . consult-yank-from-kill-ring)
          ("C-c r r" . consult-ripgrep)
          ("C-c g g" . consult-git-grep)
          ("C-c f l" . consult-focus-lines))
@@ -87,8 +89,6 @@
   (setq completion-category-overrides '((file (styles basic partial-completion)))))
 
 
-
-
 (use-package vertico
   :ensure t
   :demand t
@@ -103,6 +103,12 @@
               ("C-l" . backward-kill-word)))
 
 (setq enable-recursive-minibuffers t)
+
+
+(use-package cape
+  :config
+  (add-to-list 'completion-at-point-functions #'cape-dabbrev)
+  (add-to-list 'completion-at-point-functions #'cape-file))
 
 
 (use-package savehist
