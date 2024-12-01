@@ -80,8 +80,8 @@
         register-preview-function #'consult-register-format
         ;;    completion-in-region-function #'consult-completion-in-region
         ;;    tab-always-indent 'complete)
-        (consult-customize consult-find consult-fd :state (consult--file-preview)) ; preview for consult-fd
-        ))
+        )
+  (consult-customize consult-find consult-fd :state (consult--file-preview))) ; preview for consult-fd
 
 (use-package orderless
   :ensure t
