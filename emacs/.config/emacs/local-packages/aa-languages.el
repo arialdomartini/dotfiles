@@ -35,20 +35,6 @@
   (require 'consult-eglot-embark)
   (consult-eglot-embark-mode))
 
-
-(use-package indent-bars
-  :config
-  (require 'indent-bars-ts)
-  :custom
-  (indent-bars-treesit-support t)
-  (indent-bars-spacing-override nil)
-  ;; (indent-bars-treesit-wrap '())
-  (indent-bars-color-by-depth '(:regexp "outline-\\([0-9]+\\)" :blend 0.4))
-  (indent-bars-no-stipple-char (string-to-char "|"))
-  (indent-bars-prefer-character 't)) ;; so it works also in terminal
-
-
-
 (use-package c-ts-mode
   :ensure nil
   :config
