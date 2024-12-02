@@ -7,13 +7,22 @@
   (setq switch-window-default-window-size 0.65) ;auto resize to 65% of frame size
   (switch-window-mouse-mode)) ;auto resize with mouse too
 
-;; windmove
-(global-set-key (kbd "C-M-S-<up>") 'windmove-up)
-(global-set-key (kbd "C-M-S-<down>") 'windmove-down)
-(global-set-key (kbd "C-M-S-<left>") 'windmove-left)
-(global-set-key (kbd "C-M-S-<right>") 'windmove-right)
+(use-package windmove
+  :config
+  (global-set-key (kbd "C-M-S-<up>") 'windmove-up)
+  (global-set-key (kbd "C-M-S-<down>") 'windmove-down)
+  (global-set-key (kbd "C-M-S-<left>") 'windmove-left)
+  (global-set-key (kbd "C-M-S-<right>") 'windmove-right))
 
 (winner-mode t)
+
+(use-package buffer-move
+  :config
+  (global-set-key (kbd "<C-S-up>")     'buf-move-up)
+  (global-set-key (kbd "<C-S-down>")   'buf-move-down)
+  (global-set-key (kbd "<C-S-left>")   'buf-move-left)
+  (global-set-key (kbd "<C-S-right>")  'buf-move-right))
+
 
 (use-package buffer-expose
   :ensure t)
