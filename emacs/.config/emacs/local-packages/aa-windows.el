@@ -18,10 +18,10 @@
 
 (use-package buffer-move
   :config
-  (global-set-key (kbd "<C-S-up>")     'buf-move-up)
-  (global-set-key (kbd "<C-S-down>")   'buf-move-down)
-  (global-set-key (kbd "<C-S-left>")   'buf-move-left)
-  (global-set-key (kbd "<C-S-right>")  'buf-move-right))
+  (global-set-key (kbd "<C-M-S-s-up>")     'buf-move-up)
+  (global-set-key (kbd "<C-M-S-s-down>")   'buf-move-down)
+  (global-set-key (kbd "<C-M-S-s-left>")   'buf-move-left)
+  (global-set-key (kbd "<C-M-S-s-right>")  'buf-move-right))
 
 
 (use-package buffer-expose
