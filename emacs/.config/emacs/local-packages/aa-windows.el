@@ -12,17 +12,14 @@
   (global-set-key (kbd "C-M-S-<up>") 'windmove-up)
   (global-set-key (kbd "C-M-S-<down>") 'windmove-down)
   (global-set-key (kbd "C-M-S-<left>") 'windmove-left)
-  (global-set-key (kbd "C-M-S-<right>") 'windmove-right))
+  (global-set-key (kbd "C-M-S-<right>") 'windmove-right)
+
+  (global-set-key (kbd "<C-M-S-s-up>")     'windmove-swap-states-up)
+  (global-set-key (kbd "<C-M-S-s-down>")   'windmove-swap-states-down)
+  (global-set-key (kbd "<C-M-S-s-left>")   'windmove-swap-states-left)
+  (global-set-key (kbd "<C-M-S-s-right>")  'windmove-swap-states-right))
 
 (winner-mode t)
-
-(use-package buffer-move
-  :config
-  (global-set-key (kbd "<C-M-S-s-up>")     'buf-move-up)
-  (global-set-key (kbd "<C-M-S-s-down>")   'buf-move-down)
-  (global-set-key (kbd "<C-M-S-s-left>")   'buf-move-left)
-  (global-set-key (kbd "<C-M-S-s-right>")  'buf-move-right))
-
 
 (use-package buffer-expose
   :ensure t)
