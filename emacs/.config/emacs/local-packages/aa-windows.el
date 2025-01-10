@@ -8,6 +8,7 @@
   (switch-window-mouse-mode)) ;auto resize with mouse too
 
 (use-package windmove
+  :ensure nil
   :config
   (global-set-key (kbd "C-M-S-<up>") 'windmove-up)
   (global-set-key (kbd "C-M-S-<down>") 'windmove-down)
@@ -19,7 +20,10 @@
   (global-set-key (kbd "<C-M-S-s-left>")   'windmove-swap-states-left)
   (global-set-key (kbd "<C-M-S-s-right>")  'windmove-swap-states-right))
 
-(winner-mode t)
+(use-package winner
+  :ensure nil
+  :config
+  (winner-mode t))
 
 (use-package buffer-expose
   :ensure t)
