@@ -106,10 +106,16 @@
 (setq enable-recursive-minibuffers t)
 
 
+
+
 (use-package cape
   :config
-  (add-to-list 'completion-at-point-functions #'cape-dabbrev)
-  (add-to-list 'completion-at-point-functions #'cape-file))
+  (defun my-cape-add-backends ()
+    (add-hook 'completion-at-point-functions #'cape-dabbrev nil 'local)
+    (add-hook 'completion-at-point-functions #'cape-file nil 'local))
+  
+  (add-hook 'text-mode-hook #'my-cape-add-backends)
+  (add-hook 'prog-mode-hook #'my-cape-add-backends))
 
 
 (use-package savehist
