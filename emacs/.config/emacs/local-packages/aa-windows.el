@@ -33,4 +33,7 @@
   (global-set-key (kbd "C-:") 'avy-goto-line))
 
 
+(setq ediff-split-window-function 'split-window-horizontally)
+(setq ediff-window-setup-function 'ediff-setup-windows-plain) 
+
 (provide 'aa-windows)
