@@ -68,6 +68,18 @@
 
 (use-package fsharp-mode
   :ensure t)
+
+;; (use-package fsharp-ts-mode
+;;   :vc ( :url "https://github.com/KaranAhlawat/fsharp-ts-mode"
+;;         :rev "bd44b4e"))
+
+;; (use-package fsharp-ts-mode
+;;   :vc ( :url "https://github.com/KaranAhlawat/fsharp-ts-mode"
+;;         :branch "main"))
+
+
+
+
 (use-package eglot-fsharp
   :ensure t
   :after fsharp-mode
@@ -77,7 +89,7 @@
 
 
 (use-package haskell-ts-mode
-  :vc (:url https://codeberg.org/pranshu/haskell-ts-mode)
+  :vc (:url "https://codeberg.org/pranshu/haskell-ts-mode")
   :mode "\\.hs\\'"
   :hook (haskell-ts-mode . eglot-ensure)
   :bind
@@ -87,9 +99,6 @@
   (add-to-list 'eglot-server-programs '(haskell-ts-mode . ("haskell-language-server-wrapper" "--lsp"))))
 
 
-;; does not work properly
-;; (use-package fsharp-ts-mode
-;;   :vc (:url "https://github.com/KaranAhlawat/fsharp-ts-mode"))
 
 (global-set-key (kbd "<XF86Tools>") 'consult-imenu)
 (global-set-key (kbd "<XF86Launch5>") 'consult-outline)
