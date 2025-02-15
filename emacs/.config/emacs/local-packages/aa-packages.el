@@ -107,13 +107,19 @@
 
 
 
+(defun remove-ispell-completion ()
+  (remove-hook 'completion-at-point-functions #'ispell-completion-at-point t))
+
+(with-eval-after-load 'text-mode
+  (remove-ispell-completion)
+  (add-hook 'text-mode-hook #'remove-ispell-completion))
 
 (use-package cape
   :config
   (defun my-cape-add-backends ()
     (add-hook 'completion-at-point-functions #'cape-dabbrev nil 'local)
     (add-hook 'completion-at-point-functions #'cape-file nil 'local))
-  
+
   (add-hook 'text-mode-hook #'my-cape-add-backends)
   (add-hook 'prog-mode-hook #'my-cape-add-backends))
 
