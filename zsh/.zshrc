@@ -162,6 +162,7 @@ export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 export EDITOR=emacs
 export VISUAL=emacs
 
+export PAGER=less
 
 
 
