@@ -110,9 +110,9 @@
 	autoSetupRemote = true
 [rebase]
 	autosquash = true
+        updateRefs = true
 [pull]
 	rebase = true
-
 [merge]
 	tool = kdiff3
 
