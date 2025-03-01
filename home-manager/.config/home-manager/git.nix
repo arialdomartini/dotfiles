@@ -5,6 +5,6 @@
     enable = true;
   };
 
-  xdg.configFile."git/config".source = ../../git/config;
-  xdg.configFile."git/.gitignore-global".source = ../../git/.gitignore-global;
+  xdg.configFile."git/config".source = ../../../git/config;
+  xdg.configFile."git/.gitignore-global".source = ../../../git/.gitignore-global;
 }
