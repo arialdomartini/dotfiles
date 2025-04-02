@@ -51,7 +51,7 @@
   :demand t
   :config
   (vertico-mode)
-  (setq vertico-count 15
+  (setq vertico-count 25
         vertico-resize nil)
   (file-name-shadow-mode 1)
   
@@ -66,6 +66,7 @@
   :ensure t
   :demand t
   :bind (("M-g M-g" . consult-goto-line)
+         ("M-g <SPC>" . consult-mark)
          ("C-x b" . consult-buffer)
          ("C-s"   . consult-line)
          ("C-S-s" . isearch-forward)
