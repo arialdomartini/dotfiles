@@ -1,40 +1,32 @@
 autoload -U compinit && compinit -u  # BEFORE zoxide init
 eval "$(/usr/bin/zoxide init zsh)"
 
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
-[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-source "${ZINIT_HOME}/zinit.zsh"
+# Load zplug
+source ~/.zplug/init.zsh
 
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
-#+BEGIN_SRC PowerLevel10k
+# PowerLevel10k setup
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-#+END_SRC
 
 if [ `tput colors` = "256" ]; then
-	zinit light romkatv/powerlevel10k
+    zplug "romkatv/powerlevel10k", as:theme, depth:1
 fi
-#+END_SRC
 
-#+BEGIN_SRC Plugins
-zinit light zsh-users/zsh-completions
-zinit snippet OMZ::lib/history.zsh
-zinit snippet OMZ::plugins/git/git.plugin.zsh
-zinit snippet OMZP::fzf
-zinit light Aloxaf/fzf-tab
-#zinit light Tarrasch/zsh-bd
-#zinit light https://github.com/felixr/docker-zsh-completion
+# Plugins
+zplug "zsh-users/zsh-completions"
+zplug "ohmyzsh/ohmyzsh", use:"lib/history.zsh"
+zplug "ohmyzsh/ohmyzsh", use:"plugins/git/git.plugin.zsh"
+zplug "ohmyzsh/ohmyzsh", use:"plugins/fzf/fzf.plugin.zsh"
+zplug "Aloxaf/fzf-tab"
+zplug "Tarrasch/zsh-bd"
 
-
+# History substring search
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=true
-zinit light zsh-users/zsh-history-substring-search
+zplug "zsh-users/zsh-history-substring-search"
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey -M emacs '^P' history-substring-search-up
@@ -43,18 +35,25 @@ bindkey -M emacs '^N' history-substring-search-down
 zstyle ':fzf-tab:complete:_zlua:*' query-string input
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-
-# those should stay last
-zinit light zsh-users/zsh-autosuggestions
-zinit light zdharma/fast-syntax-highlighting
-zinit load wfxr/forgit
-
+# These should stay last
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zdharma/fast-syntax-highlighting", defer:2
+zplug "wfxr/forgit"
 
 eval "$(direnv hook zsh)"
 
-#+END_SRC
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
 
-#+BEGIN_SRC Aliases
+# Then, source plugins and add commands to $PATH
+zplug load
+
+# Aliases
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
 alias tree='broot'
@@ -66,7 +65,7 @@ alias ..="cd ..;l"
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-#alias upto=bd
+alias upto=bd
 
 alias g="git"
 
@@ -150,10 +149,7 @@ denvs() {
     eval "$(docker-machine env --swarm $1)"
 }
 
-#+END_SRC
-
-#+BEGIN_SRC  Environment variables
-
+# Environment variables
 export HISTFILE=~/.zsh_history
 export SAVEHIST=9999999
 export HISTSIZE=9999999
@@ -164,19 +160,15 @@ export VISUAL=emacs
 
 export PAGER=less
 
-
-
 export EDITOR=emacs
 export GIT_EDITOR=emacs
 
 export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
 
-
 export JAVA_HOME=/usr/lib/jvm/default
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
 
 export HISTFILE=~/.zsh_history
 export SAVEHIST=9999999
