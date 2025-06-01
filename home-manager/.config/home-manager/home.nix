@@ -29,7 +29,7 @@
 
   home.packages = with pkgs; [
     smartgithg
-    gimp
+    gimp3
     ripgrep
     ripgrep-all
     onlyoffice-bin
