@@ -45,20 +45,25 @@
   (drag-stuff-define-keys)) ;; M-<up/down/left/right>
 
 
-
 (use-package vertico
   :ensure t
   :demand t
   :config
   (vertico-mode)
+  (vertico-buffer-mode 1)
+  (setq vertico-buffer-display-action
+        '(display-buffer-full-frame))
   (setq vertico-count 25
         vertico-resize nil)
   (file-name-shadow-mode 1)
-  
-  ;;  (add-hook 'rfn-eshadow-update-overlay-hook #'vertico-directory-tidy) 
+  (add-hook 'rfn-eshadow-update-overlay-hook #'vertico-directory-tidy)
   :bind (:map vertico-map
               ("C-j" . vertico-insert)
               ("C-l" . backward-kill-word)))
+
+
+(setq enable-recursive-minibuffers t)
+
 
 
 ;; (setq completion-lazy-hilit t)
@@ -89,23 +94,6 @@
   :config
   (setq completion-styles '(orderless basic))
   (setq completion-category-overrides '((file (styles basic partial-completion)))))
-
-
-(use-package vertico
-  :ensure t
-  :demand t
-  :config
-  (vertico-mode)
-  (setq vertico-count 10
-        vertico-resize nil)
-  (file-name-shadow-mode 1)
-  (add-hook 'rfn-eshadow-update-overlay-hook #'vertico-directory-tidy) 
-  :bind (:map vertico-map
-              ("C-j" . vertico-insert)
-              ("C-l" . backward-kill-word)))
-
-(setq enable-recursive-minibuffers t)
-
 
 
 (defun remove-ispell-completion ()
