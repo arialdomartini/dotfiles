@@ -38,5 +38,11 @@
 (setq ediff-window-setup-function 'ediff-setup-windows-plain) 
 
 (global-set-key (kbd "<f12>")  #'jump-to-register)
+(setq scroll-preserve-screen-position 'always)
+
+(use-package tabspaces
+  :config
+  (tabspaces-mode))
+
 
 (provide 'aa-windows)
