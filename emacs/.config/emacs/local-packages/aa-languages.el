@@ -109,4 +109,9 @@
 ;; (add-to-list 'auto-mode-alist '("\\.keymap\\'" . dts-mode))
 
 
+(load-file (let ((coding-system-for-read 'utf-8))
+             (shell-command-to-string "agda-mode locate")))
+
+
+
 (provide 'aa-languages)
