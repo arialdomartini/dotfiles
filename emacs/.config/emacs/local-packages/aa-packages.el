@@ -87,7 +87,21 @@
         ;;    completion-in-region-function #'consult-completion-in-region
         ;;    tab-always-indent 'complete)
         )
-  (consult-customize consult-find consult-fd :state (consult--file-preview))) ; preview for consult-fd
+  (consult-customize consult-find consult-fd :state (consult--file-preview)) ;; preview for consult-fd
+
+  (consult-customize
+   consult-line
+   :add-history (seq-some #'thing-at-point '(region symbol)))
+
+  (defalias 'consult-line-thing-at-point 'consult-line)
+
+  (consult-customize
+   consult-line-thing-at-point
+   :initial (thing-at-point 'symbol))
+
+  (global-set-key (kbd "M-s .") #'consult-line-thing-at-point)
+  (global-set-key (kbd "M-s M-s .") #'isearch-forward-symbol-at-point))
+
 
 (use-package orderless
   :ensure t
