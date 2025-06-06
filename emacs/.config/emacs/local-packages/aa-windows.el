@@ -40,9 +40,18 @@
 (global-set-key (kbd "<f12>")  #'jump-to-register)
 (setq scroll-preserve-screen-position 'always)
 
-(use-package tabspaces
+
+(use-package tab-bar
+  :defer t
   :config
-  (tabspaces-mode))
+  (global-set-key (kbd "M-<left>") #'tab-previous)
+  (global-set-key (kbd "M-<right>") #'tab-next)
+
+  (defun tab-bar-view-toggle ()
+    (interactive)
+    (setopt tab-bar-show (not tab-bar-show)))
+
+  (global-set-key (kbd "C-x t s") #'tab-bar-view-toggle))
 
 
 (provide 'aa-windows)
