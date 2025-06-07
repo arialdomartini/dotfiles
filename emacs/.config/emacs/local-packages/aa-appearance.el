@@ -49,4 +49,17 @@
   :ensure t
   :hook ((prog-mode . rainbow-mode)))
 
+
+(use-package hi-lock
+  :defer t
+  :config
+  (defun hi-lock-set-pattern-auto (regexp)
+    "Highlight all matches for REGEXP using the next hi-lock face."
+    (interactive "sHighlight regexp: ")
+    (let ((hi-lock-auto-select-face t))
+      (hi-lock-set-pattern regexp (hi-lock-read-face-name))))
+  :bind
+  (("M-s h h" . hi-lock-set-pattern-auto)))
+
+
 (provide 'aa-appearance)
