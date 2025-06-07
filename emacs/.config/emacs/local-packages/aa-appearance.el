@@ -52,14 +52,23 @@
 
 (use-package hi-lock
   :defer t
+  :init
+  (setq hi-lock-auto-select-face t)
   :config
-  (defun hi-lock-set-pattern-auto (regexp)
-    "Highlight all matches for REGEXP using the next hi-lock face."
-    (interactive "sHighlight regexp: ")
-    (let ((hi-lock-auto-select-face t))
-      (hi-lock-set-pattern regexp (hi-lock-read-face-name))))
+  (defun hi-lock-unface-dwim ()
+    "Remove hi-lock highlighting for the symbol or regex at point, if present."
+    (interactive)
+    (let ((symbol (find-tag-default-as-symbol-regexp))
+          (regexps-at-point (hi-lock--regexps-at-point)))
+      (cond
+       (regexps-at-point
+        (unhighlight-regexp (car regexps-at-point)))
+       (symbol
+        (hi-lock-unface-buffer symbol))
+       (t
+        (call-interactively 'unhighlight-regexp)))))
   :bind
-  (("M-s h h" . hi-lock-set-pattern-auto)))
+  (("M-s h u" . hi-lock-unface-buffer-at-point)))
 
 
 (provide 'aa-appearance)
