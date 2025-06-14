@@ -80,7 +80,9 @@
          ("M-y" . consult-yank-from-kill-ring)
          ("C-c r r" . consult-ripgrep)
          ("C-c g g" . consult-git-grep)
-         ("C-c f l" . consult-focus-lines))
+         ("C-c f l" . consult-focus-lines)
+         ("<XF86Tools>" . consult-outline)
+         ("<XF86Launch5>" . consult-imenu))
   :config
   (setq register-preview-delay 0.5
         register-preview-function #'consult-register-format

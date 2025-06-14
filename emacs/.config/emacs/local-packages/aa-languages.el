@@ -79,7 +79,6 @@
 
 
 
-
 (use-package eglot-fsharp
   :ensure t
   :after fsharp-mode
@@ -98,10 +97,6 @@
   :config
   (add-to-list 'eglot-server-programs '(haskell-ts-mode . ("haskell-language-server-wrapper" "--lsp"))))
 
-
-
-(global-set-key (kbd "<XF86Tools>") 'consult-imenu)
-(global-set-key (kbd "<XF86Launch5>") 'consult-outline)
 
 (use-package dts-mode
   :mode ("\\.keymap\\'" . dts-mode))
