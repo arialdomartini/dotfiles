@@ -44,14 +44,25 @@
 (use-package tab-bar
   :defer t
   :config
-  (global-set-key (kbd "M-<left>") #'tab-previous)
-  (global-set-key (kbd "M-<right>") #'tab-next)
 
   (defun tab-bar-view-toggle ()
     (interactive)
     (setopt tab-bar-show (not tab-bar-show)))
 
-  (global-set-key (kbd "C-x t s") #'tab-bar-view-toggle))
+  (let ((default-bg (face-background 'default))
+        (default-fg (face-foreground 'default))
+        (inactive-fg (face-foreground 'mode-line-inactive)))
+    (custom-set-faces
+     ;; Tab bar background and text
+     `(tab-bar ((t (:inherit default :background ,default-bg :foreground ,default-fg))))
+     ;; Active tab: theme-adaptive colors, no border
+     `(tab-bar-tab ((t (:inherit default :background ,default-fg :foreground ,default-bg :box nil))))
+     ;; Inactive tab: theme-adaptive colors, no border
+     `(tab-bar-tab-inactive ((t (:inherit default :background ,default-bg :foreground ,inactive-fg :box nil))))))
+  :bind
+  (("C-x t s" . tab-bar-view-toggle)
+   ("M-<left>" . tab-previous)
+   ("M-<right>" . tab-next)))
 
 
 (provide 'aa-windows)
