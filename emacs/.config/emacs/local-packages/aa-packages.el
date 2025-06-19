@@ -189,6 +189,8 @@
   :bind (("C-c t" . vterm)
          :map vterm-mode-map
          ("<f1>" . vterm-copy-mode)
+         ("M-<left>" . nil) ;; because of tab bar
+         ("M-<right>" . nil)
          :map vterm-copy-mode-map
          ("<f1>" . vterm-copy-mode))
   :custom
