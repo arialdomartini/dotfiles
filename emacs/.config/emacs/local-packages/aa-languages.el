@@ -66,8 +66,8 @@
 ;;   ( :map haskell-mode-map
 ;;     ("M-RET". eglot-code-actions)))
 
-(use-package fsharp-mode
-  :ensure t)
+;; (use-package fsharp-mode
+;;   :ensure t)
 
 ;; (use-package fsharp-ts-mode
 ;;   :vc ( :url "https://github.com/KaranAhlawat/fsharp-ts-mode"
@@ -107,6 +107,12 @@
 (load-file (let ((coding-system-for-read 'utf-8))
              (shell-command-to-string "agda-mode locate")))
 
-
+(use-package hs-minor-mode
+  :ensure nil
+  :bind
+  ("C-M-<left>" . hs-hide-block)
+  ("C-M-<right>" . hs-show-block)
+  :hook
+  (prog-mode .hs-minor-mode))
 
 (provide 'aa-languages)
