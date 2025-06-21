@@ -113,6 +113,6 @@
   ("C-M-<left>" . hs-hide-block)
   ("C-M-<right>" . hs-show-block)
   :hook
-  (prog-mode .hs-minor-mode))
+  (emacs-lisp-mode . hs-minor-mode))
 
 (provide 'aa-languages)
