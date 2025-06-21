@@ -64,9 +64,7 @@
 
 (setq enable-recursive-minibuffers t)
 
-
-
-;; (setq completion-lazy-hilit t)
+(setq completion-lazy-hilit t)
 (use-package consult
   :ensure t
   :demand t
