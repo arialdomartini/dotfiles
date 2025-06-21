@@ -84,6 +84,7 @@
          ("<XF86Tools>" . consult-outline)
          ("<XF86Launch5>" . consult-imenu))
   :config
+  (setq completion-in-region-function #'consult-completion-in-region) ;; instead of corfu
   (setq register-preview-delay 0.5
         register-preview-function #'consult-register-format
         ;;    completion-in-region-function #'consult-completion-in-region
@@ -146,38 +147,6 @@
   (completion-styles '(orderless basic))
   (completion-category-defaults . nil)
   (completion-category-overrides '((file (styles substring basic partial-completion)))))
-
-
-;; TODO use corfu with dabbrev
-(use-package corfu
-  :ensure t
-  :init
-  (global-corfu-mode)
-  ;; (defun corfu-move-to-minibuffer ()
-  ;;   (interactive)
-  ;;   (let ((completion-extra-properties corfu--extra)
-  ;;         completion-cycle-threshold completion-cycling)
-  ;;     (apply #'consult-completion-in-region completion-in-region--data)))
-  ;; (keymap-set corfu-map "<tab>" 'corfu-move-to-minibuffer)
-  :config
-  (setq corfu-min-width 250
-        corfu-min-height 750
-        corfu-count 20
-        corfu-auto nil
-        corfu-cycle t
-        corfu-separator ?\s
-        corfu-preview-current "insert"
-        corfu-scroll-margin 25
-        ;; enable corfu on TAB
-        tab-always-indent 'complete
-        ;; shows documentation after `corfu-popupinfo-delay'
-        corfu-popupinfo-delay '(1.25 . 0.5))
-  (corfu-popupinfo-mode 1)
-
-  ;; Sort by input history (no need to modify `corfu-sort-function').
-  (with-eval-after-load 'savehist
-    (corfu-history-mode 1)
-    (add-to-list 'savehist-additional-variables 'corfu-history)))
 
 
 (use-package vterm
