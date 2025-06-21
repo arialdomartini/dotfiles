@@ -163,7 +163,7 @@
   (setq corfu-min-width 250
         corfu-min-height 750
         corfu-count 20
-        corfu-auto t
+        corfu-auto nil
         corfu-cycle t
         corfu-separator ?\s
         corfu-preview-current "insert"
@@ -178,8 +178,6 @@
   (with-eval-after-load 'savehist
     (corfu-history-mode 1)
     (add-to-list 'savehist-additional-variables 'corfu-history)))
-
-
 
 
 (use-package vterm
