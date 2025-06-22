@@ -1,7 +1,7 @@
-(let ((gemini-api-key (auth-source-pass-get 'secret "gemini-api")))
-  (if gemini-api-key
-      (setenv "GEMINI_API_KEY" gemini-api-key)
-    (error "Could not retrieve Gemini API key from auth-source-pass.")))
+(let ((gemini-api-key (with-temp-buffer
+                        (insert-file-contents (locate-user-emacs-file "gemini-apikey"))
+                        (buffer-string))))
+  (setenv "GEMINI_API_KEY" (string-trim gemini-api-key)))
 
 
 (use-package chatgpt-shell
@@ -9,7 +9,7 @@
   :custom
   ((chatgpt-shell-google-key
     (lambda ()
-      (auth-source-pass-get 'secret "gemini-api"))))
+      (getenv "GEMINI_API_KEY"))))
   :config
   (setq chatgpt-shell-model-version "gemini-2.0-flash"))
 
