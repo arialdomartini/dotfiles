@@ -73,4 +73,6 @@ The DWIM behaviour of this command is as follows:
 ;; Tab = 4 spaces
 (setq sgml-basic-offset 4)
 
+(global-auto-revert-mode)
+
 (provide 'aa-defaults)
