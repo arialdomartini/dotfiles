@@ -1,10 +1,8 @@
 (use-package page-break-lines
-  :ensure t
   :config
   (global-page-break-lines-mode))
 
 (use-package dashboard
-  :ensure t
   :init
   (setq
    dashboard-startup-banner (concat user-emacs-directory "logo.png")
@@ -13,7 +11,7 @@
    dashboard-center-content t)
   
   :config
-  (dashboard-setup-startup-hook)
+  ;; (dashboard-setup-startup-hook)
   (text-scale-set 1)
   (setq dashboard-items '((projects . 7)
 			  (recents . 20))
