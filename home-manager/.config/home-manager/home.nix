@@ -45,4 +45,10 @@
   home.sessionVariables = {
     EDITOR = "emacs";
   };
+
+  # DISABLE HOME MANAGER NEWS
+  news = {
+    display = "silent";
+    entries = pkgs.lib.mkForce [ ];
+  };
 }
