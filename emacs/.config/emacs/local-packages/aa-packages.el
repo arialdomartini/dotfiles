@@ -21,9 +21,10 @@
   :after magit
   :config
   (setq auth-sources '("~/.authinfo")
-    github.user "arialdo.martini@gmail.com"))
+        github.user "arialdo.martini@gmail.com"))
 
-;; we stopped here
+(use-package jj-mode
+  :vc (:url "https://github.com/bolivier/jj-mode.el"))
 
 (use-package git-timemachine
   :bind (("C-c g t" . git-timemachine)))
