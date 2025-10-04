@@ -86,7 +86,7 @@ alias h="git log --oneline"
 alias -g L="|less"
 
 alias f="fg"
-alias j="clear && jj st && echo && jj log --limit 20"
+alias j="clear && jj st && echo && jj l --limit 20"
 
 alias s="kitty +kitten ssh"
 
