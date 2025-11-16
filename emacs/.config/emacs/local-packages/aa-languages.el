@@ -53,9 +53,6 @@
   :config
   (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode))
 
-(use-package nix-mode)
-
-
 ;; (use-package haskell-mode
 ;;   :ensure t
 ;;   :mode "\\.hs\\'"

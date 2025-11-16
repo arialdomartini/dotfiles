@@ -2,9 +2,6 @@
 
 {
   imports = [
-    ./git.nix
-    ./zsh.nix
-    ./direnv.nix
   ];
 
   home = {
@@ -28,14 +25,6 @@
     };
 
   home.packages = with pkgs; [
-    smartgithg
-    gimp3
-    ripgrep
-    ripgrep-all
-    onlyoffice-bin
-    unzip
-    fd
-    jq
   ];
 
   home.file = {
