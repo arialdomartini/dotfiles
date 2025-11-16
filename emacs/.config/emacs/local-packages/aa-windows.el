@@ -7,6 +7,8 @@
   (setq switch-window-default-window-size 0.65) ;auto resize to 65% of frame size
   (switch-window-mouse-mode)) ;auto resize with mouse too
 
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
 (use-package windmove
   :ensure nil
   :config
