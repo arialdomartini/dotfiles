@@ -17,7 +17,7 @@
 
   (add-hook 'enable-theme-functions 'aa-borderless-line))
 
-(ef-themes-select-dark 'ef-maris-dark)
+(ef-themes-load-theme 'ef-elea-dark)
 
 ;; (use-package base16-theme
 ;;   :ensure t
