@@ -95,6 +95,10 @@
   (add-to-list 'eglot-server-programs '(haskell-ts-mode . ("haskell-language-server-wrapper" "--lsp"))))
 
 
+(use-package typst-mode
+  :vc (:url "https://github.com/Ziqi-Yang/typst-mode.el"))
+
+
 (use-package dts-mode
   :mode ("\\.keymap\\'" . dts-mode))
 ;; alternatively
