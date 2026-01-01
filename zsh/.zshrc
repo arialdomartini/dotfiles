@@ -195,3 +195,7 @@ bindkey "\e[F" end-of-line
 # source /usr/share/zsh/plugins/zsh-nix-shell/nix-shell.plugin.zsh
 
 eval "$(direnv hook zsh)"
+
+
+# Expands history expressions like !! or !$ when you press space
+bindkey ' ' magic-space
