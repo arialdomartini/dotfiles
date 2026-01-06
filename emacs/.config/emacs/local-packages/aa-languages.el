@@ -95,7 +95,9 @@
   (add-to-list 'eglot-server-programs '(haskell-ts-mode . ("haskell-language-server-wrapper" "--lsp"))))
 
 
-(use-package idris-mode)
+(use-package idris-mode
+  :custom
+  (idris-interpreter-path "idris2"))
 
 (use-package dts-mode
   :mode ("\\.keymap\\'" . dts-mode))
