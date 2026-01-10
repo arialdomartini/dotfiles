@@ -1,6 +1,7 @@
 ;; prevent Emacs from modifying configuration files
 (setq custom-file (make-temp-file "emacs-custom-"))
 (setq initial-scratch-message "")
+(setq inhibit-startup-echo-area-message t)
 (setq warning-minimum-level :error)
 
 (put 'dired-find-alternate-file 'disabled nil)
