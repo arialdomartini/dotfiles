@@ -24,7 +24,9 @@
         github.user "arialdo.martini@gmail.com"))
 
 (use-package jj-mode
-  :vc (:url "https://github.com/bolivier/jj-mode.el"))
+  :vc (:url "https://github.com/bolivier/jj-mode.el")
+  :custom
+  (jj-log-entry-template 'oneline))
 
 (use-package git-timemachine
   :bind (("C-c g t" . git-timemachine)))
