@@ -4,6 +4,8 @@
 (setq inhibit-startup-echo-area-message t)
 (setq warning-minimum-level :error)
 
+(recentf-mode t)
+
 (put 'dired-find-alternate-file 'disabled nil)
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
 (setq-default indent-tabs-mode nil)
