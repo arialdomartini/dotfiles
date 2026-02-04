@@ -163,7 +163,7 @@ export PAGER=less
 export EDITOR=emacs
 export GIT_EDITOR=emacs
 
-export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
+export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init'
 
 export JAVA_HOME=/usr/lib/jvm/default
 
