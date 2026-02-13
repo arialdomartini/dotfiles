@@ -29,18 +29,12 @@
   (require 'consult-eglot-embark)
   (consult-eglot-embark-mode))
 
-(use-package consult-eglot
-  :after (consult eglot embark)
-  :config
-  (require 'consult-eglot-embark)
-  (consult-eglot-embark-mode))
-
-(use-package c-ts-mode
-  :ensure nil
-  :config
-  (add-hook 'c-mode-hook 'eglot-ensure)
-  (add-hook 'c++-mode-hook 'eglot-ensure)
-  (add-hook 'c++-ts-mode-hook 'eglot-ensure))
+;; (use-package c-ts-mode
+;;   :ensure nil
+;;   :config
+;;   (add-hook 'c-mode-hook 'eglot-ensure)
+;;   (add-hook 'c++-mode-hook 'eglot-ensure)
+;;   (add-hook 'c++-ts-mode-hook 'eglot-ensure))
 
 (use-package rainbow-delimiters
   :ensure t
@@ -76,12 +70,12 @@
 
 
 
-(use-package eglot-fsharp
-  :ensure t
-  :after fsharp-mode
-  :config
-  (setq eglot-fsharp-server-install-dir nil)
-  (add-hook 'fsharp-mode-hook #'eglot-ensure))
+;; (use-package eglot-fsharp
+;;   :ensure t
+;;   :after fsharp-mode
+;;   :config
+;;   (setq eglot-fsharp-server-install-dir nil)
+;;   (add-hook 'fsharp-mode-hook #'eglot-ensure))
 
 
 (use-package haskell-ts-mode
@@ -105,15 +99,22 @@
 ;; (add-to-list 'auto-mode-alist '("\\.keymap\\'" . dts-mode))
 
 
-(load-file (let ((coding-system-for-read 'utf-8))
-             (shell-command-to-string "agda-mode locate")))
+;; (load-file (let ((coding-system-for-read 'utf-8))
+;;              (shell-command-to-string "agda-mode locate")))
 
-(use-package hs-minor-mode
-  :ensure nil
-  :bind
-  ("C-M-<left>" . hs-hide-block)
-  ("C-M-<right>" . hs-show-block)
-  :hook
-  (emacs-lisp-mode . hs-minor-mode))
+;; (use-package hs-minor-mode
+;;   :ensure nil
+;;   :bind
+;;   ("C-M-<left>" . hs-hide-block)
+;;   ("C-M-<right>" . hs-show-block)
+;;   :hook
+;;   (emacs-lisp-mode . hs-minor-mode))
+
+
+(use-package hideshow
+  :hook (prog-mode . hs-minor-mode)
+  :bind (:map hs-minor-mode-map
+              ("C-M-<left>" . hs-hide-block)
+              ("C-M-<right>" . hs-show-block)))
 
 (provide 'aa-languages)
