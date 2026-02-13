@@ -18,8 +18,9 @@
   ;; (set-face-attribute 'flymake-note  nil :inverse-video t)
   :custom
   (flymake-mode-line-lighter "Fly")
-  :hook prog-mode)
-
+  :hook ((prog-mode . (lambda ()
+                        (unless (derived-mode-p 'lisp-interaction-mode)
+                          (flymake-mode 1))))))
 
 (use-package consult-eglot-embark)
 
