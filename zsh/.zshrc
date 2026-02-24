@@ -110,6 +110,10 @@ m() {
 
 alias tree="nocorrect tree"
 
+yss() {
+  yay -Ss "$@" 2>/dev/null | awk '/^[a-z]/{name=$1} /^    /{gsub(/^    /,"",$0); printf "%-30s %s\n", name, $0}'
+}
+
 w() {
     clear &&  git branch && echo && git status --short --untracked-files=all --branch
 }
