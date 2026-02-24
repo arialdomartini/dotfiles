@@ -1,7 +1,9 @@
-(set-frame-font "PragmataPro Liga 16" nil t)
-;(set-frame-font "Monoid 14" nil t)
-;(set-frame-font "Iosevka 18" nil t)
-;(set-frame-font "Cascadia Code 18" nil t)
+;;(set-frame-font "PragmataPro Liga 16" nil t)
+(set-frame-font "Victor Mono 16" nil t)
+
+;;(set-frame-font "Monoid 14" nil t)
+;;(set-frame-font "Iosevka 18" nil t)
+;;(set-frame-font "Cascadia Code 18" nil t)
 
 
 
