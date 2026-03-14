@@ -19,6 +19,12 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (global-set-key (kbd "M-z") 'zap-up-to-char)
+(global-set-key (kbd "M-g b") 'eval-buffer)
+(defun aa--reload-major-mode ()
+  (interactive)
+  (funcall major-mode))
+
+(global-set-key (kbd "M-g r") 'aa--reload-major-mode)
 
 (progn
   (defun kill-current-buffer (&optional arg)
