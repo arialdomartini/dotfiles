@@ -25,6 +25,7 @@
   (funcall major-mode))
 
 (global-set-key (kbd "M-g r") 'aa--reload-major-mode)
+(global-set-key (kbd "M-g d") 'duplicate-dwim)
 
 (progn
   (defun kill-current-buffer (&optional arg)
