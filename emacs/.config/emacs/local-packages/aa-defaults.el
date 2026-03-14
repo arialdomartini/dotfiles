@@ -82,6 +82,14 @@ The DWIM behaviour of this command is as follows:
 ;; Tab = 4 spaces
 (setq sgml-basic-offset 4)
 
+;; ibuffer columns. Larger name, no size
+(setq ibuffer-formats
+      '((mark modified read-only locked " " (name 45 45 :left :elide) " "
+              (mode 16 16 :left :elide) " "
+              filename-and-process)
+        (mark " " (name 16 -1) " " filename)))
+
+
 (global-auto-revert-mode)
 
 (provide 'aa-defaults)
