@@ -89,10 +89,22 @@
   :config
   (add-to-list 'eglot-server-programs '(haskell-ts-mode . ("haskell-language-server-wrapper" "--lsp"))))
 
+;; (add-to-list 'load-path (expand-file-name "~/prg/emacs/fsharp-ts-mode"))
+;; ;;(require 'fsharp-ts-mode)
+;; ;;(add-to-list 'auto-mode-alist '("\\.fs\\'" . fsharp-ts-mode))
 
-(use-package idris-mode
-  :custom
-  (idris-interpreter-path "idris2"))
+(use-package fsharp-ts-mode
+  :ensure nil
+  :load-path "/home/arialdo/prg/emacs/fsharp-ts-mode/"
+  :mode ("\\.fs\\'" "\\.fsx\\'" "\\.fsi\\'"))
+
+;; (use-package idris-mode
+;;   :custom
+;;   (idris-interpreter-path "idris2"))
+
+(use-package idris2-mode
+  :vc (:url "https://github.com/idris-community/idris2-mode"
+            :rev :newest))
 
 (use-package dts-mode
   :mode ("\\.keymap\\'" . dts-mode))
@@ -113,7 +125,11 @@
 
 
 (use-package hideshow
-  :hook (prog-mode . hs-minor-mode)
+  :hook (prog-mode . aa-hs-minor-mode-maybe)
+  :config
+  (defun aa-hs-minor-mode-maybe ()
+    (unless (derived-mode-p 'fsharp-ts-mode)
+      (hs-minor-mode 1)))
   :bind (:map hs-minor-mode-map
               ("C-M-<left>" . hs-hide-block)
               ("C-M-<right>" . hs-show-block)))
