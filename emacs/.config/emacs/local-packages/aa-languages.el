@@ -11,6 +11,12 @@
   (eglot-connect-timeout nil)) ; never timeout
 
 
+(use-package js
+  :ensure nil
+  :config
+  (add-hook 'js-ts-mode-hook 'eglot-ensure))
+
+
 (use-package flymake
   :config
   ;; (set-face-attribute 'flymake-error  nil :inverse-video t)
