@@ -150,6 +150,15 @@
   (completion-category-overrides '((file (styles substring basic partial-completion)))))
 
 
+
+;; inherits PATH so that binaries installed with opam are visible
+(use-package exec-path-from-shell
+  :ensure t
+  :config
+  (setq exec-path-from-shell-arguments nil)
+  (exec-path-from-shell-initialize))
+
+
 (use-package vterm
   :config
   (setq vterm-ignore-blink-cursor nil)
