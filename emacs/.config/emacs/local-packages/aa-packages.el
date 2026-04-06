@@ -164,6 +164,11 @@
   (setq vterm-ignore-blink-cursor nil)
   :hook (vterm-mode . aa/disable-hl-line-mode)
   :bind (("C-c t" . vterm)
+         ("M-g t" . (lambda ()
+                      (interactive)
+                      (tab-duplicate)
+                      (delete-other-windows)
+                      (vterm)))
          :map vterm-mode-map
          ("<f1>" . vterm-copy-mode)
          ("M-<left>" . nil) ;; because of tab bar
