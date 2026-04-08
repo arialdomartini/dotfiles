@@ -237,3 +237,15 @@ for_window [all] border pixel 2
 
 
 bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
+
+
+# Toggle shader
+bindsym $mod+Shift+g exec --no-startup-id "killall picom; picom --backend glx --window-shader-fg ~/.config/picom/grayscale.glsl &>/dev/null"
+mode "Screen shader: [c]olors, [g]reen, [b]lack and white, [Esc] cancel" {
+  bindsym c  exec --no-startup-id "killall picom" ; mode "default"
+  bindsym b  exec --no-startup-id "killall picom; picom --backend glx --window-shader-fg ~/.config/picom/grayscale.glsl &>/dev/null" ; mode "default"
+  bindsym g  exec --no-startup-id "killall picom; picom --backend glx --window-shader-fg ~/.config/picom/green.glsl &>/dev/null" ; mode "default"
+
+  bindsym Escape mode "default"
+}
+bindsym $mod+Mod1+g mode "Screen shader: [c]olors, [g]reen, [b]lack and white, [Esc] cancel"
