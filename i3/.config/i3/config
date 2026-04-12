@@ -249,3 +249,6 @@ mode "Screen shader: [c]olors, [g]reen, [b]lack and white, [Esc] cancel" {
   bindsym Escape mode "default"
 }
 bindsym $mod+Mod1+g mode "Screen shader: [c]olors, [g]reen, [b]lack and white, [Esc] cancel"
+
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
