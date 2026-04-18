@@ -18,6 +18,15 @@
              (lambda ()
                (setq prettify-symbols-alist
                      '(("forall" . ?∀)
+                       (":="     . ?≔)
+                       ("=?"     . ?≟)
+                       ("negb"   . ?¬)
+                       ("&&"   . ?∧)
+                       ("||"    . ?∨)
+                       ("Type" . ?𝕌)
+                       ("simpl" . ?β)
+                       ("reflexivity" . ?✓)
+                       ("Proof.". ?▽)
                        ("Qed."   . ?☐)))
                (prettify-symbols-mode 1)))
 
