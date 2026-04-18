@@ -13,6 +13,14 @@
   :hook
   (rocq-mode . eglot-ensure)
   (rocq-mode . rocq-follow-viewport-mode)
-  (rocq-mode . rocq-auto-goals-at-point-mode))
+  (rocq-mode . rocq-auto-goals-at-point-mode)
+  (rocq-mode .
+             (lambda ()
+               (setq prettify-symbols-alist
+                     '(("forall" . ?∀)
+                       ("Qed."   . ?☐)))
+               (prettify-symbols-mode 1)))
+
+  (rocq-mode . prettify-symbols-mode))
 
 (provide 'aa-rocq)
