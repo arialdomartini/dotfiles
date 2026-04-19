@@ -200,4 +200,6 @@
   :config
   (setq vundo-glyph-alist vundo-unicode-symbols))
 
+(use-package typst-ts-mode)
+
 (provide 'aa-packages)

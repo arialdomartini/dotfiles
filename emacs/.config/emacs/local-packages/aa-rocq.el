@@ -10,6 +10,21 @@
   (set-face-attribute 'rocq-mode-processing-face nil
                       :background (face-attribute 'region :background)
                       :extend t)
+
+  ;; Display goal buffer on the right, shrinked.
+  (add-to-list 'display-buffer-alist
+               '((major-mode . rocq-goals-mode)
+                 (display-buffer-in-side-window)
+                 (side . left)
+                 (slot . 0)
+                 (window-width . 0.40)
+                 (preserve-size . (t . nil))))
+  ;; Smaller font for goal buffer.
+  (add-hook 'rocq-goals-mode-hook
+            (lambda () (text-scale-set -3)))
+
+
+
   :hook
   (rocq-mode . eglot-ensure)
   (rocq-mode . rocq-follow-viewport-mode)
