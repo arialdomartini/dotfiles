@@ -3,7 +3,7 @@
   :vc (:url "https://codeberg.org/jpoiret/rocq-mode.el.git" :rev :newest)
   :mode "\\.v\\'"
   :config
-  (set-face-attribute 'rocq-mode-last-goal-request nil
+  (set-face-attribute 'rocq-mode-last-request nil
                       :background (face-attribute 'transient-value :background)
                       :extend t)
   (face-spec-reset-face 'rocq-mode-processing-face)
@@ -13,7 +13,7 @@
 
   ;; Display goal buffer on the right, shrinked.
   (add-to-list 'display-buffer-alist
-               '((major-mode . rocq-goals-mode)
+               '((major-mode . rocq-goal-mode)
                  (display-buffer-in-side-window)
                  (side . left)
                  (slot . 0)
