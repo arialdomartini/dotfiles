@@ -15,9 +15,9 @@
   (add-to-list 'display-buffer-alist
                '((major-mode . rocq-goal-mode)
                  (display-buffer-in-side-window)
-                 (side . left)
+                 (side . bottom)
                  (slot . 0)
-                 (window-width . 0.40)
+                 (window-width . 0.30)
                  (preserve-size . (t . nil))))
   ;; Smaller font for goal buffer.
   (add-hook 'rocq-goals-mode-hook
