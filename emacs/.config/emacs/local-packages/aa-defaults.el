@@ -25,7 +25,14 @@
   (funcall major-mode))
 
 (global-set-key (kbd "M-g r") 'aa--reload-major-mode)
-(global-set-key (kbd "M-g d") 'duplicate-dwim)
+
+(defun aa/duplicate-dwim-deactivate-mark ()
+  "Duplicate, then deactivate the region."
+  (interactive)
+  (duplicate-dwim)
+  (deactivate-mark))
+
+(global-set-key (kbd "M-g d") #'aa/duplicate-dwim-deactivate-mark)
 
 (progn
   (defun kill-current-buffer (&optional arg)
