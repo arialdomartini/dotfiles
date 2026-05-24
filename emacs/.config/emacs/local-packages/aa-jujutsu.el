@@ -16,6 +16,9 @@
   (add-to-list 'display-buffer-alist
                '((major-mode . majutsu-log-mode)
                  (display-buffer-same-window)))
+  (add-to-list 'display-buffer-alist
+               '((major-mode . majutsu-diff-mode)
+                 (display-buffer-full-frame)))
   :config
   ;; (setq majutsu-log-template-change-id
   ;;       [:label
@@ -32,7 +35,25 @@
   ;;                   [:change_id :shortest]]]])
 
 
+  (setq majutsu-log-commit-columns
+        '((:field id :align left :visible nil)
+          (:field change-id :align left)
+          (:field bookmarks :align left)
+          (:field tags :align left)
+          (:field working-copies :align left)
+          (:field empty :align left)
+          (:field git-head :align left :visible nil)
+          (:field description :align left)
+          (:field author :align right)
+          (:field timestamp :align right)
+          (:field commit-id :align right :visible nil)
+          (:field flags :align left :visible nil)
+          (:field long-desc :visible nil)))
 
+  (setq majutsu-log-template-author
+        [:if [:== [:author :email] "arialdo.martini@gmail.com"]
+             ""
+             [:author :name]])
 
 
   (setq majutsu-log-template-change-id
