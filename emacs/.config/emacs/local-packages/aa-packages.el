@@ -158,25 +158,24 @@
   (setq exec-path-from-shell-arguments nil)
   (exec-path-from-shell-initialize))
 
-
-(use-package vterm
-  :config
-  (setq vterm-ignore-blink-cursor nil)
-  :hook (vterm-mode . aa/disable-hl-line-mode)
-  :bind (("C-c t" . vterm)
-         ("M-g t" . (lambda ()
-                      (interactive)
-                      (tab-duplicate)
-                      (delete-other-windows)
-                      (vterm)))
-         :map vterm-mode-map
-         ("<f1>" . vterm-copy-mode)
-         ("M-<left>" . nil) ;; because of tab bar
-         ("M-<right>" . nil)
-         :map vterm-copy-mode-map
-         ("<f1>" . vterm-copy-mode))
+(use-package ghostel
+  :vc (:url "https://github.com/dakra/ghostel" :rev :newest)
+  :hook (ghostel-mode . aa/disable-hl-line-mode)
+  :bind (("C-c t" . ghostel)
+         ("M-g t" . aa/ghostel-new-tab)
+         :map ghostel-semi-char-mode-map
+         ("<f1>" . ghostel-copy-mode))
   :custom
-  (vterm-shell "zsh"))
+  (ghostel-shell "zsh")
+  (ghostel-keymap-exceptions
+   '("C-c" "C-x" "C-u" "C-h" "M-x" "M-o" "M-:" "C-\\"
+     "M-g" "M-<left>" "M-<right>")))
+
+(defun aa/ghostel-new-tab ()
+  (interactive)
+  (tab-duplicate)
+  (delete-other-windows)
+  (ghostel '(4)))
 
 
 (use-package markdown-mode
