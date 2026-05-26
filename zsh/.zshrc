@@ -12,7 +12,8 @@ autoload -Uz _zinit
 eval "$(starship init zsh)"
 
 zinit light olets/zsh-transient-prompt
-export TRANSIENT_PROMPT_TRANSIENT_PROMPT='$(starship module character) '
+# export TRANSIENT_PROMPT_TRANSIENT_PROMPT='$(starship module character) '
+export TRANSIENT_PROMPT_TRANSIENT_PROMPT='$(starship module directory)$(starship module character) '
 
 zinit light zsh-users/zsh-completions
 zinit snippet OMZ::lib/history.zsh
