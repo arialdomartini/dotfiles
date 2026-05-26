@@ -1,16 +1,12 @@
 
 [username]
-show_always = true
+show_always = false
 format = "[$user]($style)@"
 
 [hostname]
-ssh_only = false
+ssh_only = true
 format = "[$hostname]($style) "
 
 [status]
 disabled = false
 format = "[$symbol$status]($style) "
-
-[cmd_duration]
-min_time = 0  # mostra sempre, anche per comandi veloci
-format = "took [$duration]($style) "
