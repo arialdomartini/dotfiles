@@ -1,0 +1,15 @@
+[cmd_duration]
+min_time = 0  # mostra sempre, anche per comandi veloci
+format = "took [$duration]($style) "
+
+[status]
+disabled = false
+format = "[$symbol$status]($style) "
+
+[username]
+show_always = true
+format = "[$user]($style)@"
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style) "
