@@ -19,6 +19,7 @@
   (add-to-list 'display-buffer-alist
                '((major-mode . majutsu-diff-mode)
                  (display-buffer-full-frame)))
+  :bind ("C-x j" . majutsu)
   :config
   ;; (setq majutsu-log-template-change-id
   ;;       [:label
