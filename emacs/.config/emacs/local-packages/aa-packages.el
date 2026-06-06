@@ -54,6 +54,17 @@
   :config
   (vertico-mode)
   (vertico-buffer-mode 1)
+
+  (defun aa/consult-line-windowed (orig &rest args)
+    (let ((vertico-buffer-display-action
+           '(display-buffer-below-selected
+             (window-height . 0.4))))
+      (apply orig args)))
+
+  (advice-add 'consult-line :around #'aa/consult-line-windowed)
+
+
+  
   (setq vertico-buffer-display-action
         '(display-buffer-full-frame))
   (setq vertico-count 25
