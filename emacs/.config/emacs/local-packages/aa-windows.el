@@ -67,4 +67,10 @@
    ("M-<right>" . tab-next)))
 
 
+(use-package dimmer
+  :config
+  (setq dimmer-fraction .5))
+
+
+
 (provide 'aa-windows)
