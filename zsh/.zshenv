@@ -4,6 +4,7 @@ path=(
   /home/arialdo/.dotnet/tools
   /home/arialdo/.cabal/bin
   /home/arialdo/.ghcup/bin
+  /home/arialdo/.cargo/bin
   /home/arialdo/.opam/rocq/bin
   /home/arialdo/.zplug/bin
   /usr/local/bin
