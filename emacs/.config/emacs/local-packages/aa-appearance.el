@@ -22,7 +22,7 @@
 (use-package olivetti
   :ensure t)
 
-;; goggles
+;; volatile-highlights
 (use-package volatile-highlights
   :ensure t
   :config
