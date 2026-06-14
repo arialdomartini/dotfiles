@@ -11,11 +11,19 @@
   (eglot-connect-timeout nil)) ; never timeout
 
 
+(setq-local completion-at-point-functions '(cape-file elisp-completion-at-point cape-dabbrev t))
+
+(use-package expreg
+  :config
+  (setq expreg-restore-point-on-quit t)
+  :bind
+  ("C-=" . expreg-expand)
+  ("C-+" . expreg-contract))
+
 (use-package js
   :ensure nil
   :config
   (add-hook 'js-ts-mode-hook 'eglot-ensure))
-
 
 (use-package flymake
   :config

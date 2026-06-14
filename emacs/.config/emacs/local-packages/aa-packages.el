@@ -1,9 +1,3 @@
-(use-package expand-region
-  :ensure t
-  :bind
-  ("C-=" . er/expand-region)
-  ("C-+" . er/contract-region))
-
 (use-package magit
   :defer t
   :config
