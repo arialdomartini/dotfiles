@@ -33,6 +33,7 @@
              (lambda ()
                (setq prettify-symbols-alist
                      '(("forall" . ?∀)
+                       ("exists" . ?∃)
                        (":="     . ?≔)
                        ("=?"     . ?≟)
                        ("not"   . ?¬)
