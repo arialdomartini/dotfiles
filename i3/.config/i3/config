@@ -207,7 +207,7 @@ bar {
 }
 
 # Keyboard delay and repeat rate
-exec --no-startup-id xset r rate 185 35
+# exec --no-startup-id xset r rate 185 35
 bindsym $mod+Mod1+o exec xset r rate 185 35
 
 exec --no-startup-id xinput --set-prop "DLL075B:01 06CB:76AF Touchpad" "libinput Accel Speed" 0 .5
