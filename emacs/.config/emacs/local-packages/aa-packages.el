@@ -89,6 +89,7 @@
          ("C-c f l" . consult-focus-lines)
          ("<XF86Tools>" . consult-outline)
          ("<XF86Launch5>" . consult-imenu))
+
   :config
   ;; rg, do not ignore .config
   (setq consult-ripgrep-args
@@ -167,7 +168,6 @@
   (exec-path-from-shell-initialize))
 
 (use-package ghostel
-  :vc (:url "https://github.com/dakra/ghostel" :rev :newest)
   :hook (ghostel-mode . aa/disable-hl-line-mode)
   :bind (("C-c t" . ghostel)
          ("M-g t" . aa/ghostel-new-tab)
