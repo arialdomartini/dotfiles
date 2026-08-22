@@ -4,6 +4,9 @@
 (setq inhibit-startup-echo-area-message t)
 (setq warning-minimum-level :error)
 
+(put 'narrow-to-region 'disabled nil)
+
+
 (recentf-mode t)
 
 (put 'dired-find-alternate-file 'disabled nil)
@@ -19,7 +22,10 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (global-set-key (kbd "M-z") 'zap-up-to-char)
-(global-set-key (kbd "M-g b") 'eval-buffer)
+(global-set-key (kbd "M-g b e") 'eval-buffer)
+(global-set-key (kbd "M-g b r") 'revert-buffer)
+
+
 (defun aa--reload-major-mode ()
   (interactive)
   (funcall major-mode))
