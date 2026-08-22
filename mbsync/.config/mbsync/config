@@ -2,8 +2,7 @@ IMAPAccount gmail
 Host imap.gmail.com
 UserCmd "awk -F ' ' '/gmail/ { print $(NF-2); exit; }' ~/.authinfo"
 PassCmd "awk -F ' ' '/gmail/ { print $NF; exit; }' ~/.authinfo"
-SSLType IMAPS
-SSLVersions TLSv1.2
+TLSType IMAPS
 
 IMAPStore gmail-remote
 Account gmail
@@ -17,6 +16,34 @@ Inbox ~/.mail/gmail/Inbox
 Channel gmail
 Far :gmail-remote:
 Near :gmail-local:
+# Include everything
+Patterns *
+Sync All
+Create Both
+Remove Both
+Expunge Both
+SyncState *
+
+
+
+IMAPAccount infomaniak
+Host imap.infomaniak.ch
+UserCmd "awk -F ' ' '/infomaniak/ { print $(NF-2); exit; }' ~/.authinfo"
+PassCmd "awk -F ' ' '/infomaniak/ { print $NF; exit; }' ~/.authinfo"
+TLSType IMAPS
+
+IMAPStore infomaniak-remote
+Account infomaniak
+
+MaildirStore infomaniak-local
+Subfolders Verbatim
+# The trailing "/" is important
+Path ~/.mail/infomaniak/
+Inbox ~/.mail/infomaniak/Inbox
+
+Channel infomaniak
+Far :infomaniak-remote:
+Near :infomaniak-local:
 # Include everything
 Patterns *
 Sync All
