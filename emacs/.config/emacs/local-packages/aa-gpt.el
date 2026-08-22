@@ -11,7 +11,12 @@
     (lambda ()
       (getenv "GEMINI_API_KEY"))))
   :config
-  (setq chatgpt-shell-model-version "gemini-2.0-flash"))
+  (setq chatgpt-shell-model-version "gemini-2.5-flash")
+  :bind (:map chatgpt-shell-mode-map
+              ("<return>" . newline)
+              ("C-<return>" . chatgpt-shell-submit)))
+
+
 
 (use-package minuet
   :bind
