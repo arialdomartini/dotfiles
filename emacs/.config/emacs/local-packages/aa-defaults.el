@@ -24,7 +24,7 @@
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 (global-set-key (kbd "M-g b e") 'eval-buffer)
 (global-set-key (kbd "M-g b r") 'revert-buffer)
-
+(global-set-key (kbd "M-g d") 'duplicate-dwim)
 
 (defun aa--reload-major-mode ()
   (interactive)
