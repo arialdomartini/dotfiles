@@ -47,6 +47,10 @@
             :query "tag:inbox"
             :sort-order newest-first
             :key ,(kbd "i"))
+          ( :name "📥 inbox-infomaniak"
+            :query "tag:inbox and to:arialdo@ik.me"
+            :sort-order newest-first
+            :key ,(kbd "k"))
 	  ( :name "😸 all"
             :query "*"
             :sort-order newest-first
@@ -54,3 +58,4 @@
 
 
 (provide 'aa-email)
+
