@@ -1,0 +1,86 @@
+[user]
+name = "Arialdo Martini"
+email = "arialdo.martini@gmail.com"
+
+[gg]
+
+[gg.ui]
+recent-workspaces = ['C:\prg\sunrise', 'C:\prg\batch-server\service-bus']
+
+[ui]
+paginate = "auto"
+#default-command = "l"
+graph.style = "curved"
+diff-editor = ":builtin"
+
+[templates]
+#log = "builtin_log_oneline"
+log = "simple_log"
+arrange = "simple_log"
+
+[colors]
+change_id = { fg = "green", bold = true }
+bookmarks = { fg = "#88ffff", bold = true }
+empty = { fg = "yellow", bold = true }
+"node working_copy" = { fg = "#ffff00", bold = true }
+"no_description" = { fg = "red", bold = true }
+
+[template-aliases]
+empty_commit_marker = "label('empty', '▢')"
+
+simple_log = """
+  if(self.parents().len() > 1, raw_escape_sequence("\b\b")) ++
+  separate(" ",
+    pad_end(
+      4,
+      separate("/",
+        self.change_id().shortest(),
+        if(self.divergent() || self.hidden(), self.change_offset())
+      )
+    ),
+    if(self.immutable(), "🔒", "  ") ++ " ",
+    if(self.empty(), empty_commit_marker),
+    self.bookmarks(),
+    if(self.description(), self.description().first_line(), if(self.empty(), '', label('no_description', '←')))
+  )
+"""
+
+
+
+## format_short_id(id)' = 'id.shortest(5).prefix()'
+
+[working-copy]
+eol-conversion = "none"
+
+
+[aliases]
+# Just log
+l = ["log", "-T", "simple_log", "--limit", "20"]
+
+# Log all changes
+la = ["log", "-r ::@"]
+
+# Log with more details
+ld = ["log", "-T", "builtin_log_oneline"]
+
+d = ["diff"]
+dd = ["diff", "--tool", "difft"]
+a = ["abandon"]
+re = ["restore"]
+r = ["rebase"]
+su = ["show", "--summary"]
+am = ["desc", "-r", "@-", "-m"]
+c = ["commit", "-m"]
+s = ["squash"]
+
+# tug - move the nearest bookmark to the nearest non-empty change at or before @
+# use `jj b a' instead
+tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "closest_nonempty(@)"]
+
+[revsets]
+'bookmark-advance-to' = '@-'
+
+[revset-aliases]
+
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+'closest_nonempty(to)' = 'heads(::to ~ empty())'
