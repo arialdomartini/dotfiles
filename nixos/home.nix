@@ -6,6 +6,10 @@
 
   home.stateVersion = "26.05";
 
+  imports = [
+    ./emacs/emacs.nix
+  ];
+  
   home.packages = with pkgs; [
     git
     jujutsu
@@ -19,4 +23,3 @@
     enable = true;  
   };
 }
-
