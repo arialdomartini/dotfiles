@@ -1,5 +1,14 @@
 # Arialdo's dotfiles
 
+## NixOS
+NixOS configuration is in [nixos](./nixos). To install, run:
+
+```
+sudo nixos-rebuild switch --flake ./nixos/#arixos
+```
+
+or run `switch.sh`.
+
 ## Install (from dotfiles to home)
 
 ```
