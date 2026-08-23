@@ -8,7 +8,15 @@
 
   home.packages = with pkgs; [
     git
+    jujutsu
+    ripgrep
+    fd
   ];
 
   programs.home-manager.enable = true;
+
+  programs.firefox = {
+    enable = true;  
+  };
 }
+
