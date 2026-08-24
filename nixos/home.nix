@@ -15,6 +15,7 @@
     jujutsu
     ripgrep
     fd
+    notmuch
   ];
 
   programs.home-manager.enable = true;
