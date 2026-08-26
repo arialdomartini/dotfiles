@@ -140,11 +140,6 @@
   (add-hook 'prog-mode-hook #'my-cape-add-backends))
 
 
-(use-package savehist
-  :init
-  (savehist-mode)
-  :config
-  (push 'register-alist savehist-additional-variables))
 
 (use-package marginalia
   :ensure t

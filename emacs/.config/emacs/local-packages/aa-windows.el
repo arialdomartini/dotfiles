@@ -44,9 +44,12 @@
 
 
 (use-package tab-bar
+  :ensure nil
   :defer t
   :config
+  (setopt tab-bar-history-mode t)
 
+  
   (defun tab-bar-view-toggle ()
     (interactive)
     (setopt tab-bar-show (not tab-bar-show)))

@@ -6,6 +6,15 @@
 
 (put 'narrow-to-region 'disabled nil)
 
+(setopt save-place-mode t)
+
+(use-package savehist
+  :ensure nil
+  :init
+  (savehist-mode)
+  :config
+  (push 'register-alist savehist-additional-variables))
+
 
 (recentf-mode t)
 
