@@ -92,8 +92,8 @@
 
   :config
   ;; rg, do not ignore .config
-  (setq consult-ripgrep-args
-        "rg --null --line-buffered --color=never --max-columns=1000 --path-separator / --smart-case --no-heading --with-filename --line-number --search-zip --hidden --glob=.config --glob=.config/**")
+  ;; (setq consult-ripgrep-args
+  ;;       "rg --null --line-buffered --color=never --max-columns=1000 --path-separator / --smart-case --no-heading --with-filename --line-number --search-zip --hidden --glob=.config --glob=.config/**")
   (setq completion-in-region-function #'consult-completion-in-region) ;; instead of corfu
   (setq register-preview-delay 0.5
         register-preview-function #'consult-register-format
