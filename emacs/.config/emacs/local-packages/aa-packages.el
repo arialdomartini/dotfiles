@@ -169,7 +169,7 @@
          :map ghostel-semi-char-mode-map
          ("<f1>" . ghostel-copy-mode))
   :custom
-  (ghostel-shell "zsh")
+  (ghostel-shell "fish")
   (ghostel-keymap-exceptions
    '("C-c" "C-x" "C-u" "C-h" "M-x" "M-o" "M-:" "C-\\"
      "M-g" "M-<left>" "M-<right>")))

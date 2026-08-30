@@ -16,6 +16,7 @@
     ripgrep
     fd
     notmuch
+    fish
   ];
 
   programs.home-manager.enable = true;
