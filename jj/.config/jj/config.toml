@@ -73,6 +73,9 @@ am = ["desc", "-r", "@-", "-m"]
 c = ["commit", "-m"]
 s = ["squash"]
 
+# Convert the current Change into the Git Index
+i = ["new", "-B", "@", "--no-edit", "-m"]
+
 # tug - move the nearest bookmark to the nearest non-empty change at or before @
 # use `jj b a' instead
 tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "closest_nonempty(@)"]
