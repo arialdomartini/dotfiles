@@ -28,8 +28,8 @@ empty = { fg = "yellow", bold = true }
 [template-aliases]
 empty_commit_marker = "label('empty', '▢')"
 
+
 simple_log = """
-  if(self.parents().len() > 1, raw_escape_sequence("\b\b")) ++
   separate(" ",
     pad_end(
       4,
@@ -40,8 +40,8 @@ simple_log = """
     ),
     if(self.immutable(), "🔒", "  ") ++ " ",
     if(self.empty(), empty_commit_marker),
-    self.bookmarks(),
-    if(self.description(), self.description().first_line(), if(self.empty(), '', label('no_description', '←')))
+    if(self.description(), self.description().first_line(), if(self.empty(), '', label('no_description', '←'))),
+    self.bookmarks()
   )
 """
 
@@ -61,7 +61,8 @@ l = ["log", "-T", "simple_log", "--limit", "20"]
 la = ["log", "-r ::@"]
 
 # Log with more details
-ld = ["log", "-T", "builtin_log_oneline"]
+llo = ["log", "-T", "builtin_log_oneline"]
+llc = ["log", "-T", "builtin_log_comfortable"]
 
 d = ["diff"]
 dd = ["diff", "--tool", "difft"]
