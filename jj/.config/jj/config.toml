@@ -41,7 +41,8 @@ simple_log = """
     if(self.immutable(), "🔒", "  ") ++ " ",
     if(self.empty(), empty_commit_marker),
     if(self.description(), self.description().first_line(), if(self.empty(), '', label('no_description', '←'))),
-    self.bookmarks()
+    self.bookmarks(),
+    if(!self.mine(), self.author().name().replace(regex:" .*", ""))
   )
 """
 
@@ -54,6 +55,7 @@ eol-conversion = "none"
 
 
 [aliases]
+n = ["new"]
 # Just log
 l = ["log", "-T", "simple_log", "--limit", "20"]
 
@@ -81,6 +83,14 @@ i = ["new", "-B", "@", "--no-edit", "-m"]
 # use `jj b a' instead
 tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "closest_nonempty(@)"]
 
+others = ["util", "exec", "--", "bash", "-c", '''
+jj log -r "touched_by_others($1)"
+''', ""]
+
+lf = ["util", "exec", "--", "bash", "-c", '''
+jj log -r "files($1)"
+''', ""]
+
 [revsets]
 'bookmark-advance-to' = '@-'
 
@@ -88,3 +98,5 @@ tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "closest_non
 
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
 'closest_nonempty(to)' = 'heads(::to ~ empty())'
+
+'touched_by_others(path)' = 'files(path) & ::@ & ~mine() & ~immutable()'
