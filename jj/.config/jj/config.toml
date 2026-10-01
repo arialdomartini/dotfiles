@@ -4,9 +4,6 @@
 
 [gg]
 
-[gg.ui]
-recent-workspaces = ['C:\prg\sunrise', 'C:\prg\batch-server\service-bus']
-
 [ui]
 paginate = "auto"
 #default-command = "l"
@@ -65,6 +62,9 @@ la = ["log", "-r ::@"]
 # Log with more details
 llo = ["log", "-T", "builtin_log_oneline"]
 llc = ["log", "-T", "builtin_log_comfortable"]
+
+# amend description
+ad = ["desc", "-r", "@-", "-m"]
 
 d = ["diff"]
 dd = ["diff", "--tool", "difft"]
