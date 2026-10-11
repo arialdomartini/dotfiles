@@ -32,6 +32,7 @@
 
 (use-package avy :ensure t
   :config 
+  (global-set-key (kbd "C-M-:") 'avy-goto-word-0)
   (global-set-key (kbd "C-;") 'avy-goto-word-1)
   (global-set-key (kbd "C-:") 'avy-goto-line))
 
