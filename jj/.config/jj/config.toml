@@ -36,9 +36,9 @@ simple_log = """
       )
     ),
     if(self.immutable(), "🔒", "  ") ++ " ",
+    self.bookmarks(),
     if(self.empty(), empty_commit_marker),
     if(self.description(), self.description().first_line(), if(self.empty(), '', label('no_description', '←'))),
-    self.bookmarks(),
     if(!self.mine(), self.author().name().replace(regex:" .*", ""))
   )
 """
