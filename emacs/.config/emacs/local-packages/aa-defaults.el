@@ -3,7 +3,7 @@
 (setq initial-scratch-message "")
 (setq inhibit-startup-echo-area-message t)
 (setq warning-minimum-level :error)
-
+(setq ring-bell-function #'ignore)
 (put 'narrow-to-region 'disabled nil)
 
 (setopt save-place-mode t)
